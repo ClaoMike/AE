@@ -1,5 +1,6 @@
 package scenes;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
@@ -10,6 +11,7 @@ import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
 import dev.clao.GameMain;
+import gameObjects.dynamicObjects.MainPlayer;
 import gameObjects.staticObjects.WorldTerrainController;
 import helpers.GameInfo;
 
@@ -25,6 +27,7 @@ public class Gameplay implements Screen {
     private World world;
 
     private WorldTerrainController worldTerrainController;
+    private MainPlayer player;
 
     public Gameplay(GameMain game) {
         this.game = game;
@@ -41,6 +44,7 @@ public class Gameplay implements Screen {
         world = new World(new Vector2(0, -9.8f), true);
 
         worldTerrainController = new WorldTerrainController(game, world);
+        player = new MainPlayer(world, 200, 110);
 
     }
     @Override
@@ -55,13 +59,18 @@ public class Gameplay implements Screen {
         game.getBatch().begin();
 
         worldTerrainController.drawTerrain();
+        game.getBatch().draw(player, player.getX(), player.getY());
 
         game.getBatch().end();
 
         debugRenderer.render(world, renderCamera.combined);
         game.getBatch().setProjectionMatrix(mainCamera.combined);
         mainCamera.update();
-//        renderCamera.update();
+        renderCamera.update();
+
+        player.update();
+
+        world.step(Gdx.graphics.getDeltaTime(), 6, 2);
     }
 
     @Override
