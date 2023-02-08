@@ -9,8 +9,6 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 
-import helpers.GameInfo;
-
 public class GroundTile extends Sprite {
     private World world;
     private Body body;
@@ -23,12 +21,12 @@ public class GroundTile extends Sprite {
     void createBody() {
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyDef.BodyType.StaticBody;
-        bodyDef.position.set((getX() + getWidth()/2f - 4) / GameInfo.PPM, (getY() + getHeight()/2)/GameInfo.PPM);
+        bodyDef.position.set((getX() + getWidth()/2f), (getY() + getHeight()/2));
 
         body = world.createBody(bodyDef);
 
         PolygonShape shape = new PolygonShape();
-        shape.setAsBox(getWidth()/2/GameInfo.PPM, getHeight()/2/GameInfo.PPM);
+        shape.setAsBox(getWidth()/2, getHeight()/2);
 
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
@@ -39,5 +37,6 @@ public class GroundTile extends Sprite {
     public void setSpritePosition(float x, float y) {
         setPosition(x, y);
         createBody();
+
     }
 }

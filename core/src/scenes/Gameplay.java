@@ -10,7 +10,7 @@ import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
 import dev.clao.GameMain;
-import gameObjects.staticObjects.GroundTile;
+import gameObjects.staticObjects.WorldTerrainController;
 import helpers.GameInfo;
 
 public class Gameplay implements Screen {
@@ -24,7 +24,7 @@ public class Gameplay implements Screen {
 
     private World world;
 
-    private GroundTile gt;
+    private WorldTerrainController worldTerrainController;
 
     public Gameplay(GameMain game) {
         this.game = game;
@@ -32,15 +32,16 @@ public class Gameplay implements Screen {
         mainCamera = new OrthographicCamera(GameInfo.WIDTH, GameInfo.HEIGHT);
         mainCamera.position.set(GameInfo.WIDTH/2, GameInfo.HEIGHT/2, 0);
         viewport = new StretchViewport(GameInfo.WIDTH, GameInfo.HEIGHT, mainCamera);
+
         renderCamera = new OrthographicCamera();
-        renderCamera.setToOrtho(false, GameInfo.WIDTH/GameInfo.PPM, GameInfo.HEIGHT/GameInfo.PPM);
+        renderCamera.setToOrtho(false, GameInfo.WIDTH, GameInfo.HEIGHT);
         renderCamera.position.set(GameInfo.WIDTH/2, GameInfo.HEIGHT/2, 0);
         debugRenderer = new Box2DDebugRenderer();
 
         world = new World(new Vector2(0, -9.8f), true);
 
-        gt = new GroundTile(world);
-        gt.setSpritePosition(0, 0 );
+        worldTerrainController = new WorldTerrainController(game, world);
+
     }
     @Override
     public void show() {
@@ -53,13 +54,14 @@ public class Gameplay implements Screen {
 
         game.getBatch().begin();
 
-        game.getBatch().draw(gt, gt.getX(), gt.getY());
+        worldTerrainController.drawTerrain();
 
         game.getBatch().end();
 
         debugRenderer.render(world, renderCamera.combined);
         game.getBatch().setProjectionMatrix(mainCamera.combined);
         mainCamera.update();
+//        renderCamera.update();
     }
 
     @Override
