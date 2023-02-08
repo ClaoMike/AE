@@ -23,7 +23,7 @@ public class GroundTile extends Sprite {
     void createBody() {
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyDef.BodyType.StaticBody;
-        bodyDef.position.set((getX() + getWidth()/2) / GameInfo.PPM, (getY() + getHeight()/2)/GameInfo.PPM);
+        bodyDef.position.set((getX() + getWidth()/2f - 4) / GameInfo.PPM, (getY() + getHeight()/2)/GameInfo.PPM);
 
         body = world.createBody(bodyDef);
 
