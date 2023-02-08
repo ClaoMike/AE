@@ -1,6 +1,7 @@
 package scenes;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
@@ -30,7 +31,7 @@ public class Gameplay implements Screen {
     private MainPlayer player;
 
     public Gameplay(GameMain game) {
-        this.game = game;
+        this.game = game; 
 
         mainCamera = new OrthographicCamera(GameInfo.WIDTH, GameInfo.HEIGHT);
         mainCamera.position.set(GameInfo.WIDTH/2, GameInfo.HEIGHT/2, 0);
@@ -44,7 +45,7 @@ public class Gameplay implements Screen {
         world = new World(new Vector2(0, -9.8f), true);
 
         worldTerrainController = new WorldTerrainController(game, world);
-        player = new MainPlayer(world, 200, 110);
+        player = new MainPlayer(world, 200, 500);
 
     }
     @Override
@@ -52,8 +53,26 @@ public class Gameplay implements Screen {
 
     }
 
+//    void handleInput(float dt) {
+//        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+////            player.getBody().applyLinearImpulse(new Vector2(-10000, 0), player.getBody().getWorldCenter(), true);
+//            System.out.println("Right ");
+//            player.move(100, 0);
+//        }else if(Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+////            player.getBody().applyLinearImpulse(new Vector2(10000, 0), player.getBody().getWorldCenter(), true);
+//            System.out.println("Left");
+//            player.move(-100, 0);
+//        }else if(Gdx.input.isKeyPressed(Input.Keys.SPACE)){
+////            player.getBody().applyForceToCenter(0, 800f, true);
+//            player.getBody().setLinearVelocity(0, 8f);
+//        }
+//    }
+
     @Override
     public void render(float delta) {
+//        handleInput(delta);
+        player.update();
+
         ScreenUtils.clear(0, 0, 1, 1);
 
         game.getBatch().begin();
@@ -68,7 +87,7 @@ public class Gameplay implements Screen {
         mainCamera.update();
         renderCamera.update();
 
-        player.update();
+
 
         world.step(Gdx.graphics.getDeltaTime(), 6, 2);
     }

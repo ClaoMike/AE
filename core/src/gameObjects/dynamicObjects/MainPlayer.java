@@ -33,6 +33,7 @@ public class MainPlayer extends Sprite {
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
         fixtureDef.density = 80f;
+        fixtureDef.friction = 2f;
 
         Fixture fixture = body.createFixture(fixtureDef);
 
@@ -41,6 +42,13 @@ public class MainPlayer extends Sprite {
 
     public void update() {
         setPosition(body.getPosition().x-getWidth()/2, body.getPosition().y-getHeight()/2);
+    }
+
+    public void move(float x, float y) {
+        body.setLinearVelocity(x, body.getLinearVelocity().y);
+    }
+    public Body getBody() {
+        return body;
     }
 
 }
