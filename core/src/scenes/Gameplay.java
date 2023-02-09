@@ -1,100 +1,119 @@
 package scenes;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.Box2D;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.badlogic.gdx.physics.box2d.Fixture;
+import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.utils.ScreenUtils;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.badlogic.gdx.utils.viewport.Viewport;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import dev.clao.GameMain;
-import gameObjects.dynamicObjects.MainPlayer;
-import gameObjects.staticObjects.WorldTerrainController;
 import helpers.GameInfo;
 
 public class Gameplay implements Screen {
     private GameMain game;
+    private Texture img;
+    private Sprite cube;
 
-    private OrthographicCamera mainCamera;
-    private Viewport viewport;
+    OrthographicCamera camera;
+    ExtendViewport viewport;
+    World world;
 
-    private OrthographicCamera renderCamera;
-    private Box2DDebugRenderer debugRenderer;
+    static final float STEP_TIME = 1f / 60f;
+    static final int VELOCITY_ITERATIONS = 6;
+    static final int POSITION_ITERATIONS = 2;
 
-    private World world;
+    float accumulator = 0;
 
-    private WorldTerrainController worldTerrainController;
-    private MainPlayer player;
+    Box2DDebugRenderer debugRenderer;
+    Body body;
+
+    private void stepWorld() {
+        float delta = Gdx.graphics.getDeltaTime();
+
+        accumulator += Math.min(delta, 0.25f);
+
+        if (accumulator >= STEP_TIME) {
+            accumulator -= STEP_TIME;
+
+            world.step(STEP_TIME, VELOCITY_ITERATIONS, POSITION_ITERATIONS);
+        }
+    }
 
     public Gameplay(GameMain game) {
-        this.game = game; 
-
-        mainCamera = new OrthographicCamera(GameInfo.WIDTH, GameInfo.HEIGHT);
-        mainCamera.position.set(GameInfo.WIDTH/2, GameInfo.HEIGHT/2, 0);
-        viewport = new StretchViewport(GameInfo.WIDTH, GameInfo.HEIGHT, mainCamera);
-
-        renderCamera = new OrthographicCamera();
-        renderCamera.setToOrtho(false, GameInfo.WIDTH, GameInfo.HEIGHT);
-        renderCamera.position.set(GameInfo.WIDTH/2, GameInfo.HEIGHT/2, 0);
-        debugRenderer = new Box2DDebugRenderer();
-
-        world = new World(new Vector2(0, -9.8f), true);
-
-        worldTerrainController = new WorldTerrainController(game, world);
-        player = new MainPlayer(world, 200, 500);
-
+        this.game = game;
     }
     @Override
     public void show() {
+        Box2D.init();
+        world = new World(new Vector2(0, -10), true);
+
+        img = new Texture("groundCube.png");
+        cube = new Sprite(img);
+        camera = new OrthographicCamera();
+        viewport = new ExtendViewport(GameInfo.WIDTH/GameInfo.PPM, GameInfo.HEIGHT/GameInfo.PPM, camera);
+        debugRenderer = new Box2DDebugRenderer();
+
+        BodyDef bodyDef = new BodyDef();
+        bodyDef.type = BodyDef.BodyType.DynamicBody;
+//        bodyDef.type = BodyDef.BodyType.StaticBody;
+        bodyDef.position.set(1000/GameInfo.PPM , 500/GameInfo.PPM);
+
+// Create our body in the world using our body definition
+        body = world.createBody(bodyDef);
+
+// Create a circle shape and set its radius to 6
+        PolygonShape shape = new PolygonShape();
+        shape.setAsBox(100/GameInfo.PPM, 100/GameInfo.PPM);
+
+// Create a fixture definition to apply our shape to
+        FixtureDef fixtureDef = new FixtureDef();
+        fixtureDef.shape = shape;
+        fixtureDef.density = 0.5f;
+        fixtureDef.friction = 0.4f;
+//        fixtureDef.restitution = 0.6f; // Make it bounce a little bit
+
+// Create our fixture and attach it to the body
+        Fixture fixture = body.createFixture(fixtureDef);
+
+// Remember to dispose of any shapes after you're done with them!
+// BodyDef and FixtureDef don't need disposing, but shapes do.
+        shape.dispose();
 
     }
 
-//    void handleInput(float dt) {
-//        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-////            player.getBody().applyLinearImpulse(new Vector2(-10000, 0), player.getBody().getWorldCenter(), true);
-//            System.out.println("Right ");
-//            player.move(100, 0);
-//        }else if(Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-////            player.getBody().applyLinearImpulse(new Vector2(10000, 0), player.getBody().getWorldCenter(), true);
-//            System.out.println("Left");
-//            player.move(-100, 0);
-//        }else if(Gdx.input.isKeyPressed(Input.Keys.SPACE)){
-////            player.getBody().applyForceToCenter(0, 800f, true);
-//            player.getBody().setLinearVelocity(0, 8f);
-//        }
-//    }
-
     @Override
     public void render(float delta) {
-//        handleInput(delta);
-        player.update();
+        stepWorld();
 
-        ScreenUtils.clear(0, 0, 1, 1);
+        Gdx.gl.glClearColor(1, 1, 1, 1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         game.getBatch().begin();
 
-        worldTerrainController.drawTerrain();
-        game.getBatch().draw(player, player.getX(), player.getY());
+        game.getBatch().draw(cube, body.getPosition().x - cube.getWidth()/GameInfo.PPM, body.getPosition().y - cube.getHeight()/GameInfo.PPM, cube.getWidth()*2/GameInfo.PPM,cube.getHeight()*2/ GameInfo.PPM);
 
         game.getBatch().end();
 
-        debugRenderer.render(world, renderCamera.combined);
-        game.getBatch().setProjectionMatrix(mainCamera.combined);
-        mainCamera.update();
-        renderCamera.update();
-
-
-
-        world.step(Gdx.graphics.getDeltaTime(), 6, 2);
+        debugRenderer.render(world, camera.combined);
     }
 
     @Override
     public void resize(int width, int height) {
+        viewport.update(width, height, true);
 
+       game.getBatch().setProjectionMatrix(camera.combined);
     }
 
     @Override
@@ -114,6 +133,8 @@ public class Gameplay implements Screen {
 
     @Override
     public void dispose() {
-
+        img.dispose();
+        world.dispose();
+        debugRenderer.dispose();
     }
 }
