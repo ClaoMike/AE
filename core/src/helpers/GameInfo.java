@@ -12,5 +12,7 @@ public class GameInfo {
 
     public static final int TILE_SIZE = 100;
 
+    public static final float GRAVITY = 9.81f;
+
 
 }
