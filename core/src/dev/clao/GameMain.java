@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 
+import scenes.BasicScene;
 import scenes.Gameplay;
 
 public class GameMain extends Game {
@@ -19,6 +20,7 @@ public class GameMain extends Game {
 	public void create () {
 		batch = new SpriteBatch();
 		setScreen(new Gameplay(this));
+//		setScreen(new BasicScene(this));
 	}
 
 	@Override
