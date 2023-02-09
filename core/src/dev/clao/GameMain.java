@@ -2,7 +2,6 @@ package dev.clao;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
 import scenes.Gameplay;
 
 public class GameMain extends Game {
@@ -16,7 +15,6 @@ public class GameMain extends Game {
 	public void create () {
 		batch = new SpriteBatch();
 		setScreen(new Gameplay(this));
-//		setScreen(new BasicScene(this));
 	}
 
 	@Override
