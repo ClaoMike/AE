@@ -1,4 +1,4 @@
-package scenes;
+package screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -13,7 +13,6 @@ import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import dev.clao.GameMain;
 import helpers.GameInfo;
-import objects.GameObject;
 
 public class BasicScreen implements Screen {
     protected GameMain game;
@@ -22,8 +21,6 @@ public class BasicScreen implements Screen {
     protected World world;
     private Box2DDebugRenderer debugRenderer;
     private float accumulator = 0;
-
-    private int somePosition= 0;
 
     public BasicScreen(GameMain game) {
         this.game = game;

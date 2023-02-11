@@ -2,7 +2,7 @@ package dev.clao;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import scenes.Gameplay;
+import screens.Gameplay;
 
 public class GameMain extends Game {
 	private SpriteBatch batch;
