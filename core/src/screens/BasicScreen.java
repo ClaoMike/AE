@@ -44,7 +44,7 @@ public class BasicScreen implements Screen {
         world = new World(new Vector2(0, -GameInfo.GRAVITY), true);
 
         camera = new OrthographicCamera();
-        viewport = new ExtendViewport(GameInfo.WIDTH*2/GameInfo.PPM, GameInfo.HEIGHT*2/GameInfo.PPM, camera);
+        viewport = new ExtendViewport(GameInfo.WIDTH*2f/GameInfo.PPM, GameInfo.HEIGHT*2f/GameInfo.PPM, camera);
         debugRenderer = new Box2DDebugRenderer();
 
         showObjects();
