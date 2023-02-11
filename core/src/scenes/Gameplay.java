@@ -26,7 +26,9 @@ public class Gameplay extends BasicScreen {
     }
 
     protected void drawObjects() {
-        startPlatformGround.draw(game);
+        // TODO: fix this
+//        player.updateSpritePosition();
+//        startPlatformGround.draw(game);
         player.draw(game);
     }
 

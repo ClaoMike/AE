@@ -26,6 +26,9 @@ public class GameObject extends Sprite {
 
         createBody(type, initialX, initialY);
         attachFixtureToBody(generateFixtureDefinition());
+
+        setPosition(body.getPosition().x,
+                body.getPosition().y);
     }
 
     private void createBody(BodyDef.BodyType type, float x, float y) {
@@ -64,7 +67,6 @@ public class GameObject extends Sprite {
                 body.getPosition().y - this.getHeight()/GameInfo.PPM,
                 this.getWidth()*2/GameInfo.PPM,
                 this.getHeight()*2/GameInfo.PPM);
-
     }
 
     public Body getBody() {

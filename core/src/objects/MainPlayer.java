@@ -19,7 +19,8 @@ public class MainPlayer extends GameObject {
     }
 
     public void draw(GameMain game) {
-        super.draw(game.getBatch());
+        // TODO: fix this
+//        super.draw(game.getBatch());
         update();
     }
 

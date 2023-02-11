@@ -68,7 +68,7 @@ public class BasicScreen implements Screen {
         drawObjects();
         game.getBatch().end();
 
-//        updateCamera(getCameraNewPosition());
+        updateCamera(getCameraNewPosition());
 
         debugRenderer.render(world, camera.combined);
     }
