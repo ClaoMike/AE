@@ -14,7 +14,7 @@ import helpers.GameInfo;
 
 public class GameObject extends Sprite {
     private World world;
-    private Body body;
+    protected Body body;
 
     public GameObject(String textureName, World world, BodyDef.BodyType type, float initialX, float initialY) {
         super(new Texture(textureName));
@@ -61,6 +61,10 @@ public class GameObject extends Sprite {
                 this.getWidth()*2/GameInfo.PPM,
                 this.getHeight()*2/GameInfo.PPM);
 
+    }
+
+    public Body getBody() {
+        return body;
     }
 
 }
