@@ -15,11 +15,14 @@ import helpers.GameInfo;
 public class GameObject extends Sprite {
     private World world;
     protected Body body;
+    private String objectData;
 
     public GameObject(String textureName, World world, BodyDef.BodyType type, float initialX, float initialY) {
         super(new Texture(textureName));
 
         this.world = world;
+
+        objectData = textureName.replace(".png", "");
 
         createBody(type, initialX, initialY);
         attachFixtureToBody(generateFixtureDefinition());
@@ -51,6 +54,7 @@ public class GameObject extends Sprite {
 
     private void attachFixtureToBody(FixtureDef fd) {
         Fixture fixture = body.createFixture(fd);
+        fixture.setUserData(objectData);
     }
 
     public void draw(SpriteBatch batch) {

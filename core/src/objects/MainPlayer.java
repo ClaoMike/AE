@@ -9,6 +9,7 @@ import dev.clao.GameMain;
 
 public class MainPlayer extends GameObject {
     private World world;
+    public boolean isInAir = false;
 
     public MainPlayer(World world) {
         super("player.png", world, BodyDef.BodyType.DynamicBody, 700, 700);
@@ -53,7 +54,9 @@ public class MainPlayer extends GameObject {
     }
 
     private void jump() {
-        body.applyLinearImpulse(0, 1f, body.getPosition().x, body.getPosition().y, true);
+        if(!isInAir){
+            body.applyLinearImpulse(0, 6f, body.getPosition().x, body.getPosition().y, true);
+        }
     }
 
 }
