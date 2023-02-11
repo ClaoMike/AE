@@ -2,6 +2,7 @@ package objects;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 
@@ -36,11 +37,17 @@ public class MainPlayer extends GameObject {
     }
 
     private void moveLeft() {
-        body.applyLinearImpulse(-0.4f, 0, body.getPosition().x, body.getPosition().y, true);
+        float speed = body.getLinearVelocity().x;
+        if(speed > -5f) {
+            body.applyLinearImpulse(-0.3f, 0, body.getPosition().x, body.getPosition().y, true);
+        }
     }
 
     private void moveRight() {
-        body.applyLinearImpulse(0.4f, 0, body.getPosition().x, body.getPosition().y, true);
+        float speed = body.getLinearVelocity().x;
+        if(speed < 5f) {
+            body.applyLinearImpulse(0.3f, 0, body.getPosition().x, body.getPosition().y, true);
+        }
     }
 
     private void moveUp() {
