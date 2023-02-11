@@ -5,6 +5,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.physics.box2d.Box2D;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
@@ -20,8 +21,9 @@ public class BasicScreen implements Screen {
     private ExtendViewport viewport;
     protected World world;
     private Box2DDebugRenderer debugRenderer;
-    private GameObject go;
     private float accumulator = 0;
+
+    private int somePosition= 0;
 
     public BasicScreen(GameMain game) {
         this.game = game;
@@ -66,7 +68,17 @@ public class BasicScreen implements Screen {
         drawObjects();
         game.getBatch().end();
 
+//        updateCamera(getCameraNewPosition());
+
         debugRenderer.render(world, camera.combined);
+    }
+
+    private void updateCamera(Vector3 newPosition) {
+        camera.position.set(newPosition);
+        camera.update();
+    }
+    protected Vector3 getCameraNewPosition() {
+        return new Vector3(0,0,0);
     }
 
     protected void drawObjects() {

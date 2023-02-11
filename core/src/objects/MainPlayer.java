@@ -10,11 +10,12 @@ import dev.clao.GameMain;
 
 public class MainPlayer extends GameObject {
     private World world;
-    public boolean isInAir = false;
+    public boolean isInAir;
 
     public MainPlayer(World world) {
         super("player.png", world, BodyDef.BodyType.DynamicBody, 700, 700);
         this.world = world;
+        isInAir = true;
     }
 
     public void draw(GameMain game) {
@@ -61,6 +62,7 @@ public class MainPlayer extends GameObject {
     }
 
     private void jump() {
+        // TODO: Improve this as sometimes it does not work, check collisons
         if(!isInAir){
             body.applyLinearImpulse(0, 6f, body.getPosition().x, body.getPosition().y, true);
         }
