@@ -1,22 +1,21 @@
 package scenes;
 
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import dev.clao.GameMain;
-import objects.GameObject;
+import objects.StartPlatformGround;
 
 public class Gameplay extends BasicScreen {
-    GameObject go;
+    StartPlatformGround startPlatformGround;
 
     public Gameplay(GameMain game) {
         super(game);
     }
 
     protected void showObjects() {
-        go = new GameObject("groundCube.png", world, BodyDef.BodyType.StaticBody, 500, 500);
+        startPlatformGround = new StartPlatformGround(world);
     }
 
     protected void drawObjects() {
-        go.draw(game.getBatch());
+        startPlatformGround.draw(game);
     }
 
 }
