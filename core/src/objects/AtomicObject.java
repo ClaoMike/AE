@@ -12,7 +12,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import helpers.GameInfo;
 
 public class AtomicObject extends Sprite {
-    private Body body;
+    private final Body body;
 
     public AtomicObject(String filename, float x, float y, World world, BodyDef.BodyType type, float density) {
         super(new Texture(Gdx.files.internal(filename)));

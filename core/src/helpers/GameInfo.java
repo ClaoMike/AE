@@ -1,17 +1,18 @@
 package helpers;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 
 public class GameInfo {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // MAIN
-    public static final boolean DEBUG_MODE = false;
+    public static final boolean DEBUG_MODE = true;
     public static final int PPM = 100;
 
     // DESKTOP LAUNCHER
     public static final int WIDTH = 1440;
     public static final int HEIGHT = 900;
+    public static final int FPS = 60;
+    public static final String TITLE = "Antrum Exploratio";
 
     // ASSETS
     public static final String PLAYER = "player.png";

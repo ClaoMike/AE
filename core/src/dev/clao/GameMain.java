@@ -8,7 +8,6 @@ import screens.BasicScreen;
 
 public class GameMain extends Game {
 	private SpriteBatch batch;
-	private boolean debugMode = GameInfo.DEBUG_MODE;
 
 	public SpriteBatch getBatch() {
 		return batch;
@@ -17,7 +16,7 @@ public class GameMain extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		setScreen(new BasicScreen(this, debugMode));
+		setScreen(new BasicScreen(this, GameInfo.DEBUG_MODE));
 	}
 
 	@Override

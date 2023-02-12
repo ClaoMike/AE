@@ -11,17 +11,18 @@ import helpers.GameInfo;
 import objects.AtomicObject;
 
 public class BasicScreen implements Screen {
-    private GameMain game;
-    private World world;
-    private SpriteBatch spriteBatch;
+    private final GameMain game;
+    private final World world;
+    private final SpriteBatch spriteBatch;
     private AtomicObject a1, a2;
-    private FollowingCamera camera;
+    private final FollowingCamera camera;
 
     public BasicScreen(GameMain game, boolean debugMode) {
         this.game = game;
         this.spriteBatch = game.getBatch();
         this.world = new World(GameInfo.GRAVITY, GameInfo.WORLD_DO_SLEEP);
 
+        //noinspection IntegerDivisionInFloatingPointContext
         a1 = new AtomicObject(
                 GameInfo.PLAYER,
                 GameInfo.WIDTH/2,
@@ -29,6 +30,7 @@ public class BasicScreen implements Screen {
                 world,
                 BodyDef.BodyType.DynamicBody,
                 1.0f);
+        //noinspection IntegerDivisionInFloatingPointContext
         a2 = new AtomicObject(
                 GameInfo.PLAYER,
                 GameInfo.WIDTH/3,
@@ -37,7 +39,7 @@ public class BasicScreen implements Screen {
                 BodyDef.BodyType.StaticBody,
                 1.0f);
 
-        camera = new FollowingCamera(spriteBatch, world, GameInfo.WIDTH, GameInfo.HEIGHT, debugMode, a1);
+        camera = new FollowingCamera(spriteBatch, world, GameInfo.WIDTH, GameInfo.HEIGHT, a1);
     }
 
     @Override

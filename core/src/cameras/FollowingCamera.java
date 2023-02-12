@@ -6,26 +6,26 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
+
+import helpers.GameInfo;
 import objects.AtomicObject;
 
 public class FollowingCamera {
-    private OrthographicCamera camera;
-    private Box2DDebugRenderer debugRenderer;
-    private SpriteBatch batch;
-    private World world;
-    private boolean isDebug;
-    private AtomicObject following;
+    private final OrthographicCamera camera;
+    private final Box2DDebugRenderer debugRenderer;
+    private final SpriteBatch batch;
+    private final World world;
+    private final AtomicObject following;
 
-    public FollowingCamera(SpriteBatch batch, World world, float w, float h, boolean isDebug, AtomicObject following) {
-        this.isDebug = isDebug;
+    public FollowingCamera(SpriteBatch batch, World world, float w, float h, AtomicObject following) {
         this.world = world;
         this.batch = batch;
         this.following = following;
 
         debugRenderer = new Box2DDebugRenderer();
 
-        if(isDebug) {
-            camera = new OrthographicCamera(w/PPM, h/PPM); // rendering camera
+        if(GameInfo.DEBUG_MODE) {
+            camera = new OrthographicCamera(w / PPM, h / PPM); // rendering camera
         } else {
             camera = new OrthographicCamera(w, h); // normal camera
         }
@@ -38,7 +38,7 @@ public class FollowingCamera {
     }
 
     private void updatePosition() {
-        if (isDebug) {
+        if (GameInfo.DEBUG_MODE) {
             updatePosition(following.getBody().getPosition().x, following.getBody().getPosition().y);
         } else {
             updatePosition(following.getX() + following.getWidth() / 2, following.getY() + following.getHeight() / 2);
