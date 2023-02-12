@@ -15,43 +15,36 @@ public class Examplee implements Screen {
     private World world;
     private Box2DDebugRenderer debugRenderer;
     private SpriteBatch spriteBatch;
-    ////////////////////////////////////////////////////////////////////////////////////////////
     private Sprite sprite, staticSprite;
     private Body body, body2;
-    ////////////////////////////////////////////////////////////////////////////////////////////
     private OrthographicCamera camera;
-    private float W, H;
-    private float PPM = 100f;
+    private final float PPM = 100f;
 
     @Override
     public void show() {
-        W = Gdx.graphics.getWidth();
-        H = Gdx.graphics.getHeight();
+        float w = Gdx.graphics.getWidth();
+        float h = Gdx.graphics.getHeight();
         world = new World(new Vector2(0, -10), true);
         debugRenderer = new Box2DDebugRenderer();
         spriteBatch = new SpriteBatch();
-        ////////////////////////////////////////////////////////////////////////////////////////////
         sprite = new Sprite(new Texture(Gdx.files.internal("player.png")));
         staticSprite = new Sprite(new Texture(Gdx.files.internal("player.png")));
-        ////////////////////////////////////////////////////////////////////////////////////////////
         // TODO:
         // normal camera
-//        camera = new OrthographicCamera(W, H);
+        camera = new OrthographicCamera(w, h);
         // rendering camera
-        camera = new OrthographicCamera(W/PPM, H/PPM);
-        camera.position.set(W / 2, H / 2, 0);
+//        camera = new OrthographicCamera(W/PPM, H/PPM);
+        camera.position.set(w / 2, h / 2, 0);
 
-        ////////////////////////////////////////////////////////////////////////////////////////////
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = BodyDef.BodyType.DynamicBody;
-        bodyDef.position.set(W / 2 / PPM, H / 2/ PPM);
+        bodyDef.position.set(w / 2 / PPM, h / 2/ PPM);
         body = world.createBody(bodyDef);
 
         BodyDef bodyDef2 = new BodyDef();
         bodyDef2.type = BodyDef.BodyType.StaticBody;
-        bodyDef2.position.set(W / 3/ PPM, H / 3/ PPM);
+        bodyDef2.position.set(w / 3/ PPM, h / 3/ PPM);
         body2 = world.createBody(bodyDef2);
-        ////////////////////////////////////////////////////////////////////////////////////////////
 
         PolygonShape shape = new PolygonShape();
         shape.setAsBox(sprite.getWidth() / 2/ PPM, sprite.getHeight() / 2/ PPM);
@@ -59,10 +52,9 @@ public class Examplee implements Screen {
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
         fixtureDef.density = 1.0f;
-        ////////////////////////////////////////////////////////////////////////////////////////////
+
         body.createFixture(fixtureDef);
         body2.createFixture(fixtureDef);
-        ////////////////////////////////////////////////////////////////////////////////////////////
         shape.dispose();
     }
 
@@ -70,37 +62,24 @@ public class Examplee implements Screen {
     public void render(float delta) {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         world.step(Gdx.graphics.getDeltaTime(), 6, 2);
-        ////////////////////////////////////////////////////////////////////////////////////////////
-//        sprite.setPosition(body.getPosition().x - sprite.getWidth() / 2, body.getPosition().y - sprite.getHeight() / 2);
         sprite.setPosition((body.getPosition().x - sprite.getWidth() / 2) * PPM, (body.getPosition().y - sprite.getHeight() / 2) * PPM);
-
         sprite.setRotation((float)Math.toDegrees(body.getAngle()));
-
-//        staticSprite.setPosition(body2.getPosition().x - staticSprite.getWidth() / 2, body2.getPosition().y - staticSprite.getHeight() / 2);
         staticSprite.setPosition((body2.getPosition().x - staticSprite.getWidth() / 2) * PPM, (body2.getPosition().y - staticSprite.getHeight() / 2) * PPM);
-
         staticSprite.setRotation((float)Math.toDegrees(body2.getAngle()));
-        ////////////////////////////////////////////////////////////////////////////////////////////
 
         // TODO:
         // normal camera
-//        camera.position.set(sprite.getX() + sprite.getWidth() / 2, sprite.getY() + sprite.getHeight() / 2, 0);
+        camera.position.set(sprite.getX() + sprite.getWidth() / 2, sprite.getY() + sprite.getHeight() / 2, 0);
         // rendering camera
-        camera.position.set(body.getPosition().x, body.getPosition().y, 0);
+//        camera.position.set(body.getPosition().x, body.getPosition().y, 0);
 
         camera.update();
         spriteBatch.setProjectionMatrix(camera.combined);
         spriteBatch.begin();
-        ////////////////////////////////////////////////////////////////////////////////////////////
         sprite.draw(spriteBatch);
         staticSprite.draw(spriteBatch);
-        ////////////////////////////////////////////////////////////////////////////////////////////
         spriteBatch.end();
         debugRenderer.render(world, spriteBatch.getProjectionMatrix());
-
-        System.out.println("Sprite position: " + staticSprite.getX() + ", " + staticSprite.getY());
-        System.out.println("Body position: " + (body2.getPosition().x - staticSprite.getWidth() / 2) * 100 + ", " + (body2.getPosition().y - staticSprite.getHeight() / 2) * 100);
-        System.out.println("Camera position: " + camera.position.x + ", " + camera.position.y);
     }
 
     @Override
