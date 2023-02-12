@@ -2,9 +2,8 @@ package dev.clao;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import screens.Gameplay;
-import screens.GameplayScreen;
-import screens.SimpleScreen;
+
+import screens.Examplee;
 
 public class GameMain extends Game {
 	private SpriteBatch batch;
@@ -18,7 +17,9 @@ public class GameMain extends Game {
 		batch = new SpriteBatch();
 //		setScreen(new Gameplay(this));
 //		setScreen(new SimpleScreen(this));
-		setScreen(new GameplayScreen(this));
+//		setScreen(new GameplayScreen(this));
+		setScreen(new Examplee());
+//		setScreen(new Exampple());
 	}
 
 	@Override
