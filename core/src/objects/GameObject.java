@@ -27,8 +27,7 @@ public class GameObject extends Sprite {
         createBody(type, initialX, initialY);
         attachFixtureToBody(generateFixtureDefinition());
 
-        setPosition(body.getPosition().x,
-                body.getPosition().y);
+        setPosition(body.getPosition().x, body.getPosition().y);
     }
 
     private void createBody(BodyDef.BodyType type, float x, float y) {
