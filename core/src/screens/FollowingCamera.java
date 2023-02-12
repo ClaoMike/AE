@@ -9,17 +9,21 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 
-public class ScreenCamera {
+import objects.AtomicObject;
+
+public class FollowingCamera {
     private OrthographicCamera camera;
     private Box2DDebugRenderer debugRenderer;
     private SpriteBatch batch;
     private World world;
     private boolean isDebug;
+    private AtomicObject following;
 
-    public ScreenCamera(SpriteBatch batch, World world, float w, float h, boolean isDebug) {
+    public FollowingCamera(SpriteBatch batch, World world, float w, float h, boolean isDebug, AtomicObject following) {
         this.isDebug = isDebug;
         this.world = world;
         this.batch = batch;
+        this.following = following;
 
         debugRenderer = new Box2DDebugRenderer();
 
@@ -36,15 +40,16 @@ public class ScreenCamera {
         camera.position.set(x, y, 0);
     }
 
-    public void updatePosition(Sprite sprite, Body body) {
+    private void updatePosition() {
         if (isDebug) {
-            updatePosition(body.getPosition().x, body.getPosition().y);
+            updatePosition(following.getBody().getPosition().x, following.getBody().getPosition().y);
         } else {
-            updatePosition(sprite.getX() + sprite.getWidth() / 2, sprite.getY() + sprite.getHeight() / 2);
+            updatePosition(following.getX() + following.getWidth() / 2, following.getY() + following.getHeight() / 2);
         }
     }
 
     public void update() {
+        updatePosition();
         camera.update();
         batch.setProjectionMatrix(camera.combined);
     }
