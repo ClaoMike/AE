@@ -1,66 +1,60 @@
 package screens;
 
+import static helpers.GameInfo.PPM;
+
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.math.Vector3;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.utils.viewport.ExtendViewport;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.badlogic.gdx.utils.viewport.Viewport;
-
-import dev.clao.GameMain;
-import helpers.GameInfo;
 
 public class ScreenCamera {
-    private OrthographicCamera mainCamera;
-    private Viewport viewport;
-    private OrthographicCamera box2DCamera;
+    private OrthographicCamera camera;
     private Box2DDebugRenderer debugRenderer;
-
+    private SpriteBatch batch;
     private World world;
-    private Vector3 position;
-    private GameMain game;
+    private boolean isDebug;
 
-    public ScreenCamera(GameMain game, World world) {
-        this.game = game;
+    public ScreenCamera(SpriteBatch batch, World world, float w, float h, boolean isDebug) {
+        this.isDebug = isDebug;
         this.world = world;
-        position = new Vector3(GameInfo.WIDTH/2, GameInfo.HEIGHT/2,0);
-
-        mainCamera = new OrthographicCamera(GameInfo.WIDTH, GameInfo.HEIGHT);
-        mainCamera.position.set(GameInfo.WIDTH / 2f, GameInfo.HEIGHT / 2, 0);
-
-        viewport = new StretchViewport(GameInfo.WIDTH, GameInfo.HEIGHT,
-                mainCamera);
-
-        box2DCamera = new OrthographicCamera();
-        box2DCamera.setToOrtho(false, GameInfo.WIDTH / GameInfo.PPM,
-                GameInfo.HEIGHT / GameInfo.PPM);
-        box2DCamera.position.set(GameInfo.WIDTH / 2f, GameInfo.HEIGHT/ 2f, 0);
+        this.batch = batch;
 
         debugRenderer = new Box2DDebugRenderer();
 
+        if(isDebug) {
+            camera = new OrthographicCamera(w/PPM, h/PPM); // rendering camera
+        } else {
+            camera = new OrthographicCamera(w, h); // normal camera
+        }
+
+        camera.position.set(w / 2, h / 2, 0);
+    }
+
+    private void updatePosition(float x, float y) {
+        camera.position.set(x, y, 0);
+    }
+
+    public void updatePosition(Sprite sprite, Body body) {
+        if (isDebug) {
+            updatePosition(body.getPosition().x, body.getPosition().y);
+        } else {
+            updatePosition(sprite.getX() + sprite.getWidth() / 2, sprite.getY() + sprite.getHeight() / 2);
+        }
     }
 
     public void update() {
-        mainCamera.position.set(position);
-        box2DCamera.position.set(position);
-
-        debugRenderer.render(world, box2DCamera.combined);
-
-        game.getBatch().setProjectionMatrix(mainCamera.combined);
-        mainCamera.update();
-        box2DCamera.update();
+        camera.update();
+        batch.setProjectionMatrix(camera.combined);
     }
 
-    public void resize(int width, int height) {
-        viewport.update(width, height, true);
+    public void render() {
+        debugRenderer.render(world, batch.getProjectionMatrix());
     }
 
     public void dispose() {
         debugRenderer.dispose();
     }
 
-    public void updatePosition(Vector3 position) {
-        this.position = position;
-    }
 }
