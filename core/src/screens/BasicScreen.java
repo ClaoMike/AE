@@ -68,6 +68,10 @@ public class BasicScreen implements Screen {
             player.performAction(PlayerAction.GO_LEFT);
         } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             player.performAction(PlayerAction.GO_RIGHT);
+        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
+            player.performAction(PlayerAction.GO_UP);
+        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+            player.performAction(PlayerAction.GO_DOWN);
         }
     }
 

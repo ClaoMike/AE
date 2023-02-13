@@ -19,15 +19,21 @@ public class MainPlayer extends AtomicObject {
         switch (action){
             case GO_LEFT:
                 if(body.getLinearVelocity().x > -GameInfo.PLAYER_MAX_SPEED) {
-                    applyImpulse(-GameInfo.PLAYER_HORIZONTAL_IMPULSE,
-                            0);
+                    applyImpulse(-GameInfo.PLAYER_HORIZONTAL_IMPULSE, 0);
                 }
                 break;
             case GO_RIGHT:
                 if(body.getLinearVelocity().x < GameInfo.PLAYER_MAX_SPEED) {
-                    applyImpulse(GameInfo.PLAYER_HORIZONTAL_IMPULSE,
-                            0);
+                    applyImpulse(GameInfo.PLAYER_HORIZONTAL_IMPULSE, 0);
                 }
+                break;
+            case GO_UP:
+                // TODO: update this based on collisions with walls and maximul speed
+                applyImpulse(0, GameInfo.PLAYER_HORIZONTAL_IMPULSE);
+                break;
+            case GO_DOWN:
+                // TODO: update this based on collisions with walls and maximul speed
+                applyImpulse(0, -GameInfo.PLAYER_HORIZONTAL_IMPULSE);
                 break;
             default:
                 System.out.println("Not implemented yet");
