@@ -20,7 +20,16 @@ public class DrawableMaze implements Drawable {
         maze = m.getVertices();
         for(Array<Vertex> row: maze) {
             for(Vertex v: row) {
-                MazeRoom mr = new MazeRoom(batch, world, newX, y);
+
+                // TODO:
+                Array<BlockDirections> allowedDirections = new Array<>();
+                allowedDirections.add(BlockDirections.DOWN);
+                allowedDirections.add(BlockDirections.UP);
+                allowedDirections.add(BlockDirections.RIGHT);
+                allowedDirections.add(BlockDirections.LEFT);
+
+                MazeRoom mr = new MazeRoom(batch, world, newX, y, allowedDirections);
+
                 drawableMaze.add(mr);
                 newX += mr.getSize();
                 brSize = mr.getSize();
