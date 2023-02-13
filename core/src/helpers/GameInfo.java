@@ -10,7 +10,7 @@ import com.badlogic.gdx.math.Vector2;
 public class GameInfo {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // MAIN
-    public static final boolean DEBUG_MODE = false;
+    public static final boolean DEBUG_MODE = true;
     public static final int PPM = 100;
 
     // DESKTOP LAUNCHER
@@ -32,6 +32,10 @@ public class GameInfo {
     public static final boolean WORLD_DO_SLEEP = true;
     public static final int VELOCITY_ITERATIONS = 6;
     public static final int POSITION_ITERATIONS = 2;
+
+    // MAIN PLAYER
+    public static final float PLAYER_MAX_SPEED = 5f;
+    public static final float PLAYER_HORIZONTAL_IMPULSE = 0.8f;
 
     // PLATFORM
     public static final int NUMBER_OF_BASIC_ROOMS_IN_PLATFORM = 3;
