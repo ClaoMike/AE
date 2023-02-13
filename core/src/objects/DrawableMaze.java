@@ -17,19 +17,18 @@ public class DrawableMaze implements Drawable {
         float brSize = 0;
 
         Maze m = new Maze();
+        m.printToConsole();
         maze = m.getVertices();
         for(Array<Vertex> row: maze) {
             for(Vertex v: row) {
+                Array<BlockDirections> allowedDirections = getDirections(v);
 
-                // TODO:
-                Array<BlockDirections> allowedDirections = new Array<>();
-                allowedDirections.add(BlockDirections.DOWN);
-                allowedDirections.add(BlockDirections.UP);
-                allowedDirections.add(BlockDirections.RIGHT);
-                allowedDirections.add(BlockDirections.LEFT);
+                // if it's the maze entrance, demolish the wall
+                if(v.getI() == 0 && v.getJ() == 0) {
+                    allowedDirections.add(BlockDirections.LEFT);
+                }
 
                 MazeRoom mr = new MazeRoom(batch, world, newX, y, allowedDirections);
-
                 drawableMaze.add(mr);
                 newX += mr.getSize();
                 brSize = mr.getSize();
@@ -37,6 +36,26 @@ public class DrawableMaze implements Drawable {
             newX = x;
             y -= brSize;
         }
+    }
+
+    private Array<BlockDirections> getDirections(Vertex v) {
+        Array<BlockDirections> allowedDirections = new Array<>();
+        Array<Vertex> neighbours = v.getNeighbours();
+
+        for (Vertex n: neighbours) {
+            if(v.getI() + 1 == n.getI()) {
+                allowedDirections.add(BlockDirections.DOWN);
+            } else if(v.getI() - 1 == n.getI()) {
+                allowedDirections.add(BlockDirections.UP);
+            } else if(v.getJ() + 1 == n.getJ()) {
+                allowedDirections.add(BlockDirections.RIGHT);
+            } else if(v.getJ() - 1 == n.getJ()) {
+                allowedDirections.add(BlockDirections.LEFT);
+
+            }
+        }
+
+        return allowedDirections;
     }
 
     @Override
