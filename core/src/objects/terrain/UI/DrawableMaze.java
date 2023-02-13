@@ -1,24 +1,27 @@
-package objects;
+package objects.terrain.UI;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
+import helpers.GameInfo;
+import objects.Drawable;
+import objects.terrain.back_end.Maze;
+import objects.terrain.back_end.Vertex;
+
 public class DrawableMaze implements Drawable {
-   private Array<Array<Vertex>> maze;
-   private Array<MazeRoom> drawableMaze = new Array<>();
-   private SpriteBatch batch;
-   private World world;
+    private final Array<MazeRoom> drawableMaze = new Array<>();
 
     public DrawableMaze(SpriteBatch batch, World world, float x, float y) {
-        this.batch = batch;
-        this.world = world;
         float newX = x;
         float brSize = 0;
 
         Maze m = new Maze();
-        m.printToConsole();
-        maze = m.getVertices();
+        if(GameInfo.DEBUG_MODE) {
+            m.printToConsole();
+        }
+        Array<Array<Vertex>> maze = m.getVertices();
+
         for(Array<Vertex> row: maze) {
             for(Vertex v: row) {
                 Array<BlockDirections> allowedDirections = getDirections(v);

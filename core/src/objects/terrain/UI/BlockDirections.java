@@ -1,4 +1,4 @@
-package objects;
+package objects.terrain.UI;
 
 public enum BlockDirections {
     UP,

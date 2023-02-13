@@ -1,4 +1,4 @@
-package objects;
+package objects.terrain.UI;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.BodyDef;
@@ -6,12 +6,14 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
 import helpers.GameInfo;
+import objects.AtomicObject;
+import objects.Drawable;
 
-public class BasicRoom implements Drawable{
+public class BasicRoom implements Drawable {
     private final Array<AtomicObject> blocks = new Array<>();
     protected final World world;
-    private SpriteBatch batch;
-    private float blockSize;
+    private final SpriteBatch batch;
+    private final float blockSize;
 
     public BasicRoom(SpriteBatch batch, World world, float startX, float startY) {
         this.batch = batch;

@@ -37,6 +37,16 @@ public class GameInfo {
     public static final float PLAYER_MAX_SPEED = 5f;
     public static final float PLAYER_HORIZONTAL_IMPULSE = 0.8f;
 
+    // MAZE
+    public static final int NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE = 10;
+
+    // MAZE ROOM
+    public static final int[] CENTER_ATOMIC_OBJECTS_INDICES = {5, 6, 9, 10};
+    public static final int[] LEFT_ATOMIC_OBJECTS_INDICES = {4, 8};
+    public static final int[] RIGHT_ATOMIC_OBJECTS_INDICES = {7, 11};
+    public static final int[] UP_ATOMIC_OBJECTS_INDICES = {13, 14};
+    public static final int[] DOWN_ATOMIC_OBJECTS_INDICES = {1, 2};
+
     // PLATFORM
     public static final int NUMBER_OF_BASIC_ROOMS_IN_PLATFORM = 3;
 

@@ -1,16 +1,16 @@
-package objects;
+package objects.terrain.UI;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
 import helpers.GameInfo;
+import objects.Drawable;
+import objects.terrain.UI.BasicRoom;
 
-public class Platform implements Drawable{
+public class Platform implements Drawable {
     private final int numberOfRooms = GameInfo.NUMBER_OF_BASIC_ROOMS_IN_PLATFORM;
-    private Array<BasicRoom> rooms = new Array<BasicRoom>();
-    private SpriteBatch batch;
-    private World world;
+    private final Array<BasicRoom> rooms = new Array<>();
 
     public Platform(SpriteBatch batch, World world, float initialX, float initialY) {
         for (int i = 0; i < numberOfRooms; i++) {

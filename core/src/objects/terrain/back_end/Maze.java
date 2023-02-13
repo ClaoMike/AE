@@ -1,10 +1,12 @@
-package objects;
+package objects.terrain.back_end;
 
 import com.badlogic.gdx.utils.Array;
 
+import helpers.GameInfo;
+
 public class Maze {
-    private int rows = 10;
-    private Array<Array<Vertex>> vertices = new Array<>();
+    private final int rows = GameInfo.NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE;
+    private final Array<Array<Vertex>> vertices = new Array<>();
 
     public Maze() {
         for (int i = 0; i < rows; i++) {
@@ -94,7 +96,7 @@ public class Maze {
                     System.out.println("Vertex with i: " + neighbour.getI() + ", j: " + neighbour.getJ() + ";");
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 

@@ -1,10 +1,11 @@
-package objects;
+package objects.terrain.back_end;
 
 import com.badlogic.gdx.utils.Array;
 
 public class Vertex {
-    boolean visited = false;
-    int i, j;
+    private boolean visited = false;
+    private final int i;
+    private final int j;
     Array<Vertex> neighbours = new Array<>();
 
     public Vertex(int i, int j) {

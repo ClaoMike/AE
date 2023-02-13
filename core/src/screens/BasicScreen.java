@@ -9,26 +9,24 @@ import com.badlogic.gdx.physics.box2d.*;
 import cameras.FollowingCamera;
 import dev.clao.GameMain;
 import helpers.GameInfo;
-import objects.DrawableMaze;
-import objects.MainPlayer;
-import objects.Maze;
-import objects.PlayerAction;
-import objects.WorldTerrainGenerator;
+import objects.player.MainPlayer;
+import objects.player.PlayerAction;
+import objects.terrain.WorldTerrainGenerator;
 
 public class BasicScreen implements Screen {
     private final GameMain game;
     private final World world;
     private final SpriteBatch spriteBatch;
-    private MainPlayer player;
+    private final MainPlayer player;
     private final FollowingCamera camera;
-    private WorldTerrainGenerator terrainGenerator;
+    private final WorldTerrainGenerator terrainGenerator;
 
-    public BasicScreen(GameMain game, boolean debugMode) {
+    public BasicScreen(GameMain game) {
         this.game = game;
         this.spriteBatch = game.getBatch();
         this.world = new World(GameInfo.GRAVITY, GameInfo.WORLD_DO_SLEEP);
 
-        player = new MainPlayer(GameInfo.PLAYER, GameInfo.WIDTH/2, GameInfo.HEIGHT/2, world, BodyDef.BodyType.DynamicBody, 1.0f);
+        player = new MainPlayer(GameInfo.PLAYER, GameInfo.WIDTH/2f, GameInfo.HEIGHT/2f, world, BodyDef.BodyType.DynamicBody, 1.0f);
         terrainGenerator = new WorldTerrainGenerator(spriteBatch, world);
 
         camera = new FollowingCamera(spriteBatch, world, GameInfo.WIDTH, GameInfo.HEIGHT, player);

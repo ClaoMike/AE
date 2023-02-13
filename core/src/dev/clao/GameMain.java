@@ -3,7 +3,6 @@ package dev.clao;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import helpers.GameInfo;
 import screens.BasicScreen;
 
 /**
@@ -20,7 +19,7 @@ public class GameMain extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		setScreen(new BasicScreen(this, GameInfo.DEBUG_MODE));
+		setScreen(new BasicScreen(this));
 	}
 
 	@Override

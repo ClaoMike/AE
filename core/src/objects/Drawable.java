@@ -1,7 +1,7 @@
 package objects;
 
 public interface Drawable {
-    public void draw();
-    public void updatePosition();
-    public void dispose();
+    void draw();
+    void updatePosition();
+    void dispose();
 }

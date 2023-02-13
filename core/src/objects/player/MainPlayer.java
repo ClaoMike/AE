@@ -1,4 +1,4 @@
-package objects;
+package objects.player;
 
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -6,9 +6,10 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 
 import helpers.GameInfo;
+import objects.AtomicObject;
 
 public class MainPlayer extends AtomicObject {
-    private Body body;
+    private final Body body;
 
     public MainPlayer(String filename, float x, float y, World world, BodyDef.BodyType type, float density) {
         super(filename, x, y, world, type, density);
@@ -28,15 +29,13 @@ public class MainPlayer extends AtomicObject {
                 }
                 break;
             case GO_UP:
-                // TODO: update this based on collisions with walls and maximul speed
+                // TODO: update this based on collisions with walls and maximum speed
                 applyImpulse(0, GameInfo.PLAYER_HORIZONTAL_IMPULSE);
                 break;
             case GO_DOWN:
-                // TODO: update this based on collisions with walls and maximul speed
+                // TODO: update this based on collisions with walls and maximum speed
                 applyImpulse(0, -GameInfo.PLAYER_HORIZONTAL_IMPULSE);
                 break;
-            default:
-                System.out.println("Not implemented yet");
         }
     }
 
