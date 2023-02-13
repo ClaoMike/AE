@@ -10,7 +10,7 @@ import com.badlogic.gdx.math.Vector2;
 public class GameInfo {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // MAIN
-    public static final boolean DEBUG_MODE = false;
+    public static final boolean DEBUG_MODE = true;
     public static final int PPM = 100;
 
     // DESKTOP LAUNCHER

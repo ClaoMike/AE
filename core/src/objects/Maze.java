@@ -3,7 +3,7 @@ package objects;
 import com.badlogic.gdx.utils.Array;
 
 public class Maze {
-    private int rows = 5;
+    private int rows = 10;
     private Array<Array<Vertex>> vertices = new Array<>();
 
     public Maze() {
