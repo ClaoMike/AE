@@ -9,13 +9,15 @@ import cameras.FollowingCamera;
 import dev.clao.GameMain;
 import helpers.GameInfo;
 import objects.AtomicObject;
+import objects.WorldTerrainGenerator;
 
 public class BasicScreen implements Screen {
     private final GameMain game;
     private final World world;
     private final SpriteBatch spriteBatch;
-    private AtomicObject a1, a2;
+    private AtomicObject a1;
     private final FollowingCamera camera;
+    private WorldTerrainGenerator terrainGenerator;
 
     public BasicScreen(GameMain game, boolean debugMode) {
         this.game = game;
@@ -30,14 +32,7 @@ public class BasicScreen implements Screen {
                 world,
                 BodyDef.BodyType.DynamicBody,
                 1.0f);
-        //noinspection IntegerDivisionInFloatingPointContext
-        a2 = new AtomicObject(
-                GameInfo.PLAYER,
-                GameInfo.WIDTH/3,
-                GameInfo.HEIGHT/3,
-                world,
-                BodyDef.BodyType.StaticBody,
-                1.0f);
+        terrainGenerator = new WorldTerrainGenerator(spriteBatch, world);
 
         camera = new FollowingCamera(spriteBatch, world, GameInfo.WIDTH, GameInfo.HEIGHT, a1);
     }
@@ -48,13 +43,13 @@ public class BasicScreen implements Screen {
         world.step(Gdx.graphics.getDeltaTime(), GameInfo.VELOCITY_ITERATIONS, GameInfo.POSITION_ITERATIONS);
 
         a1.updatePosition();
-        a2.updatePosition();
+        terrainGenerator.updatePosition();
 
         camera.update();
 
         spriteBatch.begin();
         a1.draw(spriteBatch);
-        a2.draw(spriteBatch);
+        terrainGenerator.draw();
         spriteBatch.end();
 
         camera.render();
@@ -66,7 +61,7 @@ public class BasicScreen implements Screen {
         camera.dispose();
         spriteBatch.dispose();
         a1.dispose();
-        a2.dispose();
+        terrainGenerator.dispose();
     }
 
     @Override
