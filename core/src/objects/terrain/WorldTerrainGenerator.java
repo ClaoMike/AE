@@ -44,24 +44,31 @@ public class WorldTerrainGenerator implements Drawable {
 
     private void createMaze() {
         maze = new DrawableMaze(batch, world, initalX, initalY);
+
+        // update x and y for the end platform
+        initalX += maze.getWidth();
+        initalY = maze.getExitY();
     }
 
     private void createEndPlatform() {
-
+        endPlatform = new Platform(batch, world, initalX, initalY);
     }
 
     public void draw() {
         startPlatform.draw();
         maze.draw();
+        endPlatform.draw();
     }
 
     public void updatePosition() {
         startPlatform.updatePosition();
         maze.updatePosition();
+        endPlatform.updatePosition();
     }
 
     public void dispose() {
         startPlatform.dispose();
         maze.dispose();
+        endPlatform.dispose();
     }
 }
