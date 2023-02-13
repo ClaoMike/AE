@@ -9,6 +9,7 @@ import com.badlogic.gdx.physics.box2d.*;
 import cameras.FollowingCamera;
 import dev.clao.GameMain;
 import helpers.GameInfo;
+import objects.DrawableMaze;
 import objects.MainPlayer;
 import objects.Maze;
 import objects.PlayerAction;
@@ -22,8 +23,6 @@ public class BasicScreen implements Screen {
     private final FollowingCamera camera;
     private WorldTerrainGenerator terrainGenerator;
 
-    Maze maze;
-
     public BasicScreen(GameMain game, boolean debugMode) {
         this.game = game;
         this.spriteBatch = game.getBatch();
@@ -33,9 +32,6 @@ public class BasicScreen implements Screen {
         terrainGenerator = new WorldTerrainGenerator(spriteBatch, world);
 
         camera = new FollowingCamera(spriteBatch, world, GameInfo.WIDTH, GameInfo.HEIGHT, player);
-
-        maze = new Maze();
-        maze.printToConsole();
     }
 
     @Override

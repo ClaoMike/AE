@@ -9,7 +9,7 @@ import helpers.GameInfo;
 
 public class BasicRoom implements Drawable{
     private final Array<AtomicObject> blocks = new Array<>();
-    private final World world;
+    protected final World world;
     private SpriteBatch batch;
     private float blockSize;
 
@@ -61,6 +61,10 @@ public class BasicRoom implements Drawable{
 
     public float getSize() {
         return blockSize;
+    }
+
+    protected Array<AtomicObject> getBlocks() {
+        return blocks;
     }
 }
 

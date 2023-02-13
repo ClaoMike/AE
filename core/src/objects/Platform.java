@@ -40,4 +40,8 @@ public class Platform implements Drawable{
             room.dispose();
         }
     }
+
+    public float getWidth() {
+        return numberOfRooms * rooms.get(0).getSize();
+    }
 }

@@ -3,8 +3,8 @@ package objects;
 import com.badlogic.gdx.utils.Array;
 
 public class Maze {
-    int rows = 5;
-    Array<Array<Vertex>> vertices = new Array<>();
+    private int rows = 5;
+    private Array<Array<Vertex>> vertices = new Array<>();
 
     public Maze() {
         for (int i = 0; i < rows; i++) {
@@ -96,5 +96,9 @@ public class Maze {
             }
             System.out.println("");
         }
+    }
+
+    public Array<Array<Vertex>> getVertices() {
+        return vertices;
     }
 }
