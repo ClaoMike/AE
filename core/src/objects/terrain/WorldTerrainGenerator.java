@@ -35,7 +35,7 @@ public class WorldTerrainGenerator implements Drawable {
 
         // update x and y for the maze
         BasicRoom br = new BasicRoom(batch, world, 0, 0);
-        AtomicObject ao = new AtomicObject(GameInfo.PLAYER, 0, 0, world, BodyDef.BodyType.StaticBody, 1, false);
+        AtomicObject ao = new AtomicObject(GameInfo.PLAYER, 0, 0, world, BodyDef.BodyType.StaticBody, 1, false, false);
         initalY = br.getSize() - ao.getHeight();
         initalX = startPlatform.getWidth();
         br.dispose();

@@ -16,13 +16,13 @@ import helpers.GameInfo;
 public class AtomicObject extends Sprite {
     private Body body;
 
-    public AtomicObject(String filename, float x, float y, World world, BodyDef.BodyType type, float density, boolean isCircle) {
+    public AtomicObject(String filename, float x, float y, World world, BodyDef.BodyType type, float density, boolean isCircle, boolean isSensor) {
         super(new Texture(Gdx.files.internal(filename)));
 
         createBody(x, y, type, world);
         setUserData(removeFileExtension(filename));
         Shape shape = createShape(isCircle);
-        createFixture(shape, density);
+        createFixture(shape, density, isSensor);
 
 
     }
@@ -62,10 +62,11 @@ public class AtomicObject extends Sprite {
         }
     }
 
-    private void createFixture(Shape shape, float density) {
+    private void createFixture(Shape shape, float density, boolean isSensor) {
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
         fixtureDef.density = density;
+        fixtureDef.isSensor = isSensor;
 
         body.createFixture(fixtureDef);
         shape.dispose();
