@@ -11,6 +11,7 @@ import dev.clao.GameMain;
 import helpers.GameInfo;
 import objects.player.MainPlayer;
 import objects.player.PlayerAction;
+import objects.player.PlayerContactListener;
 import objects.terrain.WorldTerrainGenerator;
 
 public class BasicScreen implements Screen {
@@ -75,7 +76,7 @@ public class BasicScreen implements Screen {
 
     @Override
     public void show() {
-
+        world.setContactListener(new PlayerContactListener(player));
     }
 
     @Override

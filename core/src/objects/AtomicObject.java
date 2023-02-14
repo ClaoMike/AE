@@ -20,9 +20,11 @@ public class AtomicObject extends Sprite {
         super(new Texture(Gdx.files.internal(filename)));
 
         createBody(x, y, type, world);
-
+        setUserData(removeFileExtension(filename));
         Shape shape = createShape(isCircle);
         createFixture(shape, density);
+
+
     }
 
     public void updatePosition() {
@@ -45,6 +47,7 @@ public class AtomicObject extends Sprite {
         bodyDef.type = type;
         bodyDef.position.set(x / GameInfo.PPM, y / GameInfo.PPM);
         body = world.createBody(bodyDef);
+        body.setUserData("lol");
     }
 
     private Shape createShape(boolean isCircleShape) {
@@ -66,5 +69,13 @@ public class AtomicObject extends Sprite {
 
         body.createFixture(fixtureDef);
         shape.dispose();
+    }
+
+    private void setUserData(String userData) {
+        body.setUserData(userData);
+    }
+
+    private String removeFileExtension(String filename) {
+        return filename.replaceAll(".png", "");
     }
 }
