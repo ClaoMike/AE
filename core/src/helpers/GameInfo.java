@@ -34,8 +34,12 @@ public class GameInfo {
     public static final int POSITION_ITERATIONS = 2;
 
     // MAIN PLAYER
-    public static final float PLAYER_MAX_SPEED = 5f;
+    public static final float PLAYER_HORIZONTAL_MAX_SPEED = 5f;
     public static final float PLAYER_HORIZONTAL_IMPULSE = 0.8f;
+
+    public static final float PLAYER_UPWARDS_MAX_SPEED = 3f;
+    public static final float PLAYER_UPWARDS_IMPULSE = 0.8f;
+    public static final float PLAYER_DOWNWARDS_IMPULSE = 0.9f;
 
     // MAZE
     public static final int NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE = 10;

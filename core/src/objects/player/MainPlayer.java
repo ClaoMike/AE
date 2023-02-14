@@ -19,22 +19,24 @@ public class MainPlayer extends AtomicObject {
     public void performAction(PlayerAction action) {
         switch (action){
             case GO_LEFT:
-                if(body.getLinearVelocity().x > -GameInfo.PLAYER_MAX_SPEED) {
+                if(body.getLinearVelocity().x > -GameInfo.PLAYER_HORIZONTAL_MAX_SPEED) {
                     applyImpulse(-GameInfo.PLAYER_HORIZONTAL_IMPULSE, 0);
                 }
                 break;
             case GO_RIGHT:
-                if(body.getLinearVelocity().x < GameInfo.PLAYER_MAX_SPEED) {
+                if(body.getLinearVelocity().x < GameInfo.PLAYER_HORIZONTAL_MAX_SPEED) {
                     applyImpulse(GameInfo.PLAYER_HORIZONTAL_IMPULSE, 0);
                 }
                 break;
             case GO_UP:
-                // TODO: update this based on collisions with walls and maximum speed
-                applyImpulse(0, GameInfo.PLAYER_HORIZONTAL_IMPULSE);
+                // TODO: update this based on collisions with walls
+                if(body.getLinearVelocity().y < GameInfo.PLAYER_UPWARDS_MAX_SPEED) {
+                    applyImpulse(0, GameInfo.PLAYER_UPWARDS_IMPULSE);
+                }
                 break;
             case GO_DOWN:
-                // TODO: update this based on collisions with walls and maximum speed
-                applyImpulse(0, -GameInfo.PLAYER_HORIZONTAL_IMPULSE);
+                // TODO: update this based on collisions with walls
+                moveDown();
                 break;
         }
     }
@@ -47,6 +49,10 @@ public class MainPlayer extends AtomicObject {
                 bodyPosition.x,
                 bodyPosition.y,
                 true);
+    }
+
+    private void moveDown() {
+        body.setLinearVelocity(0, body.getLinearVelocity().y * GameInfo.PLAYER_DOWNWARDS_IMPULSE);
     }
 
 }
