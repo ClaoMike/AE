@@ -38,7 +38,7 @@ public class GameInfo {
     public static final float PLAYER_HORIZONTAL_IMPULSE = 0.8f;
 
     // MAZE
-    public static final int NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE = 4;
+    public static final int NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE = 10;
 
     // MAZE ROOM
     public static final int[] CENTER_ATOMIC_OBJECTS_INDICES = {5, 6, 9, 10};
