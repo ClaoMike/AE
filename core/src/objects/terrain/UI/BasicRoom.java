@@ -31,7 +31,8 @@ public class BasicRoom implements Drawable {
                         startY,
                         world,
                         BodyDef.BodyType.StaticBody,
-                        1);
+                        1,
+                        false);
                 blocks.add(ao);
                 x += ao.getWidth();
                 blockHeight = ao.getHeight();

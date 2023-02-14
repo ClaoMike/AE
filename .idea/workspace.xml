@@ -12,9 +12,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/cameras/FollowingCamera.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/cameras/FollowingCamera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/helpers/GameInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/helpers/GameInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/AtomicObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/AtomicObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/MainPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/MainPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/BasicRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/BasicRoom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/DrawableMaze.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/DrawableMaze.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/WorldTerrainGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/WorldTerrainGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/helpers/GameInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/helpers/GameInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/AtomicObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/AtomicObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/objects/player/MainPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/player/MainPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/UI/BasicRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/terrain/UI/BasicRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/WorldTerrainGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/terrain/WorldTerrainGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -24,6 +24,9 @@ public class GameInfo {
     public static final String DIRT = "dirt.png";
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
+    // ATOMIC OBJECT
+    public static final float CIRCLE_SHAPE_RADIUS = 0.5f;
+
     // BASIC ROOM
     public static final int NUMBER_OF_BLOCKS_IN_BASIC_ROOM = 4;
 

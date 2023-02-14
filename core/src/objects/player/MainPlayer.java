@@ -12,7 +12,7 @@ public class MainPlayer extends AtomicObject {
     private final Body body;
 
     public MainPlayer(String filename, float x, float y, World world, BodyDef.BodyType type, float density) {
-        super(filename, x, y, world, type, density);
+        super(filename, x, y, world, type, density, true);
         body = getBody();
         body.setFixedRotation(true);
     }

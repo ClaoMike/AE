@@ -5,33 +5,24 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
+import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 
 import helpers.GameInfo;
 
 public class AtomicObject extends Sprite {
-    private final Body body;
+    private Body body;
 
-    public AtomicObject(String filename, float x, float y, World world, BodyDef.BodyType type, float density) {
+    public AtomicObject(String filename, float x, float y, World world, BodyDef.BodyType type, float density, boolean isCircle) {
         super(new Texture(Gdx.files.internal(filename)));
 
-        BodyDef bodyDef = new BodyDef();
-        bodyDef.type = type;
-        bodyDef.position.set(x / GameInfo.PPM, y / GameInfo.PPM);
-        body = world.createBody(bodyDef);
+        createBody(x, y, type, world);
 
-        PolygonShape shape = new PolygonShape();
-        shape.setAsBox(getWidth() / 2 / GameInfo.PPM, getHeight() / 2 / GameInfo.PPM);
-
-        FixtureDef fixtureDef = new FixtureDef();
-        fixtureDef.shape = shape;
-        fixtureDef.density = density;
-
-        body.createFixture(fixtureDef);
-
-        shape.dispose();
+        Shape shape = createShape(isCircle);
+        createFixture(shape, density);
     }
 
     public void updatePosition() {
@@ -47,5 +38,33 @@ public class AtomicObject extends Sprite {
 
     public void dispose() {
         getTexture().dispose();
+    }
+
+    private void createBody(float x, float y, BodyDef.BodyType type, World world) {
+        BodyDef bodyDef = new BodyDef();
+        bodyDef.type = type;
+        bodyDef.position.set(x / GameInfo.PPM, y / GameInfo.PPM);
+        body = world.createBody(bodyDef);
+    }
+
+    private Shape createShape(boolean isCircleShape) {
+        if(isCircleShape) {
+            CircleShape shape = new CircleShape();
+            shape.setRadius(GameInfo.CIRCLE_SHAPE_RADIUS);
+            return shape;
+        } else {
+            PolygonShape shape = new PolygonShape();
+            shape.setAsBox(getWidth() / 2 / GameInfo.PPM, getHeight() / 2 / GameInfo.PPM);
+            return shape;
+        }
+    }
+
+    private void createFixture(Shape shape, float density) {
+        FixtureDef fixtureDef = new FixtureDef();
+        fixtureDef.shape = shape;
+        fixtureDef.density = density;
+
+        body.createFixture(fixtureDef);
+        shape.dispose();
     }
 }
