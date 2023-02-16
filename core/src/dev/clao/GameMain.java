@@ -4,6 +4,7 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import screens.BasicScreen;
+import screens.MainMenuScreen;
 
 /**
  * Busy with creating a sprite batch for drawing textures;
@@ -19,7 +20,8 @@ public class GameMain extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		setScreen(new BasicScreen(this));
+//		setScreen(new BasicScreen(this));
+		setScreen(new MainMenuScreen(this));
 	}
 
 	@Override

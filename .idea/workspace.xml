@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/buttons/credits.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/buttons/exit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/buttons/play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/buttons/settings.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/screens/MainMenuScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,22 +17,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/cameras/FollowingCamera.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/helpers/GameInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/AtomicObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/AtomicObject.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/MainPlayer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/MainPlayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/PlayerAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/PlayerContactListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/BasicRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/BasicRoom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/WorldTerrainGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/WorldTerrainGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/screens/BasicScreen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/AtomicObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/AtomicObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/player/MainPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/player/MainPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/UI/BasicRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/terrain/UI/BasicRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/WorldTerrainGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/terrain/WorldTerrainGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/helpers/GameInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/helpers/GameInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/helpers/GameInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/helpers/GameInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,16 +42,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets/buttons",
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/buttons" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/buttons" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="objects.terrain.back_end" />
       <recent name="objects.terrain.UI" />

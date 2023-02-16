@@ -36,6 +36,12 @@ public class GameInfo {
     public static final int VELOCITY_ITERATIONS = 6;
     public static final int POSITION_ITERATIONS = 2;
 
+    // MAIN MENU
+    public static final String PLAY_BUTTON_FILENAME = "buttons/play.png";
+    public static final String SETTINGS_BUTTON_FILENAME = "buttons/settings.png";
+    public static final String CREDITS_BUTTON_FILENAME = "buttons/credits.png";
+    public static final String EXIT_BUTTON_FILENAME = "buttons/exit.png";
+
     // MAIN PLAYER
     public static final float PLAYER_HORIZONTAL_MAX_SPEED = 5f;
     public static final float PLAYER_HORIZONTAL_IMPULSE = 0.8f;
