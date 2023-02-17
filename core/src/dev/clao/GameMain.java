@@ -20,13 +20,28 @@ public class GameMain extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-//		setScreen(new BasicScreen(this));
 		setScreen(new MainMenuScreen(this));
 	}
 
 	@Override
 	public void render () {
 		super.render();
+	}
+
+	public void gotToPlay() {
+		setScreen(new BasicScreen(this));
+	}
+
+	public void goToSettings() {
+		System.out.println("Go to settings implementation needed");
+	}
+
+	public void goToCredits() {
+		System.out.println("Go to credits implementation needed");
+	}
+
+	public void exit() {
+
 	}
 
 }
