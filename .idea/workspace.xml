@@ -5,21 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/core/src/screens/CustomButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/screens/MainMenuScreen$CustomButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/cameras/FollowingCamera.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/cameras/FollowingCamera.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/AtomicObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/Drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/MainPlayer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/MainPlayer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/PlayerAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/player/PlayerContactListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/BasicRoom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/BlockDirections.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/DrawableMaze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/MazeRoom$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/MazeRoom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/UI/Platform.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/WorldTerrainGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/back_end/Maze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/terrain/back_end/Vertex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/screens/BasicScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/screens/BasicScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/screens/CustomButton.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/screens/MainMenuScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/screens/MainMenuScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/cameras/FollowingCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/cameras/FollowingCamera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/helpers/GameInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/helpers/GameInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/AtomicObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/AtomicObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/Drawable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/Drawable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/player/MainPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/player/MainPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/player/PlayerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/player/PlayerAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/player/PlayerContactListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/player/PlayerContactListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/UI/BasicRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/UI/BasicRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/UI/BlockDirections.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/UI/BlockDirections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/UI/DrawableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/UI/DrawableMaze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/UI/MazeRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/UI/MazeRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/UI/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/UI/Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/WorldTerrainGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/WorldTerrainGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/back_end/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/back_end/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/terrain/back_end/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/back_end/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/screens/BasicScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/screens/BasicScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/screens/CustomButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/main_menu/CustomButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/screens/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/screens/MainMenuScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
@@ -76,10 +106,11 @@
       <recent name="$PROJECT_DIR$/assets/buttons" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="objects.gameplay" />
+      <recent name="objects.main_menu" />
+      <recent name="objects" />
       <recent name="objects.terrain.back_end" />
       <recent name="objects.terrain.UI" />
-      <recent name="objects.player" />
-      <recent name="objects.terrain" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

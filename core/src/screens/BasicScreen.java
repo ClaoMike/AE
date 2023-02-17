@@ -9,10 +9,10 @@ import com.badlogic.gdx.physics.box2d.*;
 import cameras.FollowingCamera;
 import dev.clao.GameMain;
 import helpers.GameInfo;
-import objects.player.MainPlayer;
-import objects.player.PlayerAction;
-import objects.player.PlayerContactListener;
-import objects.terrain.WorldTerrainGenerator;
+import objects.gameplay.player.MainPlayer;
+import objects.gameplay.player.PlayerAction;
+import objects.gameplay.player.PlayerContactListener;
+import objects.gameplay.terrain.WorldTerrainGenerator;
 
 public class BasicScreen implements Screen {
     private final GameMain game;
@@ -57,9 +57,9 @@ public class BasicScreen implements Screen {
     public void dispose() {
         world.dispose();
         camera.dispose();
-        spriteBatch.dispose();
         player.dispose();
         terrainGenerator.dispose();
+        spriteBatch.dispose();
     }
 
     private void detectUserInput() {

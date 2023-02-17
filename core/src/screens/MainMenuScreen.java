@@ -4,9 +4,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.physics.box2d.World;
 import dev.clao.GameMain;
 import helpers.GameInfo;
+import objects.main_menu.CustomButton;
 
 public class MainMenuScreen implements Screen {
     private final GameMain game;
@@ -17,16 +17,17 @@ public class MainMenuScreen implements Screen {
         this.game = game;
         this.spriteBatch = game.getBatch();
 
-        playButton = createButton(GameInfo.PLAY_BUTTON_FILENAME, 7f);
-        settingsButton = createButton(GameInfo.SETTINGS_BUTTON_FILENAME, 5f);
-        creditsButton = createButton(GameInfo.CREDITS_BUTTON_FILENAME, 3f);
-        exitButton = createButton(GameInfo.EXIT_BUTTON_FILENAME, 1f);
-
+        playButton = createButton(GameInfo.PLAY_BUTTON_FILENAME, GameInfo.PLAY_BUTTON_POSITION);
+        settingsButton = createButton(GameInfo.SETTINGS_BUTTON_FILENAME, GameInfo.SETTINGS_BUTTON_POSITION);
+        creditsButton = createButton(GameInfo.CREDITS_BUTTON_FILENAME, GameInfo.CREDITS_BUTTON_POSITION);
+        exitButton = createButton(GameInfo.EXIT_BUTTON_FILENAME, GameInfo.EXIT_BUTTON_POSITION);
     }
 
     private CustomButton createButton(String filename, float percentageOfScreenEight) {
         CustomButton button =  new CustomButton(filename, spriteBatch);
-        button.updatePosition(GameInfo.WIDTH/2f -  button.getWidth()/2, (GameInfo.HEIGHT -  button.getHeight())/10*percentageOfScreenEight);
+        button.updatePosition(
+                GameInfo.WIDTH/2f -  button.getWidth()/2,
+                (GameInfo.HEIGHT -  button.getHeight())/GameInfo.NUMBER_OF_SCREEN_DIVISIONS*percentageOfScreenEight);
 
         return button;
     }

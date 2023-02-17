@@ -37,10 +37,15 @@ public class GameInfo {
     public static final int POSITION_ITERATIONS = 2;
 
     // MAIN MENU
+    public static final float NUMBER_OF_SCREEN_DIVISIONS = 10f;
     public static final String PLAY_BUTTON_FILENAME = "buttons/play.png";
+    public static final float PLAY_BUTTON_POSITION = 7f;
     public static final String SETTINGS_BUTTON_FILENAME = "buttons/settings.png";
+    public static final float SETTINGS_BUTTON_POSITION = 5f;
     public static final String CREDITS_BUTTON_FILENAME = "buttons/credits.png";
+    public static final float CREDITS_BUTTON_POSITION = 3f;
     public static final String EXIT_BUTTON_FILENAME = "buttons/exit.png";
+    public static final float EXIT_BUTTON_POSITION = 1f;
 
     // MAIN PLAYER
     public static final float PLAYER_HORIZONTAL_MAX_SPEED = 5f;
