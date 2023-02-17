@@ -1,21 +1,15 @@
 package screens;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import dev.clao.GameMain;
 import helpers.GameInfo;
 import objects.main_menu.CustomButton;
 
-public class MainMenuScreen implements Screen {
-    private final GameMain game;
-    private final SpriteBatch spriteBatch;
+public class MainMenuScreen extends BasicScreen implements BasicScreenMethods {
     private final CustomButton playButton, settingsButton,  creditsButton, exitButton;
 
     public MainMenuScreen(GameMain game) {
-        this.game = game;
-        this.spriteBatch = game.getBatch();
+        super(game);
 
         playButton = createButton(GameInfo.PLAY_BUTTON_FILENAME, GameInfo.PLAY_BUTTON_POSITION);
         settingsButton = createButton(GameInfo.SETTINGS_BUTTON_FILENAME, GameInfo.SETTINGS_BUTTON_POSITION);
@@ -33,18 +27,18 @@ public class MainMenuScreen implements Screen {
     }
 
     @Override
-    public void render(float delta) {
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+    public void renderBeforDrawing() {
 
-        spriteBatch.begin();
+    }
 
+    public void renderWhileDrawing() {
         playButton.draw();
         settingsButton.draw();
         creditsButton.draw();
         exitButton.draw();
+    }
 
-        spriteBatch.end();
-
+    public void renderAfterDrawing() {
         checkIfPressed();
     }
 
@@ -73,36 +67,10 @@ public class MainMenuScreen implements Screen {
     }
 
     @Override
-    public void dispose() {
+    public void disposeItems() {
         playButton.dispose();
         settingsButton.dispose();
         creditsButton.dispose();
         exitButton.dispose();
     }
-
-    @Override
-    public void show() {
-
-    }
-
-    @Override
-    public void resize(int width, int height) {
-
-    }
-
-    @Override
-    public void pause() {
-
-    }
-
-    @Override
-    public void resume() {
-
-    }
-
-    @Override
-    public void hide() {
-
-    }
-
 }
