@@ -47,7 +47,7 @@ public class GameMain extends Game {
 	}
 
 	public void exit() {
-
+		System.exit(0);
 	}
 
 }
