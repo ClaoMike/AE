@@ -1,4 +1,4 @@
-package screens;
+package screens.blueprints;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -25,14 +25,17 @@ public class BasicScreen implements Screen, BasicScreenMethods {
         renderAfterDrawing();
     }
 
+    @Override
     public void renderBeforDrawing() {
 
     }
 
+    @Override
     public void renderWhileDrawing() {
 
     }
 
+    @Override
     public void renderAfterDrawing() {
 
     }

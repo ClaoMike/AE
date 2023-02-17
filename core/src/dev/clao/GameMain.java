@@ -2,9 +2,10 @@ package dev.clao;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
+import screens.CreditsScreen;
 import screens.GameplayScreen;
 import screens.MainMenuScreen;
+import screens.SettingsScreen;
 
 /**
  * Busy with creating a sprite batch for drawing textures;
@@ -39,11 +40,11 @@ public class GameMain extends Game {
 	}
 
 	public void goToSettings() {
-		System.out.println("Go to settings implementation needed");
+		setScreen(new SettingsScreen(this));
 	}
 
 	public void goToCredits() {
-		System.out.println("Go to credits implementation needed");
+		setScreen(new CreditsScreen(this));
 	}
 
 	public void exit() {

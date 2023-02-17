@@ -10,6 +10,8 @@ import objects.gameplay.player.MainPlayer;
 import objects.gameplay.player.PlayerAction;
 import objects.gameplay.player.PlayerContactListener;
 import objects.gameplay.terrain.WorldTerrainGenerator;
+import screens.blueprints.BasicScreen;
+import screens.blueprints.BasicScreenMethods;
 
 public class GameplayScreen extends BasicScreen implements BasicScreenMethods {
     private final World world;

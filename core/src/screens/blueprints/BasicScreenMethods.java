@@ -1,4 +1,4 @@
-package screens;
+package screens.blueprints;
 
 public interface BasicScreenMethods {
     void renderBeforDrawing();

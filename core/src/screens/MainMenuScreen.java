@@ -4,6 +4,8 @@ import com.badlogic.gdx.Gdx;
 import dev.clao.GameMain;
 import helpers.GameInfo;
 import objects.main_menu.CustomButton;
+import screens.blueprints.BasicScreen;
+import screens.blueprints.BasicScreenMethods;
 
 public class MainMenuScreen extends BasicScreen implements BasicScreenMethods {
     private final CustomButton playButton, settingsButton,  creditsButton, exitButton;
