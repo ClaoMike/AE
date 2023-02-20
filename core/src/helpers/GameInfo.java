@@ -48,12 +48,13 @@ public class GameInfo {
     public static final float EXIT_BUTTON_POSITION = 1f;
 
     // MAIN PLAYER
-    public static final float PLAYER_HORIZONTAL_MAX_SPEED = 5f;
-    public static final float PLAYER_HORIZONTAL_IMPULSE = 0.8f;
+    public static final float PLAYER_MAXIMUM_HORIZONTAL_SPEED = 5f;
+    public static final float PLAYER_HORIZONTAL_FORCE = 8f;
 
-    public static final float PLAYER_UPWARDS_MAX_SPEED = 3f;
-    public static final float PLAYER_UPWARDS_IMPULSE = 0.8f;
-    public static final float PLAYER_DOWNWARDS_IMPULSE = 0.9f;
+    public static final float PLAYER_MAXIMUM_UPWARDS_SPEED = 3f;
+    public static final float PLAYER_UPWARDS_FORCE = 10f;
+    public static final float PLAYER_DOWNWARDS_FORCE = 7f;
+    public static final float NULL_FORCE = 0f;
 
     // MAZE
     public static final int NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE = 10;

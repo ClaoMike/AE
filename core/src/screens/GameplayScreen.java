@@ -1,13 +1,11 @@
 package screens;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.physics.box2d.*;
 import cameras.FollowingCamera;
 import dev.clao.GameMain;
 import helpers.GameInfo;
 import objects.gameplay.player.MainPlayer;
-import objects.gameplay.player.PlayerAction;
 import objects.gameplay.player.PlayerContactListener;
 import objects.gameplay.terrain.WorldTerrainGenerator;
 import screens.blueprints.BasicScreen;
@@ -35,10 +33,8 @@ public class GameplayScreen extends BasicScreen implements BasicScreenMethods {
     }
 
     @Override
-    public void renderBeforDrawing() {
+    public void renderBeforeDrawing() {
         world.step(Gdx.graphics.getDeltaTime(), GameInfo.VELOCITY_ITERATIONS, GameInfo.POSITION_ITERATIONS);
-
-        detectUserInput();
 
         player.updatePosition();
         terrainGenerator.updatePosition();
@@ -63,18 +59,6 @@ public class GameplayScreen extends BasicScreen implements BasicScreenMethods {
         camera.dispose();
         player.dispose();
         terrainGenerator.dispose();
-    }
-
-    private void detectUserInput() {
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-            player.performAction(PlayerAction.GO_LEFT);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-            player.performAction(PlayerAction.GO_RIGHT);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
-            player.performAction(PlayerAction.GO_UP);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-            player.performAction(PlayerAction.GO_DOWN);
-        }
     }
 
 }

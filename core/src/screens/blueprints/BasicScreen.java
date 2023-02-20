@@ -18,7 +18,7 @@ public class BasicScreen implements Screen, BasicScreenMethods {
     @Override
     public void render(float delta) {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        renderBeforDrawing();
+        renderBeforeDrawing();
         spriteBatch.begin();
         renderWhileDrawing();
         spriteBatch.end();
@@ -26,7 +26,7 @@ public class BasicScreen implements Screen, BasicScreenMethods {
     }
 
     @Override
-    public void renderBeforDrawing() {
+    public void renderBeforeDrawing() {
 
     }
 

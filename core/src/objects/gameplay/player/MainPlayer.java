@@ -8,52 +8,73 @@ import com.badlogic.gdx.physics.box2d.World;
 import helpers.GameInfo;
 import objects.gameplay.AtomicObject;
 
-public class MainPlayer extends AtomicObject {
+public class MainPlayer extends AtomicObject implements PlayerActions {
     private final Body body;
+    private final PlayerInputProcessor inputProcessor;
 
     public MainPlayer(String filename, float x, float y, World world, BodyDef.BodyType type, float density) {
         super(filename, x, y, world, type, density, true, false);
         body = getBody();
         body.setFixedRotation(true);
+        inputProcessor = new PlayerInputProcessor(this);
     }
 
-    public void performAction(PlayerAction action) {
-        switch (action){
-            case GO_LEFT:
-                if(body.getLinearVelocity().x > -GameInfo.PLAYER_HORIZONTAL_MAX_SPEED) {
-                    applyImpulse(-GameInfo.PLAYER_HORIZONTAL_IMPULSE, 0);
+    @Override
+    public void updatePosition() {
+        super.updatePosition();
+        inputProcessor.detectUserInput();
+    }
+
+    public void go(Directions direction) {
+        switch (direction){
+            case LEFT:
+                if(body.getLinearVelocity().x > -GameInfo.PLAYER_MAXIMUM_HORIZONTAL_SPEED) {
+                    applyForceToTheCenterOfTheBody(-GameInfo.PLAYER_HORIZONTAL_FORCE, GameInfo.NULL_FORCE);
+
                 }
                 break;
-            case GO_RIGHT:
-                if(body.getLinearVelocity().x < GameInfo.PLAYER_HORIZONTAL_MAX_SPEED) {
-                    applyImpulse(GameInfo.PLAYER_HORIZONTAL_IMPULSE, 0);
+            case RIGHT:
+                if(body.getLinearVelocity().x < GameInfo.PLAYER_MAXIMUM_HORIZONTAL_SPEED) {
+                    applyForceToTheCenterOfTheBody(GameInfo.PLAYER_HORIZONTAL_FORCE, GameInfo.NULL_FORCE);
                 }
                 break;
-            case GO_UP:
+            case UP:
                 // TODO: update this based on collisions with walls
-                if(body.getLinearVelocity().y < GameInfo.PLAYER_UPWARDS_MAX_SPEED) {
-                    applyImpulse(0, GameInfo.PLAYER_UPWARDS_IMPULSE);
+                if(body.getLinearVelocity().y < GameInfo.PLAYER_MAXIMUM_UPWARDS_SPEED) {
+                    applyForceToTheCenterOfTheBody(GameInfo.NULL_FORCE, GameInfo.PLAYER_UPWARDS_FORCE);
                 }
                 break;
-            case GO_DOWN:
+            case DOWN:
                 // TODO: update this based on collisions with walls
-                moveDown();
+                applyForceToTheCenterOfTheBody(GameInfo.NULL_FORCE, GameInfo.PLAYER_DOWNWARDS_FORCE);
                 break;
         }
     }
 
-    private void applyImpulse(float x, float y) {
-        Vector2 bodyPosition = body.getPosition();
-        body.applyLinearImpulse(
-                x,
-                y,
-                bodyPosition.x,
-                bodyPosition.y,
-                true);
+    @Override
+    public void stopMoving(Directions direction) {
+        switch (direction){
+            case LEFT:
+            case RIGHT:
+                stopHorizontalMovement();
+                break;
+            case UP:
+            case DOWN:
+                stopVerticalMovement();
+                break;
+        }
     }
 
-    private void moveDown() {
-        body.setLinearVelocity(0, body.getLinearVelocity().y * GameInfo.PLAYER_DOWNWARDS_IMPULSE);
+    private void applyForceToTheCenterOfTheBody(float x, float y) {
+        body.applyForceToCenter(new Vector2(x, y), true);
+    }
+
+    private void stopHorizontalMovement() {
+        body.setLinearVelocity(GameInfo.NULL_FORCE, body.getLinearVelocity().y);
+    }
+
+    private void stopVerticalMovement() {
+        body.setLinearVelocity(body.getLinearVelocity().x, GameInfo.NULL_FORCE);
     }
 
 }

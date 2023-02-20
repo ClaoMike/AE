@@ -12,7 +12,7 @@ public class CreditsScreen extends BasicScreen implements BasicScreenMethods {
     }
 
     @Override
-    public void renderBeforDrawing() {
+    public void renderBeforeDrawing() {
 
     }
 
