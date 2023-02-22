@@ -10,10 +10,11 @@ import objects.gameplay.Drawable;
 import objects.gameplay.terrain.UI.BasicRoom;
 import objects.gameplay.terrain.UI.DrawableMaze;
 import objects.gameplay.terrain.UI.Platform;
+import objects.gameplay.terrain.UI.SafeRoom;
 
 public class WorldTerrainGenerator implements Drawable {
-    private float initalX = GameInfo.START_POSITION_X;
-    private float initalY = GameInfo.START_POSITION_Y;
+    private float initalX = 0;
+    private float initalY = 0;
     private final World world;
     private final SpriteBatch batch;
 
@@ -21,13 +22,17 @@ public class WorldTerrainGenerator implements Drawable {
     private DrawableMaze maze;
     private Platform endPlatform;
 
-    public WorldTerrainGenerator(SpriteBatch batch, World world) {
+    private SafeRoom s;
+
+    public WorldTerrainGenerator(SpriteBatch batch, World world, float x, float y) {
         this.world = world;
         this.batch = batch;
 
-        createStartPlatform();
-        createMaze();
-        createEndPlatform();
+        s = new SafeRoom(batch, world, x, y);
+
+//        createStartPlatform();
+//        createMaze();
+//        createEndPlatform();
     }
 
     private void createStartPlatform() {
@@ -55,20 +60,23 @@ public class WorldTerrainGenerator implements Drawable {
     }
 
     public void draw() {
-        startPlatform.draw();
-        maze.draw();
-        endPlatform.draw();
+        s.draw();
+//        startPlatform.draw();
+//        maze.draw();
+//        endPlatform.draw();
     }
 
     public void updatePosition() {
-        startPlatform.updatePosition();
-        maze.updatePosition();
-        endPlatform.updatePosition();
+        s.updatePosition();
+//        startPlatform.updatePosition();
+//        maze.updatePosition();
+//        endPlatform.updatePosition();
     }
 
     public void dispose() {
-        startPlatform.dispose();
-        maze.dispose();
-        endPlatform.dispose();
+        s.dispose();
+//        startPlatform.dispose();
+//        maze.dispose();
+//        endPlatform.dispose();
     }
 }

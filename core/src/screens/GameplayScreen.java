@@ -21,8 +21,8 @@ public class GameplayScreen extends BasicScreen implements BasicScreenMethods {
         super(game);
         this.world = new World(GameInfo.GRAVITY, GameInfo.WORLD_DO_SLEEP);
 
-        player = new MainPlayer(GameInfo.PLAYER, GameInfo.WIDTH/2f, GameInfo.HEIGHT/2f, world, BodyDef.BodyType.DynamicBody, 1.0f);
-        terrainGenerator = new WorldTerrainGenerator(spriteBatch, world);
+        player = new MainPlayer(GameInfo.PLAYER, GameInfo.PLAYER_X, GameInfo.PLAYER_Y, world, BodyDef.BodyType.DynamicBody, 1.0f);
+        terrainGenerator = new WorldTerrainGenerator(spriteBatch, world, GameInfo.WORLD_X, GameInfo.WORLD_Y);
 
         camera = new FollowingCamera(spriteBatch, world, GameInfo.WIDTH, GameInfo.HEIGHT, player);
     }

@@ -66,8 +66,11 @@ public class GameInfo {
     public static final int NUMBER_OF_BASIC_ROOMS_IN_PLATFORM = 3;
 
     // WORLD TERRAIN GENERATOR
-    public static final float START_POSITION_X = 0;
-    public static final float START_POSITION_Y = 0;
+    public static final float WORLD_X = 200;
+    public static final float WORLD_Y = 700;
+
+    public static final float PLAYER_X = GameInfo.WIDTH/2f;
+    public static final float PLAYER_Y = GameInfo.HEIGHT/2f;
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
 }
