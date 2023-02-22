@@ -31,7 +31,7 @@ public class GameInfo {
     public static final int NUMBER_OF_BLOCKS_IN_BASIC_ROOM = 4;
 
     // BASIC SCREEN
-    public static final Vector2 GRAVITY = new Vector2(0, -9.81f); // world
+    public static final Vector2 GRAVITY = new Vector2(0, 0); // world
     public static final boolean WORLD_DO_SLEEP = true;
     public static final int VELOCITY_ITERATIONS = 6;
     public static final int POSITION_ITERATIONS = 2;
@@ -48,12 +48,8 @@ public class GameInfo {
     public static final float EXIT_BUTTON_POSITION = 1f;
 
     // MAIN PLAYER
-    public static final float PLAYER_MAXIMUM_HORIZONTAL_SPEED = 5f;
-    public static final float PLAYER_HORIZONTAL_FORCE = 8f;
-
-    public static final float PLAYER_MAXIMUM_UPWARDS_SPEED = 3f;
-    public static final float PLAYER_UPWARDS_FORCE = 10f;
-    public static final float PLAYER_DOWNWARDS_FORCE = 7f;
+    public static final float PLAYER_MAXIMUM_SPEED = 5f;
+    public static final float PLAYER_FORCE = 8f;
     public static final float NULL_FORCE = 0f;
 
     // MAZE

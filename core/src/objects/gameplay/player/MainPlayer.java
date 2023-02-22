@@ -28,39 +28,24 @@ public class MainPlayer extends AtomicObject implements PlayerActions {
     public void go(Directions direction) {
         switch (direction){
             case LEFT:
-                if(body.getLinearVelocity().x > -GameInfo.PLAYER_MAXIMUM_HORIZONTAL_SPEED) {
-                    applyForceToTheCenterOfTheBody(-GameInfo.PLAYER_HORIZONTAL_FORCE, GameInfo.NULL_FORCE);
-
+                if(body.getLinearVelocity().x > -GameInfo.PLAYER_MAXIMUM_SPEED) {
+                    applyForceToTheCenterOfTheBody(-GameInfo.PLAYER_FORCE, GameInfo.NULL_FORCE);
                 }
                 break;
             case RIGHT:
-                if(body.getLinearVelocity().x < GameInfo.PLAYER_MAXIMUM_HORIZONTAL_SPEED) {
-                    applyForceToTheCenterOfTheBody(GameInfo.PLAYER_HORIZONTAL_FORCE, GameInfo.NULL_FORCE);
+                if(body.getLinearVelocity().x < GameInfo.PLAYER_MAXIMUM_SPEED) {
+                    applyForceToTheCenterOfTheBody(GameInfo.PLAYER_FORCE, GameInfo.NULL_FORCE);
                 }
                 break;
             case UP:
-                // TODO: update this based on collisions with walls
-                if(body.getLinearVelocity().y < GameInfo.PLAYER_MAXIMUM_UPWARDS_SPEED) {
-                    applyForceToTheCenterOfTheBody(GameInfo.NULL_FORCE, GameInfo.PLAYER_UPWARDS_FORCE);
+                if(body.getLinearVelocity().y < GameInfo.PLAYER_MAXIMUM_SPEED) {
+                    applyForceToTheCenterOfTheBody(GameInfo.NULL_FORCE, GameInfo.PLAYER_FORCE);
                 }
                 break;
             case DOWN:
-                // TODO: update this based on collisions with walls
-                applyForceToTheCenterOfTheBody(GameInfo.NULL_FORCE, GameInfo.PLAYER_DOWNWARDS_FORCE);
-                break;
-        }
-    }
-
-    @Override
-    public void stopMoving(Directions direction) {
-        switch (direction){
-            case LEFT:
-            case RIGHT:
-                stopHorizontalMovement();
-                break;
-            case UP:
-            case DOWN:
-                stopVerticalMovement();
+                if(body.getLinearVelocity().y > -GameInfo.PLAYER_MAXIMUM_SPEED) {
+                    applyForceToTheCenterOfTheBody(GameInfo.NULL_FORCE, -GameInfo.PLAYER_FORCE);
+                }
                 break;
         }
     }
@@ -69,12 +54,8 @@ public class MainPlayer extends AtomicObject implements PlayerActions {
         body.applyForceToCenter(new Vector2(x, y), true);
     }
 
-    private void stopHorizontalMovement() {
-        body.setLinearVelocity(GameInfo.NULL_FORCE, body.getLinearVelocity().y);
-    }
-
-    private void stopVerticalMovement() {
-        body.setLinearVelocity(body.getLinearVelocity().x, GameInfo.NULL_FORCE);
+    public void stopMoving() {
+        body.setLinearVelocity(GameInfo.NULL_FORCE, GameInfo.NULL_FORCE);
     }
 
 }

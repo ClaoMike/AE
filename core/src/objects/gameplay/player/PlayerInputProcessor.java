@@ -13,13 +13,13 @@ public class PlayerInputProcessor implements InputProcessor {
     }
 
     public void detectUserInput() {
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
+        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
             player.go(Directions.LEFT);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
+        } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
             player.go(Directions.RIGHT);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.UP)) {
+        } else if (Gdx.input.isKeyPressed(Input.Keys.W)) {
             player.go(Directions.UP);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+        } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
             player.go(Directions.DOWN);
         }
     }
@@ -31,18 +31,15 @@ public class PlayerInputProcessor implements InputProcessor {
 
     @Override
     public boolean keyUp(int keycode) {
-        if (keycode == Input.Keys.LEFT) {
-            player.stopMoving(Directions.LEFT);
+        switch(keycode) {
+            case Input.Keys.A:
+            case Input.Keys.D:
+            case Input.Keys.W:
+            case Input.Keys.S:
+                player.stopMoving();
+                break;
         }
-        if (keycode == Input.Keys.RIGHT) {
-            player.stopMoving(Directions.RIGHT);
-        }
-        if (keycode == Input.Keys.UP) {
-            player.stopMoving(Directions.UP);
-        }
-        if (keycode == Input.Keys.DOWN) {
-            player.stopMoving(Directions.DOWN);
-        }
+
         return true;
     }
 
