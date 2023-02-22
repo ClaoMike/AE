@@ -38,11 +38,10 @@ public class FollowingCamera {
     }
 
     private void updatePosition() {
-        float extraY = GameInfo.HEIGHT/4f;
         if (GameInfo.DEBUG_MODE) {
-            updatePosition(following.getBody().getPosition().x, following.getBody().getPosition().y + extraY/ PPM);
+            updatePosition(following.getBody().getPosition().x, following.getBody().getPosition().y);
         } else {
-            updatePosition(following.getX() + following.getWidth() / 2, following.getY() + following.getHeight() / 2 + extraY);
+            updatePosition(following.getX() + following.getWidth() / 2, following.getY() + following.getHeight() / 2);
         }
     }
 
