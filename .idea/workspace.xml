@@ -4,30 +4,32 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!">
-      <change afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundImage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundMusic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/Constants.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SimpleScreen.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/BackgroundImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/BackgroundMusic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/music/background.mp3" afterDir="false" />
+    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Implement Texts and Buttons using a custom font.">
+      <change afterPath="$PROJECT_DIR$/assets/refactor/fonts/Mabook.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/refactor/json/uiskin_title.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CustomButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CustomFont.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/UIScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundImage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundMusic.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundMusic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SimpleScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SimpleScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SimpleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SimpleScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -78,12 +80,13 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets/refactor/music",
+    "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets/refactor/fonts",
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/refactor/fonts" />
       <recent name="$PROJECT_DIR$/assets/refactor/music" />
       <recent name="$PROJECT_DIR$/assets/refactor/images" />
       <recent name="$PROJECT_DIR$/assets/buttons" />
@@ -95,11 +98,11 @@
       <recent name="$PROJECT_DIR$/assets/buttons" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="refactor" />
       <recent name="screens.blueprints" />
       <recent name="objects.gameplay" />
       <recent name="objects.main_menu" />
       <recent name="objects" />
-      <recent name="objects.terrain.back_end" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -118,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678114201787</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!">
+      <created>1678120973861</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678120973861</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactor&#10;&#10;Implemented simple screen;&#10;Added a background image;&#10;Added background music;&#10;Added a StretchViewport." />
     <MESSAGE value="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!" />
+    <MESSAGE value="Refactor&#10;&#10;Implement Texts and Buttons using a custom font." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor&#10;&#10;Implement Texts and Buttons using a custom font." />
   </component>
 </project>

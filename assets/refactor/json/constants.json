@@ -1,4 +1,7 @@
 {
   "BACKGROUND_IMAGE_FILEPATH": "refactor/images/background.png",
-  "BACKGROUND_MUSIC_FILEPATH": "refactor/music/background.mp3"
+  "BACKGROUND_MUSIC_FILEPATH": "refactor/music/background.mp3",
+  "GAME_VERSION": "0.2.1",
+  "FONT_FILEPATH": "refactor/fonts/Mabook.ttf",
+  "FONT_DEFAULT_SIZE": 50
 }
