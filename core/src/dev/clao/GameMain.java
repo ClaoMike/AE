@@ -2,6 +2,8 @@ package dev.clao;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+
+import refactor.screen.blueprint.SimpleScreen;
 import screens.CreditsScreen;
 import screens.GameplayScreen;
 import screens.MainMenuScreen;
@@ -21,7 +23,7 @@ public class GameMain extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		setScreen(new MainMenuScreen(this));
+		setScreen(new SimpleScreen(this));
 	}
 
 	@Override
