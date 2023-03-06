@@ -16,4 +16,9 @@ public class Constants {
     public String PROJECT_DEVELOPER;
     public String PROJECT_SUPERVISIOR;
     public String UNIVERSITY_NAME;
+    public String DEBUG_MODE_ON;
+    public String DEBUG_MODE_OFF;
+    public int MAZE_SIZE_MIN;
+    public int MAZE_SIZE_MEDIUM;
+    public int MAZE_SIZE_MAX;
 }

@@ -12,5 +12,10 @@
   "GAME_TITLE_BOTTOM_PADDING": 100,
   "PROJECT_DEVELOPER": "Claudiu Mihai Jechel",
   "PROJECT_SUPERVISIOR": "Ke Chen",
-  "UNIVERSITY_NAME": "The University of Manchester"
+  "UNIVERSITY_NAME": "The University of Manchester",
+  "DEBUG_MODE_ON": "On",
+  "DEBUG_MODE_OFF": "Off",
+  "MAZE_SIZE_MIN": 10,
+  "MAZE_SIZE_MEDIUM": 30,
+  "MAZE_SIZE_MAX": 50
 }

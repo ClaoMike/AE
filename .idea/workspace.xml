@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Implemented the main menu screen.">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Implemented the credits screen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/ButtonTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/ButtonTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/UIScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/UIScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CreditsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CreditsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SettingsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SettingsScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678130532412</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Refactor&#10;&#10;Implemented the credits screen">
+      <created>1678131284239</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678131284239</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,6 +148,7 @@
     <MESSAGE value="Refactor&#10;&#10;Implement Texts and Buttons using a custom font." />
     <MESSAGE value="Refactor&#10;&#10;Implement Texts and Buttons using a custom font plus a Table." />
     <MESSAGE value="Refactor&#10;&#10;Implemented the main menu screen." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor&#10;&#10;Implemented the main menu screen." />
+    <MESSAGE value="Refactor&#10;&#10;Implemented the credits screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor&#10;&#10;Implemented the credits screen" />
   </component>
 </project>

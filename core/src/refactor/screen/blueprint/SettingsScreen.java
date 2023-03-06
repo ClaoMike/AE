@@ -1,4 +1,9 @@
 package refactor.screen.blueprint;
 
-public class SettingsScreen {
+import dev.clao.GameMain;
+
+public class SettingsScreen extends UIScreen {
+    public SettingsScreen(GameMain game) {
+        super(game);
+    }
 }

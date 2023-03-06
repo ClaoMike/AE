@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Json;
 
 import refactor.Constants;
-import refactor.screen.blueprint.MainMenuScreen;
 import screens.CreditsScreen;
 import screens.GameplayScreen;
 import screens.SettingsScreen;
@@ -27,7 +26,7 @@ public class GameMain extends Game {
 	public void create () {
 		loadConstants();
 		batch = new SpriteBatch();
-		setScreen(new refactor.screen.blueprint.CreditsScreen(this));
+		setScreen(new refactor.screen.blueprint.SettingsScreen(this));
 	}
 
 	@Override
