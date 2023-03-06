@@ -9,5 +9,8 @@
   "MAIN_MENU_BUTTON_SETTINGS": "Settings",
   "MAIN_MENU_BUTTON_EXIT": "Exit",
   "GAME_TITLE": "Antrum Exploratio",
-  "GAME_TITLE_BOTTOM_PADDING": 100
+  "GAME_TITLE_BOTTOM_PADDING": 100,
+  "PROJECT_DEVELOPER": "Claudiu Mihai Jechel",
+  "PROJECT_SUPERVISIOR": "Ke Chen",
+  "UNIVERSITY_NAME": "The University of Manchester"
 }

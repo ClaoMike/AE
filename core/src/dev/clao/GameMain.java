@@ -27,7 +27,7 @@ public class GameMain extends Game {
 	public void create () {
 		loadConstants();
 		batch = new SpriteBatch();
-		setScreen(new MainMenuScreen(this));
+		setScreen(new refactor.screen.blueprint.CreditsScreen(this));
 	}
 
 	@Override

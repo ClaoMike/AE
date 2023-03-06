@@ -13,4 +13,7 @@ public class Constants {
     public String MAIN_MENU_BUTTON_EXIT;
     public String GAME_TITLE;
     public int GAME_TITLE_BOTTOM_PADDING;
+    public String PROJECT_DEVELOPER;
+    public String PROJECT_SUPERVISIOR;
+    public String UNIVERSITY_NAME;
 }
