@@ -4,21 +4,30 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/refactor/images/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/refactor/music/background.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SimpleScreen.java" afterDir="false" />
+    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!">
+      <change afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundImage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundMusic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/Constants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SimpleScreen.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/BackgroundImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/BackgroundMusic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/music/background.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SimpleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SimpleScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,9 +43,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -50,6 +59,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2LsauzZjNWBC7sbm4DKnvPc3uN3" />
   <component name="ProjectLevelVcsManager">
@@ -78,6 +90,7 @@
       <recent name="$PROJECT_DIR$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/refactor/json" />
       <recent name="$PROJECT_DIR$/assets/refactor" />
       <recent name="$PROJECT_DIR$/assets/buttons" />
     </key>
@@ -98,6 +111,14 @@
       <option name="presentableId" value="Default" />
       <updated>1676662473843</updated>
     </task>
+    <task id="LOCAL-00001" summary="Refactor&#10;&#10;Implemented simple screen;&#10;Added a background image;&#10;Added background music;&#10;Added a StretchViewport.">
+      <created>1678114201787</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678114201787</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,5 +131,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor&#10;&#10;Implemented simple screen;&#10;Added a background image;&#10;Added background music;&#10;Added a StretchViewport." />
+    <MESSAGE value="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!" />
   </component>
 </project>

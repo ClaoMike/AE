@@ -1,12 +1,14 @@
 package dev.clao;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.Json;
 
+import refactor.screen.blueprint.Constants;
 import refactor.screen.blueprint.SimpleScreen;
 import screens.CreditsScreen;
 import screens.GameplayScreen;
-import screens.MainMenuScreen;
 import screens.SettingsScreen;
 
 /**
@@ -14,6 +16,7 @@ import screens.SettingsScreen;
  * WARNING: Create one and only one SpriteBatch for the entire game!
  */
 public class GameMain extends Game {
+	private Constants constants;
 	private SpriteBatch batch;
 
 	public SpriteBatch getBatch() {
@@ -22,6 +25,7 @@ public class GameMain extends Game {
 
 	@Override
 	public void create () {
+		loadConstants();
 		batch = new SpriteBatch();
 		setScreen(new SimpleScreen(this));
 	}
@@ -35,6 +39,15 @@ public class GameMain extends Game {
 	@Override
 	public void render () {
 		super.render();
+	}
+
+	private void loadConstants() {
+		Json json = new Json();
+		constants = json.fromJson(Constants.class, Gdx.files.internal(Constants.JSON_CONSTANTS_FILEPATH));
+	}
+
+	public Constants getConstants() {
+		return constants;
 	}
 
 	public void gotToPlay() {
@@ -52,5 +65,4 @@ public class GameMain extends Game {
 	public void exit() {
 		System.exit(0);
 	}
-
 }

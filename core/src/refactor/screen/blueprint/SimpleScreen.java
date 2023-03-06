@@ -2,10 +2,7 @@ package refactor.screen.blueprint;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -13,54 +10,6 @@ import com.badlogic.gdx.utils.viewport.Viewport;
 import dev.clao.GameMain;
 
 public class SimpleScreen implements Screen {
-    class BackgroundImage {
-        private SpriteBatch batch;
-        private Texture texture;
-        private Sprite sprite;
-
-        public BackgroundImage(String filepath, float width, float height, SpriteBatch batch) {
-            this.batch = batch;
-
-            texture = new Texture(Gdx.files.internal(filepath));
-            sprite = new Sprite(texture);
-            sprite.setSize(width, height);
-        }
-
-        public void draw() {
-            sprite.draw(batch);
-        }
-
-        public void resize(int width, int height) {
-            sprite.setSize(width, height);
-        }
-
-        public void dispose() {
-            texture.dispose();
-        }
-    }
-
-    class BackgroundMusic {
-        private Music music;
-
-        public BackgroundMusic(String filepath) {
-            music = Gdx.audio.newMusic(Gdx.files.internal(filepath));
-            music.setLooping(true);
-            play();
-        }
-        public void play() {
-            music.play();
-        }
-
-        public void stop() {
-            music.stop();
-        }
-
-        public void dispose() {
-            stop();
-            music.dispose();
-        }
-    }
-
     private final GameMain game;
     private final SpriteBatch batch;
     private Viewport viewport;
@@ -77,8 +26,8 @@ public class SimpleScreen implements Screen {
         float screenWidth = Gdx.graphics.getWidth();
         float screenHeight = Gdx.graphics.getHeight();
 
-        backgroundImage = new BackgroundImage("refactor/images/background.png", screenWidth, screenHeight, batch);
-        backgroundMusic = new BackgroundMusic("refactor/music/background.mp3");
+        backgroundImage = new BackgroundImage(getConstants().BACKGROUND_IMAGE_FILEPATH, screenWidth, screenHeight, batch);
+        backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
 
         viewport = new StretchViewport(screenWidth, screenHeight);
     }
@@ -120,5 +69,9 @@ public class SimpleScreen implements Screen {
     public void dispose() {
         backgroundImage.dispose();
         backgroundMusic.dispose();
+    }
+
+    public Constants getConstants() {
+        return game.getConstants();
     }
 }
