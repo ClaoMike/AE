@@ -1,7 +1,13 @@
 {
   "BACKGROUND_IMAGE_FILEPATH": "refactor/images/background.png",
   "BACKGROUND_MUSIC_FILEPATH": "refactor/music/background.mp3",
-  "GAME_VERSION": "0.2.1",
+  "GAME_VERSION": "v: 0.3.3",
   "FONT_FILEPATH": "refactor/fonts/Mabook.ttf",
-  "FONT_DEFAULT_SIZE": 50
+  "FONT_DEFAULT_SIZE": 50,
+  "MAIN_MENU_BUTTON_PLAY": "Play",
+  "MAIN_MENU_BUTTON_CREDITS": "Credits",
+  "MAIN_MENU_BUTTON_SETTINGS": "Settings",
+  "MAIN_MENU_BUTTON_EXIT": "Exit",
+  "GAME_TITLE": "Antrum Exploratio",
+  "GAME_TITLE_BOTTOM_PADDING": 100
 }
