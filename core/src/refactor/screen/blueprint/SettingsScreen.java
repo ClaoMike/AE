@@ -2,7 +2,6 @@ package refactor.screen.blueprint;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.scenes.scene2d.ui.CheckBox;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 
 import dev.clao.GameMain;
@@ -11,6 +10,7 @@ public class SettingsScreen extends UIScreen {
 
     private CustomButton title;
     private SliderWithTitle slider;
+    private CheckBoxWithTitle checkBox;
     private CustomButton exitButton;
     private ButtonTable table;
 
@@ -40,6 +40,8 @@ public class SettingsScreen extends UIScreen {
                 getConstants().SETTINGS_SLIDER_DEFAULT_VALUE,
                 sliderWidth);
 
+        checkBox = new CheckBoxWithTitle("Debug Mode: ", getFont().getFont(),screenWidth/50, screenWidth/50);
+
         exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
         exitButton.addListener(new ChangeListener() {
             @Override
@@ -50,13 +52,9 @@ public class SettingsScreen extends UIScreen {
 
         table = new ButtonTable(screenWidth/2, screenHeight/2);
         table.addCustomButton(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
-        table.addSliderWithTitle(slider, getConstants().GAME_TITLE_BOTTOM_PADDING, true, sliderWidth);
+        table.addSliderWithTitle(slider, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true, sliderWidth);
+        table.addCheckBoxWithTitle(checkBox, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
         table.addCustomButton(exitButton, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
-
-        CheckBox.CheckBoxStyle checkBoxStyle = new CheckBox.CheckBoxStyle();
-        checkBoxStyle.font = getFont().getFont();
-        CheckBox b = new CheckBox("Test", checkBoxStyle);
-        table.getTable().add(b);
 
         getStage().addActor(table.getTable());
     }

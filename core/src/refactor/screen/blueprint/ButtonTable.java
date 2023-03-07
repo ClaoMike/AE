@@ -40,6 +40,14 @@ public class ButtonTable {
         }
     }
 
+    public void addCheckBoxWithTitle(CheckBoxWithTitle cwt, float bottomPadding, boolean newRow) {
+        addCustomButton(cwt.getButton(), bottomPadding, false);
+        table.add(cwt).padBottom(bottomPadding).padLeft(-100);
+        if(newRow) {
+            table.row();
+        }
+    }
+
     public Table getTable() {
         return table;
     }
