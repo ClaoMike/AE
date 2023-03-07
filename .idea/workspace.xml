@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Implemented a slider for setting the maze size.">
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CheckBoxWithTitle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CustomCheckBox.java" afterDir="false" />
+    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Implemented a checkbox for setting the debug mode on or off.">
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/screens/Screens.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,13 +13,48 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/ButtonTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/ButtonTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SettingsScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SettingsScreen$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SettingsScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SettingsScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundImage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/BackgroundMusic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/ButtonTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/CreditsScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/CreditsScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/CustomButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/CustomFont.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/CustomSlider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/MainMenuScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/MainMenuScreen$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/MainMenuScreen$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/MainMenuScreen$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/MainMenuScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SettingsScreen$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SettingsScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SimpleScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SliderWithTitle$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/SliderWithTitle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screen/blueprint/UIScreen.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/ButtonTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/ButtonTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SettingsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SettingsScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/BackgroundImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/BackgroundImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/BackgroundMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/BackgroundMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/ButtonTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/ButtonTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CheckBoxWithTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CheckBoxWithTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CreditsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/CreditsScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CustomButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CustomCheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomCheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CustomFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomFont.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/CustomSlider.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomSlider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/MainMenuScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SettingsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/SettingsScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SimpleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/blueprints/SimpleScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/SliderWithTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/SliderWithTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screen/blueprint/UIScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/blueprints/UIScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/screens/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/screens/MainMenuScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +71,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -90,10 +124,10 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="refactor" />
+      <recent name="refactor.screens.uicomponents" />
+      <recent name="refactor.screens.blueprints" />
+      <recent name="refactor.screens" />
       <recent name="screens.blueprints" />
-      <recent name="objects.gameplay" />
-      <recent name="objects.main_menu" />
-      <recent name="objects" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -161,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678205444345</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactor&#10;&#10;Implemented a checkbox for setting the debug mode on or off.">
+      <created>1678208039312</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678208039312</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,6 +225,7 @@
     <MESSAGE value="Refactor&#10;&#10;Implemented the credits screen" />
     <MESSAGE value="Refactor&#10;&#10;Prepared the Credits screen;" />
     <MESSAGE value="Refactor&#10;&#10;Implemented a slider for setting the maze size." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor&#10;&#10;Implemented a slider for setting the maze size." />
+    <MESSAGE value="Refactor&#10;&#10;Implemented a checkbox for setting the debug mode on or off." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor&#10;&#10;Implemented a checkbox for setting the debug mode on or off." />
   </component>
 </project>

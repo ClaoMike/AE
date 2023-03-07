@@ -50,15 +50,15 @@ public class MainMenuScreen extends BasicScreen implements BasicScreenMethods {
             float mouseY = Gdx.graphics.getHeight() - Gdx.input.getY();
 
             if (playButton.getBoundingRectangle().contains(mouseX, mouseY)) {
-                game.gotToPlay();
+//                game.gotToPlay();
             }
 
             if (settingsButton.getBoundingRectangle().contains(mouseX, mouseY)) {
-                game.goToSettings();
+//                game.goToSettings();
             }
 
             if (creditsButton.getBoundingRectangle().contains(mouseX, mouseY)) {
-                game.goToCredits();
+//                game.goToCredits();
             }
 
             if (exitButton.getBoundingRectangle().contains(mouseX, mouseY)) {

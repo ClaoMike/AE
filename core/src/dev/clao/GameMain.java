@@ -1,15 +1,17 @@
 package dev.clao;
 
+import static refactor.screens.Screens.MAIN_MENU;
+
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Json;
 
 import refactor.Constants;
-import refactor.screen.blueprint.MainMenuScreen;
-import screens.CreditsScreen;
-import screens.GameplayScreen;
-import screens.SettingsScreen;
+import refactor.screens.CreditsScreen;
+import refactor.screens.MainMenuScreen;
+import refactor.screens.Screens;
+import refactor.screens.SettingsScreen;
 
 /**
  * Busy with creating a sprite batch for drawing textures;
@@ -27,7 +29,7 @@ public class GameMain extends Game {
 	public void create () {
 		loadConstants();
 		batch = new SpriteBatch();
-		setScreen(new refactor.screen.blueprint.SettingsScreen(this));
+		goToScreen(MAIN_MENU);
 	}
 
 	@Override
@@ -50,19 +52,21 @@ public class GameMain extends Game {
 		return constants;
 	}
 
-	public void gotToPlay() {
-		setScreen(new GameplayScreen(this));
-	}
-
-	public void goToSettings() {
-		setScreen(new SettingsScreen(this));
-	}
-
-	public void goToCredits() {
-		setScreen(new CreditsScreen(this));
-	}
-
 	public void exit() {
 		System.exit(0);
+	}
+
+	public void goToScreen(Screens s) {
+		switch (s) {
+			case MAIN_MENU:
+				setScreen(new MainMenuScreen(this));
+				break;
+			case CREDITS:
+				setScreen(new CreditsScreen(this));
+				break;
+			case SETTINGS:
+				setScreen(new SettingsScreen(this));
+				break;
+		}
 	}
 }

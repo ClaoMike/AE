@@ -21,5 +21,7 @@
   "SETTINGS_SLIDER_STEP_VALUE": 10,
   "SETTINGS_SLIDER_DEFAULT_VALUE": 10,
   "SLIDER_BACKGROUND": "refactor/images/slider_background.png",
-  "SLIDER_KNOB_BACKGROUND": "refactor/images/slider_knob_background.png"
+  "SLIDER_KNOB_BACKGROUND": "refactor/images/slider_knob_background.png",
+  "DEBUG_MODE_CHECKBOX_TITLE": "Debug Mode: ",
+  "SLIDER_MAZE_SIZE_TITLE": "Maze Size: "
 }
