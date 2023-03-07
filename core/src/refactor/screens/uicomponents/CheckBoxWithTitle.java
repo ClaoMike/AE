@@ -3,7 +3,7 @@ package refactor.screens.uicomponents;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 public class CheckBoxWithTitle extends CustomCheckBox {
-    private CustomButton title;
+    private final CustomButton title;
 
     public CheckBoxWithTitle(String title, BitmapFont font, float width, float height) {
         super(width, height);

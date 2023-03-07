@@ -8,25 +8,9 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 
 public class CustomFont {
     private BitmapFont font;
-    private FreeTypeFontGenerator generator;
-    private FreeTypeFontGenerator.FreeTypeFontParameter parameter;
-    private SpriteBatch batch;
-
-    public CustomFont(String filepath, SpriteBatch batch) {
-        this.batch = batch;
-
-        generator = new FreeTypeFontGenerator(Gdx.files.internal(filepath));
-        parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-    }
-
-    public CustomFont(String filepath, int size, SpriteBatch batch) {
-        this.batch = batch;
-
-        generator = new FreeTypeFontGenerator(Gdx.files.internal(filepath));
-        parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-
-        setSize(size);
-    }
+    private final FreeTypeFontGenerator generator;
+    private final FreeTypeFontGenerator.FreeTypeFontParameter parameter;
+    private final SpriteBatch batch;
 
     public CustomFont(String filepath, int size, Color colour, SpriteBatch batch) {
         this.batch = batch;

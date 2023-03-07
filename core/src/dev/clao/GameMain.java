@@ -12,6 +12,7 @@ import refactor.screens.CreditsScreen;
 import refactor.screens.MainMenuScreen;
 import refactor.screens.Screens;
 import refactor.screens.SettingsScreen;
+import screens.GameplayScreen;
 
 /**
  * Busy with creating a sprite batch for drawing textures;
@@ -58,6 +59,9 @@ public class GameMain extends Game {
 
 	public void goToScreen(Screens s) {
 		switch (s) {
+			case GAMEPLAY:
+				setScreen(new GameplayScreen(this));
+				break;
 			case MAIN_MENU:
 				setScreen(new MainMenuScreen(this));
 				break;

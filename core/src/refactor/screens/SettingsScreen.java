@@ -14,11 +14,6 @@ import refactor.screens.uicomponents.SliderWithTitle;
 import refactor.screens.blueprints.UIScreen;
 
 public class SettingsScreen extends UIScreen {
-    private CustomButton title;
-    private SliderWithTitle slider;
-    private CheckBoxWithTitle checkBox;
-    private CustomButton exitButton;
-    private ButtonTable table;
 
 
     public SettingsScreen(GameMain game) {
@@ -33,9 +28,9 @@ public class SettingsScreen extends UIScreen {
         float screenHeight = Gdx.graphics.getHeight();
         float sliderWidth = screenWidth/4;
 
-        title = new CustomButton(getConstants().GAME_TITLE, getFont().getFont());
+        CustomButton title = new CustomButton(getConstants().GAME_TITLE, getFont().getFont());
 
-        slider = new SliderWithTitle(
+        SliderWithTitle slider = new SliderWithTitle(
                 getConstants().SLIDER_MAZE_SIZE_TITLE,
                 getFont().getFont(),
                 getConstants().SLIDER_BACKGROUND,
@@ -46,9 +41,9 @@ public class SettingsScreen extends UIScreen {
                 getConstants().SETTINGS_SLIDER_DEFAULT_VALUE,
                 sliderWidth);
 
-        checkBox = new CheckBoxWithTitle(getConstants().DEBUG_MODE_CHECKBOX_TITLE, getFont().getFont(),screenWidth/50, screenWidth/50);
+        CheckBoxWithTitle checkBox = new CheckBoxWithTitle(getConstants().DEBUG_MODE_CHECKBOX_TITLE, getFont().getFont(), screenWidth / 50, screenWidth / 50);
 
-        exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
+        CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
         exitButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
@@ -56,7 +51,7 @@ public class SettingsScreen extends UIScreen {
             }
         });
 
-        table = new ButtonTable(screenWidth/2, screenHeight/2);
+        ButtonTable table = new ButtonTable(screenWidth / 2, screenHeight / 2);
         table.addCustomButton(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
         table.addSliderWithTitle(slider, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true, sliderWidth);
         table.addCheckBoxWithTitle(checkBox, getConstants().GAME_TITLE_BOTTOM_PADDING, true);

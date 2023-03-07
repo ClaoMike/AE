@@ -1,6 +1,7 @@
 package refactor.screens;
 
 import static refactor.screens.Screens.CREDITS;
+import static refactor.screens.Screens.GAMEPLAY;
 import static refactor.screens.Screens.SETTINGS;
 
 import com.badlogic.gdx.Gdx;
@@ -13,13 +14,6 @@ import refactor.screens.uicomponents.CustomButton;
 import refactor.screens.blueprints.UIScreen;
 
 public class MainMenuScreen extends UIScreen {
-    private CustomButton title;
-    private CustomButton playButton;
-    private CustomButton creditsButton;
-    private CustomButton settingsButton;
-    private CustomButton exitButton;
-
-    private ButtonTable table;
 
     public MainMenuScreen(GameMain game) {
         super(game);
@@ -29,18 +23,18 @@ public class MainMenuScreen extends UIScreen {
     public void show() {
         super.show();
 
-        title = new CustomButton(getConstants().GAME_TITLE, getFont().getFont());
+        CustomButton title = new CustomButton(getConstants().GAME_TITLE, getFont().getFont());
 
-        playButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_PLAY, getFont().getFont());
+        CustomButton playButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_PLAY, getFont().getFont());
         playButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
-                System.out.println(getConstants().MAIN_MENU_BUTTON_PLAY + " Pressed");
+                game.goToScreen(GAMEPLAY);
             }
         });
 
 
-        creditsButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_CREDITS, getFont().getFont());
+        CustomButton creditsButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_CREDITS, getFont().getFont());
         creditsButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
@@ -48,7 +42,7 @@ public class MainMenuScreen extends UIScreen {
             }
         });
 
-        settingsButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_SETTINGS, getFont().getFont());
+        CustomButton settingsButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_SETTINGS, getFont().getFont());
         settingsButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
@@ -56,7 +50,7 @@ public class MainMenuScreen extends UIScreen {
             }
         });
 
-        exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
+        CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
         exitButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
@@ -67,7 +61,7 @@ public class MainMenuScreen extends UIScreen {
         float screenWidth = Gdx.graphics.getWidth();
         float screenHeight = Gdx.graphics.getHeight();
 
-        table = new ButtonTable(screenWidth/2, screenHeight/2);
+        ButtonTable table = new ButtonTable(screenWidth / 2, screenHeight / 2);
         table.addCustomButton(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
         table.addCustomButton(playButton, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
         table.addCustomButton(creditsButton, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
