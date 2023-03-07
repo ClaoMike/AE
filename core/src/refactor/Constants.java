@@ -18,7 +18,11 @@ public class Constants {
     public String UNIVERSITY_NAME;
     public String DEBUG_MODE_ON;
     public String DEBUG_MODE_OFF;
-    public int MAZE_SIZE_MIN;
-    public int MAZE_SIZE_MEDIUM;
-    public int MAZE_SIZE_MAX;
+    public int MAIN_MENU_BUTTON_BOTTOM_PADDING;
+    public int SETTINGS_SLIDER_MIN_VALUE;
+    public int SETTINGS_SLIDER_MAX_VALUE;
+    public int SETTINGS_SLIDER_STEP_VALUE;
+    public int SETTINGS_SLIDER_DEFAULT_VALUE;
+    public String SLIDER_BACKGROUND;
+    public String SLIDER_KNOB_BACKGROUND;
 }

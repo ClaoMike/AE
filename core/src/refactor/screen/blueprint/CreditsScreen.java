@@ -10,8 +10,8 @@ public class CreditsScreen extends UIScreen {
     private CustomButton title;
     private CustomButton me;
     private CustomButton supervisor;
-    private CustomButton exitButton;
     private CustomButton university;
+    private CustomButton exitButton;
     private ButtonTable table;
 
     public CreditsScreen(GameMain game) {
@@ -39,11 +39,11 @@ public class CreditsScreen extends UIScreen {
         float screenHeight = Gdx.graphics.getHeight();
 
         table = new ButtonTable(screenWidth/2, screenHeight/2);
-        table.addActor(title.getButton(), getConstants().GAME_TITLE_BOTTOM_PADDING);
-        table.addActor(me.getButton());
-        table.addActor(supervisor.getButton(), getConstants().GAME_TITLE_BOTTOM_PADDING);
-        table.addActor(university.getButton(), getConstants().GAME_TITLE_BOTTOM_PADDING);
-        table.addActor(exitButton.getButton());
+        table.addCustomButton(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
+        table.addCustomButton(me, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
+        table.addCustomButton(supervisor, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
+        table.addCustomButton(university, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
+        table.addCustomButton(exitButton, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
 
         getStage().addActor(table.getTable());
     }

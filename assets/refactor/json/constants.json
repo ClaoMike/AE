@@ -8,6 +8,7 @@
   "MAIN_MENU_BUTTON_CREDITS": "Credits",
   "MAIN_MENU_BUTTON_SETTINGS": "Settings",
   "MAIN_MENU_BUTTON_EXIT": "Exit",
+  "MAIN_MENU_BUTTON_BOTTOM_PADDING": 30,
   "GAME_TITLE": "Antrum Exploratio",
   "GAME_TITLE_BOTTOM_PADDING": 100,
   "PROJECT_DEVELOPER": "Claudiu Mihai Jechel",
@@ -15,7 +16,10 @@
   "UNIVERSITY_NAME": "The University of Manchester",
   "DEBUG_MODE_ON": "On",
   "DEBUG_MODE_OFF": "Off",
-  "MAZE_SIZE_MIN": 10,
-  "MAZE_SIZE_MEDIUM": 30,
-  "MAZE_SIZE_MAX": 50
+  "SETTINGS_SLIDER_MIN_VALUE": 10,
+  "SETTINGS_SLIDER_MAX_VALUE": 100,
+  "SETTINGS_SLIDER_STEP_VALUE": 10,
+  "SETTINGS_SLIDER_DEFAULT_VALUE": 10,
+  "SLIDER_BACKGROUND": "refactor/images/slider_background.png",
+  "SLIDER_KNOB_BACKGROUND": "refactor/images/slider_knob_background.png"
 }

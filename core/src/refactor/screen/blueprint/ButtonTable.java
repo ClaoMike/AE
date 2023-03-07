@@ -1,6 +1,5 @@
 package refactor.screen.blueprint;
 
-import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 
 public class ButtonTable {
@@ -19,14 +18,26 @@ public class ButtonTable {
         table.setPosition(x, y);
     }
 
-    public void addActor(Actor actor) {
-        table.add(actor).padBottom(50);
-        table.row();
+    public void addCustomButton(CustomButton cb, float bottomPadding, boolean newRow) {
+        table.add(cb.getButton()).padBottom(bottomPadding);
+        if(newRow) {
+            table.row();
+        }
     }
 
-    public void addActor(Actor actor, int bottomPadding) {
-        table.add(actor).padBottom(bottomPadding);
-        table.row();
+    public void addCustomSlider(CustomSlider cs, float bottomPadding, boolean newRow, float width) {
+        table.add(cs.getSlider()).padBottom(bottomPadding).width(width);
+        if(newRow) {
+            table.row();
+        }
+    }
+
+    public void addSliderWithTitle(SliderWithTitle cs, float bottomPadding, boolean newRow, float width) {
+        addCustomButton(cs.getTitle(), 10, true);
+        table.add(cs.getSlider()).padBottom(bottomPadding).width(width);
+        if(newRow) {
+            table.row();
+        }
     }
 
     public Table getTable() {

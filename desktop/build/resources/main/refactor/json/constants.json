@@ -1,16 +1,25 @@
 {
   "BACKGROUND_IMAGE_FILEPATH": "refactor/images/background.png",
   "BACKGROUND_MUSIC_FILEPATH": "refactor/music/background.mp3",
-  "GAME_VERSION": "v: 0.3.3",
+  "GAME_VERSION": "v: 0.5.0",
   "FONT_FILEPATH": "refactor/fonts/Mabook.ttf",
   "FONT_DEFAULT_SIZE": 50,
   "MAIN_MENU_BUTTON_PLAY": "Play",
   "MAIN_MENU_BUTTON_CREDITS": "Credits",
   "MAIN_MENU_BUTTON_SETTINGS": "Settings",
   "MAIN_MENU_BUTTON_EXIT": "Exit",
+  "MAIN_MENU_BUTTON_BOTTOM_PADDING": 30,
   "GAME_TITLE": "Antrum Exploratio",
   "GAME_TITLE_BOTTOM_PADDING": 100,
   "PROJECT_DEVELOPER": "Claudiu Mihai Jechel",
   "PROJECT_SUPERVISIOR": "Ke Chen",
-  "UNIVERSITY_NAME": "The University of Manchester"
+  "UNIVERSITY_NAME": "The University of Manchester",
+  "DEBUG_MODE_ON": "On",
+  "DEBUG_MODE_OFF": "Off",
+  "SETTINGS_SLIDER_MIN_VALUE": 10,
+  "SETTINGS_SLIDER_MAX_VALUE": 100,
+  "SETTINGS_SLIDER_STEP_VALUE": 10,
+  "SETTINGS_SLIDER_DEFAULT_VALUE": 10,
+  "SLIDER_BACKGROUND": "refactor/images/slider_background.png",
+  "SLIDER_KNOB_BACKGROUND": "refactor/images/slider_knob_background.png"
 }

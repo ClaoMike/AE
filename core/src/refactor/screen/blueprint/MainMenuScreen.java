@@ -62,11 +62,11 @@ public class MainMenuScreen extends UIScreen {
         float screenHeight = Gdx.graphics.getHeight();
 
         table = new ButtonTable(screenWidth/2, screenHeight/2);
-        table.addActor(title.getButton(), getConstants().GAME_TITLE_BOTTOM_PADDING);
-        table.addActor(playButton.getButton());
-        table.addActor(creditsButton.getButton());
-        table.addActor(settingsButton.getButton());
-        table.addActor(exitButton.getButton());
+        table.addCustomButton(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
+        table.addCustomButton(playButton, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
+        table.addCustomButton(creditsButton, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
+        table.addCustomButton(settingsButton, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
+        table.addCustomButton(exitButton, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
 
         getStage().addActor(table.getTable());
     }

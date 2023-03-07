@@ -21,6 +21,10 @@ public class CustomButton {
         return button;
     }
 
+    public void updateText(String newText) {
+        button.setText(newText);
+    }
+
     private TextButton.TextButtonStyle generateNewStyle(BitmapFont font) {
         TextButton.TextButtonStyle textButtonStyle = new TextButton.TextButtonStyle();
         textButtonStyle.font = font;

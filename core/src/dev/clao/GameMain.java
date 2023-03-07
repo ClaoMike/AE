@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Json;
 
 import refactor.Constants;
+import refactor.screen.blueprint.MainMenuScreen;
 import screens.CreditsScreen;
 import screens.GameplayScreen;
 import screens.SettingsScreen;
