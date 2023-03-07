@@ -7,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Json;
 
+import refactor.BackgroundMusic;
 import refactor.Constants;
 import refactor.screens.CreditsScreen;
 import refactor.screens.MainMenuScreen;
@@ -21,6 +22,7 @@ import screens.GameplayScreen;
 public class GameMain extends Game {
 	private Constants constants;
 	private SpriteBatch batch;
+	private BackgroundMusic backgroundMusic;
 
 	public SpriteBatch getBatch() {
 		return batch;
@@ -30,6 +32,9 @@ public class GameMain extends Game {
 	public void create () {
 		loadConstants();
 		batch = new SpriteBatch();
+
+		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
+
 		goToScreen(MAIN_MENU);
 	}
 
@@ -37,6 +42,7 @@ public class GameMain extends Game {
 	public void dispose() {
 		super.dispose();
 		batch.dispose();
+		backgroundMusic.dispose();
 	}
 
 	@Override
@@ -60,6 +66,7 @@ public class GameMain extends Game {
 	public void goToScreen(Screens s) {
 		switch (s) {
 			case GAMEPLAY:
+				backgroundMusic.stop();
 				setScreen(new GameplayScreen(this));
 				break;
 			case MAIN_MENU:

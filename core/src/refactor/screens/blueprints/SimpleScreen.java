@@ -18,7 +18,6 @@ public class SimpleScreen implements Screen {
     protected final GameMain game;
     private Viewport viewport;
     private BackgroundImage backgroundImage;
-    private BackgroundMusic backgroundMusic;
     private CustomFont font;
 
     public SimpleScreen(GameMain game) {
@@ -31,7 +30,6 @@ public class SimpleScreen implements Screen {
         float screenHeight = Gdx.graphics.getHeight();
 
         backgroundImage = new BackgroundImage(getConstants().BACKGROUND_IMAGE_FILEPATH, screenWidth, screenHeight, getBatch());
-        backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
         font = new CustomFont(getConstants().FONT_FILEPATH, getConstants().FONT_DEFAULT_SIZE, Color.RED, getBatch());
 
         viewport = new StretchViewport(screenWidth, screenHeight);
@@ -73,7 +71,6 @@ public class SimpleScreen implements Screen {
     @Override
     public void dispose() {
         backgroundImage.dispose();
-        backgroundMusic.dispose();
     }
 
     public Constants getConstants() {
