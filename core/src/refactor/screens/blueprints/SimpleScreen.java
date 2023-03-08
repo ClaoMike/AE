@@ -6,18 +6,15 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
-import com.badlogic.gdx.utils.viewport.Viewport;
 
 import dev.clao.GameMain;
 import refactor.Constants;
 import refactor.screens.uicomponents.BackgroundImage;
-import refactor.BackgroundMusic;
 import refactor.screens.uicomponents.CustomFont;
 
 public class SimpleScreen implements Screen {
     protected final GameMain game;
-    private OrthographicCamera mainCamera;
+    protected OrthographicCamera mainCamera;
     private BackgroundImage backgroundImage;
     private CustomFont font;
 

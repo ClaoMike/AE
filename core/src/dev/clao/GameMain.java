@@ -12,6 +12,7 @@ import refactor.Constants;
 import refactor.GameSettings;
 import refactor.screens.CreditsScreen;
 import refactor.screens.MainMenuScreen;
+import refactor.screens.NewGameplayScreen;
 import refactor.screens.Screens;
 import refactor.screens.SettingsScreen;
 import screens.GameplayScreen;
@@ -70,11 +71,10 @@ public class GameMain extends Game {
 		switch (s) {
 			case GAMEPLAY:
 				backgroundMusic.stop();
-				setScreen(new GameplayScreen(this));
+				setScreen(new GameplayScreen(this)); // TODO: fix this
+//				setScreen(new NewGameplayScreen(this));
 				break;
 			case MAIN_MENU:
-				System.out.println(settings.getMazeSize());
-				System.out.println(settings.getDebugMode());
 				setScreen(new MainMenuScreen(this));
 				break;
 			case CREDITS:
