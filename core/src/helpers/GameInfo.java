@@ -19,7 +19,7 @@ public class GameInfo {
     public static final String TITLE = "Antrum Exploratio";
 
     // ASSETS
-    public static final String PLAYER = "player5.png";
+    public static final String PLAYER = "player.png";
     public static final String DIRT = "dirt.png";
 
     ////////////////////////////////////////////////////////////////////////////////////////////////

@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
@@ -16,7 +17,7 @@ import refactor.screens.uicomponents.CustomFont;
 
 public class SimpleScreen implements Screen {
     protected final GameMain game;
-    private Viewport viewport;
+    private OrthographicCamera mainCamera;
     private BackgroundImage backgroundImage;
     private CustomFont font;
 
@@ -32,7 +33,10 @@ public class SimpleScreen implements Screen {
         backgroundImage = new BackgroundImage(getConstants().BACKGROUND_IMAGE_FILEPATH, screenWidth, screenHeight, getBatch());
         font = new CustomFont(getConstants().FONT_FILEPATH, getConstants().FONT_DEFAULT_SIZE, Color.RED, getBatch());
 
-        viewport = new StretchViewport(screenWidth, screenHeight);
+        mainCamera = new OrthographicCamera();
+        mainCamera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        mainCamera.position.set(mainCamera.viewportWidth / 2f, mainCamera.viewportHeight / 2f, 0);
+        mainCamera.update();
     }
 
     @Override
@@ -40,16 +44,21 @@ public class SimpleScreen implements Screen {
         Gdx.gl.glClearColor(1, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        getBatch().setProjectionMatrix(viewport.getCamera().combined);
+        getBatch().setProjectionMatrix(mainCamera.combined);
 
         getBatch().begin();
         backgroundImage.draw();
         getBatch().end();
+
+        mainCamera.update();
     }
 
     @Override
     public void resize(int width, int height) {
-        viewport.update(width, height, true);
+        mainCamera.viewportWidth = width;
+        mainCamera.viewportHeight = height;
+        mainCamera.update();
+
         backgroundImage.resize(width, height);
     }
 
