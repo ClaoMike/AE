@@ -4,8 +4,7 @@ public class Constants {
     public String BACKGROUND_IMAGE_FILEPATH;
     public String BACKGROUND_MUSIC_FILEPATH;
     public String DEBUG_MODE_CHECKBOX_TITLE;
-    public String DEBUG_MODE_OFF;
-    public String DEBUG_MODE_ON;
+    public boolean DEBUG_MODE_DEFAULT_VALUE;
     public int FONT_DEFAULT_SIZE;
     public String FONT_FILEPATH;
     public String GAME_TITLE;
@@ -18,7 +17,7 @@ public class Constants {
     public String MAIN_MENU_BUTTON_PLAY;
     public String MAIN_MENU_BUTTON_SETTINGS;
     public String PROJECT_DEVELOPER;
-    public String PROJECT_SUPERVISIOR;
+    public String PROJECT_SUPERVISOR;
     public int SETTINGS_SLIDER_DEFAULT_VALUE;
     public int SETTINGS_SLIDER_MAX_VALUE;
     public int SETTINGS_SLIDER_MIN_VALUE;

@@ -14,8 +14,6 @@ import refactor.screens.uicomponents.SliderWithTitle;
 import refactor.screens.blueprints.UIScreen;
 
 public class SettingsScreen extends UIScreen {
-
-
     public SettingsScreen(GameMain game) {
         super(game);
     }
@@ -38,10 +36,17 @@ public class SettingsScreen extends UIScreen {
                 getConstants().SETTINGS_SLIDER_MIN_VALUE,
                 getConstants().SETTINGS_SLIDER_MAX_VALUE,
                 getConstants().SETTINGS_SLIDER_STEP_VALUE,
-                getConstants().SETTINGS_SLIDER_DEFAULT_VALUE,
-                sliderWidth);
+                sliderWidth,
+                game.settings
+        );
 
-        CheckBoxWithTitle checkBox = new CheckBoxWithTitle(getConstants().DEBUG_MODE_CHECKBOX_TITLE, getFont().getFont(), screenWidth / 50, screenWidth / 50);
+        CheckBoxWithTitle checkBox = new CheckBoxWithTitle(
+                getConstants().DEBUG_MODE_CHECKBOX_TITLE,
+                getFont().getFont(),
+                screenWidth / 50,
+                screenWidth / 50,
+                game.settings
+        );
 
         CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
         exitButton.addListener(new ChangeListener() {

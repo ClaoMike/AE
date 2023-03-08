@@ -79,7 +79,7 @@ public class MainMenuScreen extends UIScreen {
         float screenHeight = Gdx.graphics.getHeight();
 
         getBatch().begin();
-        getFont().drawText(getConstants().GAME_VERSION, screenWidth/10, screenHeight/5);
+        getFont().drawText(getConstants().GAME_VERSION, screenWidth/10, screenHeight/6);
         getBatch().end();
     }
 

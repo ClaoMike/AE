@@ -23,7 +23,7 @@ public class CreditsScreen extends UIScreen {
 
         CustomButton title = new CustomButton(getConstants().GAME_TITLE, getFont().getFont());
         CustomButton me = new CustomButton(getConstants().PROJECT_DEVELOPER, getFont().getFont());
-        CustomButton supervisor = new CustomButton(getConstants().PROJECT_SUPERVISIOR, getFont().getFont());
+        CustomButton supervisor = new CustomButton(getConstants().PROJECT_SUPERVISOR, getFont().getFont());
         CustomButton university = new CustomButton(getConstants().UNIVERSITY_NAME, getFont().getFont());
 
         CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());

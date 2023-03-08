@@ -9,6 +9,7 @@ import com.badlogic.gdx.utils.Json;
 
 import refactor.BackgroundMusic;
 import refactor.Constants;
+import refactor.GameSettings;
 import refactor.screens.CreditsScreen;
 import refactor.screens.MainMenuScreen;
 import refactor.screens.Screens;
@@ -27,6 +28,7 @@ public class GameMain extends Game {
 	public SpriteBatch getBatch() {
 		return batch;
 	}
+	public GameSettings settings;
 
 	@Override
 	public void create () {
@@ -34,6 +36,7 @@ public class GameMain extends Game {
 		batch = new SpriteBatch();
 
 		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
+		settings = new GameSettings(getConstants());
 
 		goToScreen(MAIN_MENU);
 	}
@@ -70,6 +73,8 @@ public class GameMain extends Game {
 				setScreen(new GameplayScreen(this));
 				break;
 			case MAIN_MENU:
+				System.out.println(settings.getMazeSize());
+				System.out.println(settings.getDebugMode());
 				setScreen(new MainMenuScreen(this));
 				break;
 			case CREDITS:

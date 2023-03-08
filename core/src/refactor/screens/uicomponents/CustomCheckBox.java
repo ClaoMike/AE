@@ -7,15 +7,22 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
+import refactor.GameSettings;
+
 public class CustomCheckBox extends Actor {
     private boolean isChecked = false;
+    private GameSettings settings;
 
-    public CustomCheckBox(float width, float height) {
+    public CustomCheckBox(float width, float height, final GameSettings settings) {
+        this.settings = settings;
+        isChecked = settings.getDebugMode();
+
         setSize(width, height);
         addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
                 isChecked = !isChecked;
+                settings.setDebugMode(isChecked);
             }
         });
     }
