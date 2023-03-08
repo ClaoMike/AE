@@ -10,7 +10,6 @@ import com.badlogic.gdx.math.Vector2;
 public class GameInfo {
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // MAIN
-    public static final boolean DEBUG_MODE = false;
     public static final int PPM = 100;
 
     // DESKTOP LAUNCHER
@@ -36,24 +35,10 @@ public class GameInfo {
     public static final int VELOCITY_ITERATIONS = 6;
     public static final int POSITION_ITERATIONS = 2;
 
-    // MAIN MENU
-    public static final float NUMBER_OF_SCREEN_DIVISIONS = 10f;
-    public static final String PLAY_BUTTON_FILENAME = "buttons/play.png";
-    public static final float PLAY_BUTTON_POSITION = 7f;
-    public static final String SETTINGS_BUTTON_FILENAME = "buttons/settings.png";
-    public static final float SETTINGS_BUTTON_POSITION = 5f;
-    public static final String CREDITS_BUTTON_FILENAME = "buttons/credits.png";
-    public static final float CREDITS_BUTTON_POSITION = 3f;
-    public static final String EXIT_BUTTON_FILENAME = "buttons/exit.png";
-    public static final float EXIT_BUTTON_POSITION = 1f;
-
     // MAIN PLAYER
     public static final float PLAYER_MAXIMUM_SPEED = 5f;
     public static final float PLAYER_FORCE = 8f;
     public static final float NULL_FORCE = 0f;
-
-    // MAZE
-    public static final int NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE = 10;
 
     // MAZE ROOM
     public static final int[] CENTER_ATOMIC_OBJECTS_INDICES = {5, 6, 9, 10};

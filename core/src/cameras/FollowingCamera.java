@@ -16,15 +16,17 @@ public class FollowingCamera {
     private final SpriteBatch batch;
     private final World world;
     private final AtomicObject following;
+    private boolean debugMode;
 
-    public FollowingCamera(SpriteBatch batch, World world, float w, float h, AtomicObject following) {
+    public FollowingCamera(SpriteBatch batch, World world, float w, float h, AtomicObject following, boolean debugMode) {
         this.world = world;
         this.batch = batch;
         this.following = following;
+        this.debugMode = debugMode;
 
         debugRenderer = new Box2DDebugRenderer();
 
-        if(GameInfo.DEBUG_MODE) {
+        if(debugMode) {
             camera = new OrthographicCamera(w / PPM, h / PPM); // rendering camera
         } else {
             camera = new OrthographicCamera(w, h); // normal camera
@@ -38,7 +40,7 @@ public class FollowingCamera {
     }
 
     private void updatePosition() {
-        if (GameInfo.DEBUG_MODE) {
+        if (debugMode) {
             updatePosition(following.getBody().getPosition().x, following.getBody().getPosition().y);
         } else {
             updatePosition(following.getX() + following.getWidth() / 2, following.getY() + following.getHeight() / 2);

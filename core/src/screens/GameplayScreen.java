@@ -22,9 +22,9 @@ public class GameplayScreen extends BasicScreen implements BasicScreenMethods {
         this.world = new World(GameInfo.GRAVITY, GameInfo.WORLD_DO_SLEEP);
 
         player = new MainPlayer(GameInfo.PLAYER, GameInfo.PLAYER_X, GameInfo.PLAYER_Y, world, BodyDef.BodyType.DynamicBody, 1.0f);
-        terrainGenerator = new WorldTerrainGenerator(spriteBatch, world, GameInfo.WORLD_X, GameInfo.WORLD_Y);
+        terrainGenerator = new WorldTerrainGenerator(spriteBatch, world, GameInfo.WORLD_X, GameInfo.WORLD_Y, game.settings.getDebugMode(), game.settings.getMazeSize());
 
-        camera = new FollowingCamera(spriteBatch, world, GameInfo.WIDTH, GameInfo.HEIGHT, player);
+        camera = new FollowingCamera(spriteBatch, world, GameInfo.WIDTH, GameInfo.HEIGHT, player, game.settings.getDebugMode());
     }
 
     @Override

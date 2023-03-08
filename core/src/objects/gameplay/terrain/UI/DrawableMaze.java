@@ -12,18 +12,21 @@ import objects.gameplay.terrain.back_end.Vertex;
 public class DrawableMaze implements Drawable {
     private final Array<MazeRoom> drawableMaze = new Array<>();
     private float exitY;
+    private int cellsPerRow;
 
-    public DrawableMaze(SpriteBatch batch, World world, float x, float y) {
+    public DrawableMaze(SpriteBatch batch, World world, float x, float y, boolean debugMode, int cellsPerRow) {
+        this.cellsPerRow = cellsPerRow;
+
         float newX = x;
         float brSize = 0;
 
-        Maze m = new Maze();
-        if(GameInfo.DEBUG_MODE) {
+        Maze m = new Maze(cellsPerRow);
+        if(debugMode) {
             m.printToConsole();
         }
         Array<Array<Vertex>> maze = m.getVertices();
         int randomRow = maze.random().get(0).getI();
-        int col = GameInfo.NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE - 1;
+        int col = cellsPerRow - 1;
 
         for(Array<Vertex> row: maze) {
             for(Vertex v: row) {
@@ -93,7 +96,7 @@ public class DrawableMaze implements Drawable {
     }
 
     public float getWidth() {
-        return GameInfo.NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE * drawableMaze.get(0).getSize();
+        return cellsPerRow * drawableMaze.get(0).getSize();
     }
 
     public float getExitY() {

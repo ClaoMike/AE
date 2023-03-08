@@ -5,10 +5,11 @@ import com.badlogic.gdx.utils.Array;
 import helpers.GameInfo;
 
 public class Maze {
-    private final int rows = GameInfo.NUMBER_OF_CELLS_PER_EACH_ROW_IN_A_MAZE;
+    private int rows;
     private final Array<Array<Vertex>> vertices = new Array<>();
 
-    public Maze() {
+    public Maze(int cellsPerRow) {
+        rows = cellsPerRow;
         for (int i = 0; i < rows; i++) {
             Array<Vertex> row = new Array<>();
             for (int j = 0; j< rows; j++) {

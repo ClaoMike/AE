@@ -15,12 +15,16 @@ public class WorldTerrainGenerator implements Drawable {
     private SafeRoom startRoom;
     private DrawableMaze maze;
     private SafeRoom endRoom;
+    private boolean debugMode;
+    private int cellsPerRow;
 
-    public WorldTerrainGenerator(SpriteBatch batch, World world, float x, float y) {
+    public WorldTerrainGenerator(SpriteBatch batch, World world, float x, float y, boolean debugMode,int cellsPerRow) {
         this.world = world;
         this.batch = batch;
         this.x = x;
         this.y = y;
+        this.debugMode = debugMode;
+        this.cellsPerRow = cellsPerRow;
 
         createStartPlatform();
         createMaze();
@@ -37,7 +41,7 @@ public class WorldTerrainGenerator implements Drawable {
     }
 
     private void createMaze() {
-        maze = new DrawableMaze(batch, world, x, y);
+        maze = new DrawableMaze(batch, world, x, y, debugMode, cellsPerRow);
 
         // update x and y for the end platform
         x += maze.getWidth();
