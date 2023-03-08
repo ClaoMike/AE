@@ -20,7 +20,7 @@ public class GameInfo {
 
     // ASSETS
     public static final String PLAYER = "player.png";
-    public static final String DIRT = "dirt.png";
+    public static final String DIRT = "snow.png";
 
     ////////////////////////////////////////////////////////////////////////////////////////////////
     // ATOMIC OBJECT
