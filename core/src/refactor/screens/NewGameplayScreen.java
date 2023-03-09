@@ -13,23 +13,23 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import helpers.GameInfo;
+import refactor.NewFollowingCamera;
 import refactor.objects.CustomSpriteWithBody;
 import refactor.objects.ObjectUserData;
 import refactor.screens.blueprints.SimpleScreen;
 
 public class NewGameplayScreen extends SimpleScreen {
-
+    private World world;
+    private NewFollowingCamera camera;
     private CustomSpriteWithBody player;
     private CustomSpriteWithBody blockOfSnow;
 
-    private World world;
-    private OrthographicCamera debugCamera;
-    private Box2DDebugRenderer debugRenderer;
 
     public NewGameplayScreen(GameMain game) {
         super(game);
 
-        world = new World(new Vector2(0, -9.81f), true);
+        world = new World(new Vector2(0, 0), true);
+        camera = new NewFollowingCamera(game, world);
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         ObjectUserData blockOfSnowUserData = new ObjectUserData("snow");
@@ -56,18 +56,7 @@ public class NewGameplayScreen extends SimpleScreen {
     }
 
     @Override
-    public void show() {
-        float screenWidth = Gdx.graphics.getWidth();
-        float screenHeight = Gdx.graphics.getHeight();
-
-        mainCamera = new OrthographicCamera();
-        mainCamera.setToOrtho(false, screenWidth, screenHeight);
-
-        debugCamera = new OrthographicCamera();
-        debugCamera.setToOrtho(false, screenWidth / getConstants().PPM, screenHeight / getConstants().PPM);
-
-        debugRenderer = new Box2DDebugRenderer();
-    }
+    public void show() {}
 
     @Override
     public void render(float delta) {
@@ -75,8 +64,7 @@ public class NewGameplayScreen extends SimpleScreen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         world.step(Gdx.graphics.getDeltaTime(), GameInfo.VELOCITY_ITERATIONS, GameInfo.POSITION_ITERATIONS);
-
-        getBatch().setProjectionMatrix(mainCamera.combined);
+        camera.setProjection();
 
         player.updatePositionToBody();
         blockOfSnow.updatePositionToBody();
@@ -88,23 +76,12 @@ public class NewGameplayScreen extends SimpleScreen {
 
         getBatch().end();
 
-        mainCamera.position.set(player.getX() + player.getWidth()/2, player.getY() + player.getHeight()/2, 0);
-        mainCamera.update();
-
-        debugCamera.position.set(player.getBody().getPosition().x, player.getBody().getPosition().y, 0);
-        debugRenderer.render(world, debugCamera.combined);
-        debugCamera.update();
+        camera.followSpriteAndBodyOf(player);
     }
 
     @Override
     public void resize(int width, int height) {
-        mainCamera.viewportWidth = width;
-        mainCamera.viewportHeight = height;
-        mainCamera.update();
-
-        debugCamera.viewportWidth = width / getConstants().PPM ;
-        debugCamera.viewportHeight = height / getConstants().PPM ;
-        debugCamera.update();
+        camera.resize(width, height);
     }
 
 }

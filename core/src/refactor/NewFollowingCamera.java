@@ -10,18 +10,17 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
+import refactor.objects.CustomSpriteWithBody;
 
 public class NewFollowingCamera {
     private GameMain game;
-    private SpriteBatch batch;
     private World world;
     private OrthographicCamera mainCamera;
     private OrthographicCamera debugCamera;
     private Box2DDebugRenderer debugRenderer;
 
-    public NewFollowingCamera(GameMain game, SpriteBatch batch, World world) {
+    public NewFollowingCamera(GameMain game, World world) {
         this.game = game;
-        this.batch = batch;
         this.world = world;
 
         float screenWidth = Gdx.graphics.getWidth();
@@ -37,18 +36,23 @@ public class NewFollowingCamera {
     }
 
     public void setProjection() {
-        batch.setProjectionMatrix(mainCamera.combined);
+        game.getBatch().setProjectionMatrix(mainCamera.combined);
     }
 
-    public void followSprite(Sprite sprite) {
-        mainCamera.position.set(sprite.getX() + sprite.getWidth()/2, sprite.getY() + sprite.getHeight()/2, 0);
-        mainCamera.update();
+    public void followSpriteAndBodyOf(CustomSpriteWithBody sprite) {
+        followSprite(sprite);
+        followBody(sprite.getBody());
     }
 
-    public void followBody(Body body) {
+    private void followBody(Body body) {
         debugCamera.position.set(body.getPosition().x, body.getPosition().y, 0);
         debugRenderer.render(world, debugCamera.combined);
         debugCamera.update();
+    }
+
+    private void followSprite(Sprite sprite) {
+        mainCamera.position.set(sprite.getX() + sprite.getWidth()/2, sprite.getY() + sprite.getHeight()/2, 0);
+        mainCamera.update();
     }
 
     public void resize(int width, int height) {
