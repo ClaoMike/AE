@@ -1,6 +1,5 @@
 package dev.clao;
 
-import static refactor.screens.Screens.GAMEPLAY;
 import static refactor.screens.Screens.MAIN_MENU;
 
 import com.badlogic.gdx.Game;
@@ -8,6 +7,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Json;
 
+import dev.clao.music.BackgroundMusic;
 import refactor.Constants;
 import refactor.screens.settings.GameSettings;
 import refactor.screens.credits.CreditsScreen;

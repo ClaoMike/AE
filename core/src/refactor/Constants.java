@@ -23,6 +23,7 @@ public class Constants {
     public float PLAYER_MAXIMUM_LINEAR_VELOCITY;
     public float PLAYER_MOVEMENT_FORCE;
     public String PNG_EXTENSION;
+    public int POSITION_ITERATIONS;
     public float PPM;
     public String PROJECT_DEVELOPER;
     public String PROJECT_SUPERVISOR;
@@ -33,5 +34,7 @@ public class Constants {
     public String SLIDER_BACKGROUND;
     public String SLIDER_KNOB_BACKGROUND;
     public String SLIDER_MAZE_SIZE_TITLE;
+    public String SPACESHIP_IMAGE_FILEPATH;
     public String UNIVERSITY_NAME;
+    public int VELOCITY_ITERATIONS;
 }

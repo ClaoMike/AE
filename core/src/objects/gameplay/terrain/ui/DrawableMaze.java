@@ -11,7 +11,7 @@ import refactor.objects.maze.Vertex;
 public class DrawableMaze implements Drawable {
     private final Array<MazeRoom> drawableMaze = new Array<>();
     private float exitY;
-    private int cellsPerRow;
+    private final int cellsPerRow;
 
     public DrawableMaze(SpriteBatch batch, World world, float x, float y, boolean debugMode, int cellsPerRow) {
         this.cellsPerRow = cellsPerRow;

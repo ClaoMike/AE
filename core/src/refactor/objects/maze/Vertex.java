@@ -6,7 +6,7 @@ public class Vertex {
     private boolean visited = false;
     private final int i;
     private final int j;
-    Array<Vertex> neighbours = new Array<>();
+    final Array<Vertex> neighbours = new Array<>();
 
     public Vertex(int i, int j) {
         this.i = i;

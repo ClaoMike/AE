@@ -8,7 +8,6 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
-import helpers.GameInfo;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.blocks.Block;
 import refactor.cameras.FollowingCamera;
@@ -33,11 +32,11 @@ public class GameplayScreen extends SimpleScreen {
         player = new Player(game, world);
 
         float spaceshipX = player.getSprite().getX() - 2 * player.getSprite().getWidth();
-        float spaceshipY = player.getSprite().getY() + player.getSprite().getHeight() /2;
+        float spaceshipY = player.getSprite().getY() + player.getSprite().getHeight() / 2;
 
         spaceship = new Atom(
                 game,
-                "refactor/images/spaceship.png",
+                getConstants().SPACESHIP_IMAGE_FILEPATH,
                 world,
                 BodyDef.BodyType.StaticBody,
                 spaceshipX,
@@ -59,7 +58,7 @@ public class GameplayScreen extends SimpleScreen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         // Update the world by making a step
-        world.step(Gdx.graphics.getDeltaTime(), GameInfo.VELOCITY_ITERATIONS, GameInfo.POSITION_ITERATIONS);
+        world.step(Gdx.graphics.getDeltaTime(),getConstants().VELOCITY_ITERATIONS, getConstants().POSITION_ITERATIONS);
         camera.setProjection();
 
         // Detect user input

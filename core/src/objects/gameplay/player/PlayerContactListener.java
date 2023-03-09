@@ -7,9 +7,6 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 
 public class PlayerContactListener implements ContactListener {
 
-    public PlayerContactListener(MainPlayer player) {
-    }
-
     @Override
     public void beginContact(Contact contact) {
 //        String s1 = contact.getFixtureA().getBody().getUserData().toString();

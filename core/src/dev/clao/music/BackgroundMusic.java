@@ -1,4 +1,4 @@
-package dev.clao;
+package dev.clao.music;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
