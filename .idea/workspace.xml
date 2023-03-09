@@ -12,26 +12,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/NewFollowingCamera.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/NewFollowingCamera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Atom.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Atom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/ObjectUserData.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/ObjectUserData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/NewGameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/NewGameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/player/PlayerContactListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/player/PlayerContactListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/NewFollowingCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/NewFollowingCamera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/Atom.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/Atom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/ObjectUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/ObjectUserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/NewGameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/NewGameplayScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomCheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomCheckBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/SliderWithTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/SliderWithTitle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/cameras/FollowingCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/cameras/FollowingCamera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/helpers/GameInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/helpers/GameInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/UI/DrawableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/UI/DrawableMaze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/WorldTerrainGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/WorldTerrainGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/back_end/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/back_end/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/blueprints/UIScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/blueprints/UIScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CheckBoxWithTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CheckBoxWithTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/src/dev/clao/DesktopLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/src/dev/clao/DesktopLauncher.java" afterDir="false" />
     </list>

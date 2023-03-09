@@ -6,7 +6,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 
 public class CustomButton {
 
-    TextButton button;
+    private final TextButton button;
 
     public CustomButton(String text, BitmapFont font) {
         TextButton.TextButtonStyle textButtonStyle = generateNewStyle(font);

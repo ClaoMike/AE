@@ -1,13 +1,10 @@
 package refactor.screens.blueprints;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
 import dev.clao.GameMain;
 import refactor.screens.uicomponents.BackgroundImage;
-import refactor.screens.uicomponents.CustomFont;
 
 public class UIScreen extends SimpleScreen {
     private final Stage stage;

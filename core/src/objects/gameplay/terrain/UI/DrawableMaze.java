@@ -4,7 +4,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
-import helpers.GameInfo;
 import objects.gameplay.Drawable;
 import objects.gameplay.terrain.back_end.Maze;
 import objects.gameplay.terrain.back_end.Vertex;

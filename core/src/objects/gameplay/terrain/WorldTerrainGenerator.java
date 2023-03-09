@@ -15,8 +15,8 @@ public class WorldTerrainGenerator implements Drawable {
     private SafeRoom startRoom;
     private DrawableMaze maze;
     private SafeRoom endRoom;
-    private boolean debugMode;
-    private int cellsPerRow;
+    private final boolean debugMode;
+    private final int cellsPerRow;
 
     public WorldTerrainGenerator(SpriteBatch batch, World world, float x, float y, boolean debugMode,int cellsPerRow) {
         this.world = world;

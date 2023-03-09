@@ -8,21 +8,17 @@ import com.badlogic.gdx.math.Vector2;
  * MAIN, DESKTOP LAUNCHER, ASSETS and then the rest of classes in alphabetical order.
  */
 public class GameInfo {
-    ////////////////////////////////////////////////////////////////////////////////////////////////
     // MAIN
     public static final int PPM = 100;
 
     // DESKTOP LAUNCHER
     public static final int WIDTH = 1440;
     public static final int HEIGHT = 900;
-    public static final int FPS = 60;
-    public static final String TITLE = "Antrum Exploratio";
 
     // ASSETS
     public static final String PLAYER = "player.png";
     public static final String DIRT = "snow.png";
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
     // ATOMIC OBJECT
     public static final float CIRCLE_SHAPE_RADIUS = 0.5f;
 
@@ -56,6 +52,4 @@ public class GameInfo {
 
     public static final float PLAYER_X = GameInfo.WIDTH/2f;
     public static final float PLAYER_Y = GameInfo.HEIGHT/2f;
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////
 }

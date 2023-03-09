@@ -1,6 +1,5 @@
 package refactor.screens.uicomponents;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 import refactor.GameSettings;

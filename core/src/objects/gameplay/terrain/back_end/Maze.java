@@ -2,8 +2,6 @@ package objects.gameplay.terrain.back_end;
 
 import com.badlogic.gdx.utils.Array;
 
-import helpers.GameInfo;
-
 public class Maze {
     private int rows;
     private final Array<Array<Vertex>> vertices = new Array<>();
