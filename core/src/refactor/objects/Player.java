@@ -11,8 +11,10 @@ import java.util.Vector;
 
 import dev.clao.GameMain;
 import helpers.GameInfo;
+import refactor.Constants;
 
 public class Player extends Atom {
+    private Constants constants;
 
     public Player(GameMain game, World world) {
         super(
@@ -25,32 +27,33 @@ public class Player extends Atom {
                 false
         );
 
-       new PlayerInputProcessor(this);
+        this.constants = game.getConstants();
+
+        new PlayerInputProcessor(this);
     }
 
     public void move(Directions direction) {
         Body body = getSprite().getBody();
-        Vector2 force = direction.getVector();
 
         switch (direction){
             case LEFT:
-                if(body.getLinearVelocity().x > -9) {
-                    body.applyForceToCenter(force, true);
+                if(body.getLinearVelocity().x > -constants.PLAYER_MAXIMUM_LINEAR_VELOCITY) {
+                    body.applyForceToCenter(new Vector2(-constants.PLAYER_MOVEMENT_FORCE, 0), true);
                 }
                 break;
             case RIGHT:
-                if(body.getLinearVelocity().x < 9) {
-                    body.applyForceToCenter(force, true);
+                if(body.getLinearVelocity().x < constants.PLAYER_MAXIMUM_LINEAR_VELOCITY) {
+                    body.applyForceToCenter(new Vector2(constants.PLAYER_MOVEMENT_FORCE, 0), true);
                 }
                 break;
             case UP:
-                if(body.getLinearVelocity().y < 9) {
-                    body.applyForceToCenter(force, true);
+                if(body.getLinearVelocity().y < constants.PLAYER_MAXIMUM_LINEAR_VELOCITY) {
+                    body.applyForceToCenter(new Vector2(0, constants.PLAYER_MOVEMENT_FORCE), true);
                 }
                 break;
             case DOWN:
-                if(body.getLinearVelocity().y > -9) {
-                    body.applyForceToCenter(force, true);
+                if(body.getLinearVelocity().y > -constants.PLAYER_MAXIMUM_LINEAR_VELOCITY) {
+                    body.applyForceToCenter(new Vector2(0, -constants.PLAYER_MOVEMENT_FORCE), true);
                 }
                 break;
         }
