@@ -20,12 +20,6 @@ public class MainPlayer extends AtomicObject implements PlayerActions {
 //        inputProcessor = new PlayerInputProcessor(this);
     }
 
-    @Override
-    public void updatePosition() {
-        super.updatePosition();
-//        inputProcessor.detectUserInput();
-    }
-
     public void go(Directions direction) {
         switch (direction){
             case LEFT:

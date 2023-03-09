@@ -3,7 +3,7 @@ package refactor.objects.maze;
 import com.badlogic.gdx.utils.Array;
 
 public class Maze {
-    private int rows;
+    private final int rows;
     private final Array<Array<Vertex>> vertices = new Array<>();
 
     public Maze(int cellsPerRow) {

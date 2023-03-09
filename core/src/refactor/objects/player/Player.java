@@ -10,7 +10,7 @@ import refactor.Constants;
 import refactor.objects.blueprints.Atom;
 
 public class Player extends Atom {
-    private Constants constants;
+    private final Constants constants;
 
     public Player(GameMain game, World world) {
         super(
