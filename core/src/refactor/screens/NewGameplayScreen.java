@@ -1,5 +1,10 @@
 package refactor.screens;
 
+import static refactor.objects.Directions.DOWN;
+import static refactor.objects.Directions.LEFT;
+import static refactor.objects.Directions.RIGHT;
+import static refactor.objects.Directions.UP;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
@@ -8,9 +13,9 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import helpers.GameInfo;
-import refactor.Block;
-import refactor.NewFollowingCamera;
-import refactor.Player;
+import refactor.objects.Block;
+import refactor.objects.NewFollowingCamera;
+import refactor.objects.Player;
 import refactor.screens.blueprints.SimpleScreen;
 
 public class NewGameplayScreen extends SimpleScreen {
@@ -63,20 +68,8 @@ public class NewGameplayScreen extends SimpleScreen {
     }
 
     private void detectUserInput() {
-        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-            System.out.println("A"); // TODO: implement this
-        }
-        if (Gdx.input.isKeyPressed(Input.Keys.D)) {
-            System.out.println("D"); // TODO: implement this
-        }
-        if (Gdx.input.isKeyPressed(Input.Keys.W)) {
-            System.out.println("W");  // TODO: implement this
-        }
-        if (Gdx.input.isKeyPressed(Input.Keys.S)) {
-            System.out.println("S"); // TODO: implement this
-        }
         if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-            System.out.println("ESCAPE"); // TODO: implement this
+            System.out.println("ESCAPE"); // TODO: implement this, show a menu
         }
     }
 

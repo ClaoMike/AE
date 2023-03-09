@@ -1,31 +1,41 @@
-package objects.gameplay.player;
+package refactor.objects;
+
+import static refactor.objects.Directions.DOWN;
+import static refactor.objects.Directions.LEFT;
+import static refactor.objects.Directions.RIGHT;
+import static refactor.objects.Directions.UP;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 
-public class PlayerInputProcessor implements InputProcessor {
-    private final MainPlayer player;
+import objects.gameplay.player.MainPlayer;
+import refactor.objects.Directions;
 
-    public PlayerInputProcessor(MainPlayer player) {
+public class PlayerInputProcessor implements InputProcessor {
+    private final Player player;
+
+    public PlayerInputProcessor(Player player) {
         this.player = player;
         Gdx.input.setInputProcessor(this);
     }
 
-    public void detectUserInput() {
-        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-            player.go(Directions.LEFT);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.D)) {
-            player.go(Directions.RIGHT);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.W)) {
-            player.go(Directions.UP);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.S)) {
-            player.go(Directions.DOWN);
-        }
-    }
-
     @Override
     public boolean keyDown(int keycode) {
+        switch(keycode) {
+            case Input.Keys.A:
+                player.move(LEFT);
+                break;
+            case Input.Keys.D:
+                player.move(RIGHT);
+                break;
+            case Input.Keys.W:
+                player.move(UP);
+                break;
+            case Input.Keys.S:
+                player.move(DOWN);
+                break;
+        }
         return false;
     }
 
@@ -34,9 +44,11 @@ public class PlayerInputProcessor implements InputProcessor {
         switch(keycode) {
             case Input.Keys.A:
             case Input.Keys.D:
+                player.stopMoving(LEFT);
+                break;
             case Input.Keys.W:
             case Input.Keys.S:
-                player.stopMoving();
+                player.stopMoving(UP);
                 break;
         }
 

@@ -38,8 +38,8 @@ public class GameMain extends Game {
 		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
 		settings = new GameSettings(getConstants());
 
-		goToScreen(MAIN_MENU);
-//		goToScreen(GAMEPLAY);
+//		goToScreen(MAIN_MENU);
+		goToScreen(GAMEPLAY);
 	}
 
 	@Override
