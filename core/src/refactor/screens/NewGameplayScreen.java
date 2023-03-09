@@ -32,22 +32,17 @@ public class NewGameplayScreen extends SimpleScreen {
 
         world = new World(new Vector2(0, -9.81f), true);
 
+        blockOfSnow = new CustomSprite("snow.png");
+
         ObjectUserData playerUserData = new ObjectUserData("player");
         Body playerBody = CustomSpriteWithBody.generateBody(world, BodyDef.BodyType.DynamicBody, 0, 0, playerUserData);
         player = new CustomSpriteWithBody("player.png", playerBody);
         player.generatePolygonShape();
 
-        blockOfSnow = new CustomSprite("snow.png");
+        FixtureDef fixtureDef = CustomSpriteWithBody.generateFixtureDef(player.getShape(), 1, false);
 
-        FixtureDef fixtureDef = new FixtureDef();
-        fixtureDef.shape = player.getShape();
-        fixtureDef.density = 1;
-        fixtureDef.isSensor = false;
-
-        player.getBody().createFixture(fixtureDef);
-        player.disposeShape();
-
-        player.setPosition(player.getBody().getPosition().x * GameInfo.PPM-player.getWidth()/2, player.getBody().getPosition().y * GameInfo.PPM -player.getHeight()/2);
+        player.attachFixture(fixtureDef);
+        player.updatePositionToBody();
     }
 
     @Override
@@ -74,7 +69,7 @@ public class NewGameplayScreen extends SimpleScreen {
         world.step(Gdx.graphics.getDeltaTime(), GameInfo.VELOCITY_ITERATIONS, GameInfo.POSITION_ITERATIONS);
 
         getBatch().setProjectionMatrix(mainCamera.combined);
-        updatePlayerPositionTest();
+        player.updatePositionToBody();
 
         getBatch().begin();
 
@@ -99,10 +94,6 @@ public class NewGameplayScreen extends SimpleScreen {
 
     private void makeCameraFollowPlayer(OrthographicCamera camera, Sprite player) {
         camera.position.set(player.getX() + player.getWidth()/2, player.getY() + player.getHeight()/2, 0);
-    }
-
-    private void updatePlayerPositionTest() {
-        player.setPosition(player.getBody().getPosition().x * GameInfo.PPM, player.getBody().getPosition().y * GameInfo.PPM);
     }
 
 }

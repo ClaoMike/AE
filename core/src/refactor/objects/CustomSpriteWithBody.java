@@ -2,6 +2,7 @@ package refactor.objects;
 
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
@@ -34,6 +35,15 @@ public class CustomSpriteWithBody extends CustomSprite {
         shape.dispose();
     }
 
+    public void attachFixture(FixtureDef fixtureDef) {
+        body.createFixture(fixtureDef);
+        disposeShape();
+    }
+
+    public void updatePositionToBody() {
+        setPosition(body.getPosition().x * GameInfo.PPM - getWidth()/2, body.getPosition().y * GameInfo.PPM - getHeight()/2);
+    }
+
     public static Body generateBody(World world, BodyDef.BodyType type, float x, float y, ObjectUserData userData) {
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = type;
@@ -43,5 +53,14 @@ public class CustomSpriteWithBody extends CustomSprite {
         body.setUserData(userData);
 
         return body;
+    }
+
+    public static FixtureDef generateFixtureDef(Shape shape, float density, boolean isSensor) {
+        FixtureDef fixtureDef = new FixtureDef();
+        fixtureDef.shape = shape;
+        fixtureDef.density = density;
+        fixtureDef.isSensor = isSensor;
+
+        return fixtureDef;
     }
 }
