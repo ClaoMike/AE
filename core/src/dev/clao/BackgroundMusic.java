@@ -1,4 +1,4 @@
-package refactor;
+package dev.clao;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;

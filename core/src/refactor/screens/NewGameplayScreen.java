@@ -24,7 +24,6 @@ public class NewGameplayScreen extends SimpleScreen {
     private CustomSpriteWithBody player;
     private CustomSpriteWithBody blockOfSnow;
 
-
     public NewGameplayScreen(GameMain game) {
         super(game);
 
