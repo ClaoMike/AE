@@ -3,14 +3,12 @@ package refactor.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
@@ -37,21 +35,17 @@ public class NewGameplayScreen extends SimpleScreen {
         ObjectUserData playerUserData = new ObjectUserData("player");
         Body playerBody = CustomSpriteWithBody.generateBody(world, BodyDef.BodyType.DynamicBody, 0, 0, playerUserData);
         player = new CustomSpriteWithBody("player.png", playerBody);
+        player.generatePolygonShape();
 
         blockOfSnow = new CustomSprite("snow.png");
 
-
-
-        PolygonShape shape = new PolygonShape();
-        shape.setAsBox(player.getWidth() / 2 / GameInfo.PPM, player.getHeight() / 2 / GameInfo.PPM);
-
         FixtureDef fixtureDef = new FixtureDef();
-        fixtureDef.shape = shape;
+        fixtureDef.shape = player.getShape();
         fixtureDef.density = 1;
         fixtureDef.isSensor = false;
 
         player.getBody().createFixture(fixtureDef);
-        shape.dispose();
+        player.disposeShape();
 
         player.setPosition(player.getBody().getPosition().x * GameInfo.PPM-player.getWidth()/2, player.getBody().getPosition().y * GameInfo.PPM -player.getHeight()/2);
     }

@@ -2,13 +2,15 @@ package refactor.objects;
 
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 
 import helpers.GameInfo;
 
 public class CustomSpriteWithBody extends CustomSprite {
-    private Body body;
+    private final Body body;
+    private PolygonShape shape;
 
     public CustomSpriteWithBody(String filepath, Body body) {
         super(filepath);
@@ -17,6 +19,19 @@ public class CustomSpriteWithBody extends CustomSprite {
 
     public Body getBody() {
         return body;
+    }
+
+    public void generatePolygonShape() {
+        shape = new PolygonShape();
+        shape.setAsBox(getWidth() / 2 / GameInfo.PPM, getHeight() / 2 / GameInfo.PPM);
+    }
+
+    public Shape getShape() {
+        return shape;
+    }
+
+    public void disposeShape() {
+        shape.dispose();
     }
 
     public static Body generateBody(World world, BodyDef.BodyType type, float x, float y, ObjectUserData userData) {
@@ -28,12 +43,5 @@ public class CustomSpriteWithBody extends CustomSprite {
         body.setUserData(userData);
 
         return body;
-    }
-}
-
-class CustomSpriteWithBodyAndShape extends CustomSpriteWithBody {
-
-    public CustomSpriteWithBodyAndShape(String filepath, Body body, Shape shape) {
-        super(filepath, body);
     }
 }
