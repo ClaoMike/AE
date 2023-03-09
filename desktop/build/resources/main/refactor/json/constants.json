@@ -1,6 +1,7 @@
 {
   "BACKGROUND_IMAGE_FILEPATH": "refactor/images/background.png",
   "BACKGROUND_MUSIC_FILEPATH": "refactor/music/background.mp3",
+  "BLOCK_IMAGE_FILEPATH": "refactor/images/snow.png",
   "DEBUG_MODE_CHECKBOX_TITLE": "Debug Mode: ",
   "DEBUG_MODE_DEFAULT_VALUE": true,
   "FONT_FILEPATH": "refactor/fonts/Mabook.ttf",
@@ -13,6 +14,8 @@
   "MAIN_MENU_BUTTON_SETTINGS": "Settings",
   "MAIN_MENU_BUTTON_EXIT": "Exit",
   "MAIN_MENU_BUTTON_BOTTOM_PADDING": 30,
+  "PLAYER_IMAGE_FILEPATH": "refactor/images/player.png",
+  "PLAYER_INITIAL_POSITION": 0,
   "PPM": 100,
   "PROJECT_DEVELOPER": "Student: Claudiu Mihai Jechel",
   "PROJECT_SUPERVISOR": "Supervisor: Ke Chen",

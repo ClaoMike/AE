@@ -3,6 +3,7 @@ package refactor;
 public class Constants {
     public String BACKGROUND_IMAGE_FILEPATH;
     public String BACKGROUND_MUSIC_FILEPATH;
+    public String BLOCK_IMAGE_FILEPATH;
     public String DEBUG_MODE_CHECKBOX_TITLE;
     public boolean DEBUG_MODE_DEFAULT_VALUE;
     public int FONT_DEFAULT_SIZE;
@@ -16,6 +17,8 @@ public class Constants {
     public String MAIN_MENU_BUTTON_EXIT;
     public String MAIN_MENU_BUTTON_PLAY;
     public String MAIN_MENU_BUTTON_SETTINGS;
+    public String PLAYER_IMAGE_FILEPATH;
+    public float PLAYER_INITIAL_POSITION;
     public float PPM;
     public String PROJECT_DEVELOPER;
     public String PROJECT_SUPERVISOR;
