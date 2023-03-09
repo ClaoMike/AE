@@ -38,8 +38,8 @@ public class GameMain extends Game {
 		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
 		settings = new GameSettings(getConstants());
 
-		goToScreen(MAIN_MENU);
-//		goToScreen(GAMEPLAY);
+//		goToScreen(MAIN_MENU);
+		goToScreen(GAMEPLAY);
 	}
 
 	@Override
@@ -71,8 +71,8 @@ public class GameMain extends Game {
 		switch (s) {
 			case GAMEPLAY:
 				backgroundMusic.stop();
-//				setScreen(new GameplayScreen(this)); // TODO: fix this
-				setScreen(new NewGameplayScreen(this));
+//				setScreen(new GameplayScreen(this));
+				setScreen(new NewGameplayScreen(this)); //TODO: Rename this to GameplayScreen after refactoring everything
 
 				break;
 			case MAIN_MENU:
