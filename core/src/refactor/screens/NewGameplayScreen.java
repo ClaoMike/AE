@@ -21,28 +21,39 @@ import refactor.screens.blueprints.SimpleScreen;
 public class NewGameplayScreen extends SimpleScreen {
 
     private CustomSpriteWithBody player;
-    private CustomSprite blockOfSnow;
+    private CustomSpriteWithBody blockOfSnow;
 
-    World world;
-    OrthographicCamera debugCamera = new OrthographicCamera();
-    Box2DDebugRenderer debugRenderer;
+    private World world;
+    private OrthographicCamera debugCamera;
+    private Box2DDebugRenderer debugRenderer;
 
     public NewGameplayScreen(GameMain game) {
         super(game);
 
         world = new World(new Vector2(0, -9.81f), true);
 
-        blockOfSnow = new CustomSprite("snow.png");
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        ObjectUserData blockOfSnowUserData = new ObjectUserData("snow");
+        Body blockOfSnowBody = CustomSpriteWithBody.generateBody(world, BodyDef.BodyType.StaticBody, 300, 300, blockOfSnowUserData);
+        blockOfSnow = new CustomSpriteWithBody("snow.png", blockOfSnowBody);
+        blockOfSnow.generatePolygonShape();
 
+        FixtureDef blockOfSnowFixtureDef = CustomSpriteWithBody.generateFixtureDef(blockOfSnow.getShape(), 1, false);
+
+        blockOfSnow.attachFixture(blockOfSnowFixtureDef );
+        blockOfSnow.updatePositionToBody();
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
         ObjectUserData playerUserData = new ObjectUserData("player");
         Body playerBody = CustomSpriteWithBody.generateBody(world, BodyDef.BodyType.DynamicBody, 0, 0, playerUserData);
         player = new CustomSpriteWithBody("player.png", playerBody);
         player.generatePolygonShape();
 
-        FixtureDef fixtureDef = CustomSpriteWithBody.generateFixtureDef(player.getShape(), 1, false);
+        FixtureDef playerFixtureDef = CustomSpriteWithBody.generateFixtureDef(player.getShape(), 1, false);
 
-        player.attachFixture(fixtureDef);
+        player.attachFixture(playerFixtureDef);
         player.updatePositionToBody();
+        ////////////////////////////////////////////////////////////////////////////////////////////
     }
 
     @Override
@@ -51,14 +62,12 @@ public class NewGameplayScreen extends SimpleScreen {
         float screenHeight = Gdx.graphics.getHeight();
 
         mainCamera = new OrthographicCamera();
-        mainCamera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
-        mainCamera.position.set(mainCamera.viewportWidth / 2f, mainCamera.viewportHeight / 2f, 0);
-        mainCamera.update();
+        mainCamera.setToOrtho(false, screenWidth, screenHeight);
 
-        debugCamera.setToOrtho(false, screenWidth/ GameInfo.PPM  , screenHeight/ GameInfo.PPM);
+        debugCamera = new OrthographicCamera();
+        debugCamera.setToOrtho(false, screenWidth / GameInfo.PPM  , screenHeight / GameInfo.PPM);
 
         debugRenderer = new Box2DDebugRenderer();
-
     }
 
     @Override
@@ -69,18 +78,21 @@ public class NewGameplayScreen extends SimpleScreen {
         world.step(Gdx.graphics.getDeltaTime(), GameInfo.VELOCITY_ITERATIONS, GameInfo.POSITION_ITERATIONS);
 
         getBatch().setProjectionMatrix(mainCamera.combined);
+
         player.updatePositionToBody();
+        blockOfSnow.updatePositionToBody();
 
         getBatch().begin();
 
         getBatch().draw(player, player.getX(), player.getY());
-        getBatch().draw(blockOfSnow, 300, 300);
+        getBatch().draw(blockOfSnow, blockOfSnow.getX(), blockOfSnow.getY());
 
         getBatch().end();
 
         makeCameraFollowPlayer(mainCamera, player);
-        debugCamera.position.set(player.getBody().getPosition().x, player.getBody().getPosition().y, 0);
         mainCamera.update();
+
+        debugCamera.position.set(player.getBody().getPosition().x, player.getBody().getPosition().y, 0);
         debugRenderer.render(world, debugCamera.combined);
         debugCamera.update();
     }
@@ -90,6 +102,10 @@ public class NewGameplayScreen extends SimpleScreen {
         mainCamera.viewportWidth = width;
         mainCamera.viewportHeight = height;
         mainCamera.update();
+
+        debugCamera.viewportWidth = width / GameInfo.PPM;
+        debugCamera.viewportHeight = height / GameInfo.PPM;
+        debugCamera.update();
     }
 
     private void makeCameraFollowPlayer(OrthographicCamera camera, Sprite player) {

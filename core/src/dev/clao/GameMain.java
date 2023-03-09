@@ -1,5 +1,6 @@
 package dev.clao;
 
+import static refactor.screens.Screens.GAMEPLAY;
 import static refactor.screens.Screens.MAIN_MENU;
 
 import com.badlogic.gdx.Game;
@@ -41,7 +42,8 @@ public class GameMain extends Game {
 		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
 		settings = new GameSettings(getConstants());
 
-		goToScreen(MAIN_MENU);
+//		goToScreen(MAIN_MENU);
+		goToScreen(GAMEPLAY);
 	}
 
 	@Override
