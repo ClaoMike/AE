@@ -13,7 +13,6 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import helpers.GameInfo;
-import refactor.objects.CustomSprite;
 import refactor.objects.CustomSpriteWithBody;
 import refactor.objects.ObjectUserData;
 import refactor.screens.blueprints.SimpleScreen;
@@ -65,7 +64,7 @@ public class NewGameplayScreen extends SimpleScreen {
         mainCamera.setToOrtho(false, screenWidth, screenHeight);
 
         debugCamera = new OrthographicCamera();
-        debugCamera.setToOrtho(false, screenWidth / GameInfo.PPM  , screenHeight / GameInfo.PPM);
+        debugCamera.setToOrtho(false, screenWidth / getConstants().PPM, screenHeight / getConstants().PPM);
 
         debugRenderer = new Box2DDebugRenderer();
     }
@@ -89,7 +88,7 @@ public class NewGameplayScreen extends SimpleScreen {
 
         getBatch().end();
 
-        makeCameraFollowPlayer(mainCamera, player);
+        mainCamera.position.set(player.getX() + player.getWidth()/2, player.getY() + player.getHeight()/2, 0);
         mainCamera.update();
 
         debugCamera.position.set(player.getBody().getPosition().x, player.getBody().getPosition().y, 0);
@@ -103,13 +102,9 @@ public class NewGameplayScreen extends SimpleScreen {
         mainCamera.viewportHeight = height;
         mainCamera.update();
 
-        debugCamera.viewportWidth = width / GameInfo.PPM;
-        debugCamera.viewportHeight = height / GameInfo.PPM;
+        debugCamera.viewportWidth = width / getConstants().PPM ;
+        debugCamera.viewportHeight = height / getConstants().PPM ;
         debugCamera.update();
-    }
-
-    private void makeCameraFollowPlayer(OrthographicCamera camera, Sprite player) {
-        camera.position.set(player.getX() + player.getWidth()/2, player.getY() + player.getHeight()/2, 0);
     }
 
 }

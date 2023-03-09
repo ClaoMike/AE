@@ -16,6 +16,7 @@ public class Constants {
     public String MAIN_MENU_BUTTON_EXIT;
     public String MAIN_MENU_BUTTON_PLAY;
     public String MAIN_MENU_BUTTON_SETTINGS;
+    public float PPM;
     public String PROJECT_DEVELOPER;
     public String PROJECT_SUPERVISOR;
     public int SETTINGS_SLIDER_DEFAULT_VALUE;

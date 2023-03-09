@@ -13,6 +13,7 @@
   "MAIN_MENU_BUTTON_SETTINGS": "Settings",
   "MAIN_MENU_BUTTON_EXIT": "Exit",
   "MAIN_MENU_BUTTON_BOTTOM_PADDING": 30,
+  "PPM": 100,
   "PROJECT_DEVELOPER": "Student: Claudiu Mihai Jechel",
   "PROJECT_SUPERVISOR": "Supervisor: Ke Chen",
   "SETTINGS_SLIDER_MIN_VALUE": 10,
