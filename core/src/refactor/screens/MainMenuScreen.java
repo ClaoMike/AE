@@ -79,8 +79,11 @@ public class MainMenuScreen extends UIScreen {
         float screenHeight = Gdx.graphics.getHeight();
 
         getBatch().begin();
+        getStage().draw();
         getFont().drawText(getConstants().GAME_VERSION, screenWidth/10, screenHeight/6);
         getBatch().end();
+
+        mainCamera.update();
     }
 
 }

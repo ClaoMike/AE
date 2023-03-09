@@ -15,6 +15,8 @@ import refactor.screens.MainMenuScreen;
 import refactor.screens.NewGameplayScreen;
 import refactor.screens.Screens;
 import refactor.screens.SettingsScreen;
+import refactor.screens.blueprints.SimpleScreen;
+import refactor.screens.blueprints.UIScreen;
 import screens.GameplayScreen;
 
 /**
@@ -71,8 +73,9 @@ public class GameMain extends Game {
 		switch (s) {
 			case GAMEPLAY:
 				backgroundMusic.stop();
-				setScreen(new GameplayScreen(this)); // TODO: fix this
-//				setScreen(new NewGameplayScreen(this));
+//				setScreen(new GameplayScreen(this)); // TODO: fix this
+				setScreen(new NewGameplayScreen(this));
+
 				break;
 			case MAIN_MENU:
 				setScreen(new MainMenuScreen(this));

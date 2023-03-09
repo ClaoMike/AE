@@ -9,14 +9,13 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import dev.clao.GameMain;
 import refactor.Constants;
-import refactor.screens.uicomponents.BackgroundImage;
 import refactor.screens.uicomponents.CustomFont;
 
 public class SimpleScreen implements Screen {
     protected final GameMain game;
     protected OrthographicCamera mainCamera;
-    private BackgroundImage backgroundImage;
     private CustomFont font;
+
 
     public SimpleScreen(GameMain game) {
         this.game = game;
@@ -24,16 +23,12 @@ public class SimpleScreen implements Screen {
 
     @Override
     public void show() {
-        float screenWidth = Gdx.graphics.getWidth();
-        float screenHeight = Gdx.graphics.getHeight();
-
-        backgroundImage = new BackgroundImage(getConstants().BACKGROUND_IMAGE_FILEPATH, screenWidth, screenHeight, getBatch());
-        font = new CustomFont(getConstants().FONT_FILEPATH, getConstants().FONT_DEFAULT_SIZE, Color.RED, getBatch());
-
         mainCamera = new OrthographicCamera();
         mainCamera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         mainCamera.position.set(mainCamera.viewportWidth / 2f, mainCamera.viewportHeight / 2f, 0);
         mainCamera.update();
+
+        font = new CustomFont(getConstants().FONT_FILEPATH, getConstants().FONT_DEFAULT_SIZE, Color.RED, getBatch());
     }
 
     @Override
@@ -42,12 +37,6 @@ public class SimpleScreen implements Screen {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         getBatch().setProjectionMatrix(mainCamera.combined);
-
-        getBatch().begin();
-        backgroundImage.draw();
-        getBatch().end();
-
-        mainCamera.update();
     }
 
     @Override
@@ -55,8 +44,6 @@ public class SimpleScreen implements Screen {
         mainCamera.viewportWidth = width;
         mainCamera.viewportHeight = height;
         mainCamera.update();
-
-        backgroundImage.resize(width, height);
     }
 
     @Override
@@ -76,7 +63,6 @@ public class SimpleScreen implements Screen {
 
     @Override
     public void dispose() {
-        backgroundImage.dispose();
     }
 
     public Constants getConstants() {

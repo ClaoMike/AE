@@ -47,4 +47,17 @@ public class CreditsScreen extends UIScreen {
 
         getStage().addActor(table.getTable());
     }
+
+    @Override
+    public void render(float delta) {
+        super.render(delta);
+
+        getBatch().begin();
+        getStage().draw();
+        getBatch().end();
+
+        mainCamera.update();
+    }
+
+
 }
