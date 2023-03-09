@@ -9,10 +9,14 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
+
+import java.lang.annotation.AnnotationTypeMismatchException;
 
 import dev.clao.GameMain;
 import helpers.GameInfo;
+import refactor.objects.Atom;
 import refactor.objects.Block;
 import refactor.objects.NewFollowingCamera;
 import refactor.objects.Player;
@@ -23,6 +27,7 @@ public class NewGameplayScreen extends SimpleScreen {
     private final NewFollowingCamera camera;
     private final Player player;
     private final Block blockOfSnow;
+    private final Atom spaceship;
 
     public NewGameplayScreen(GameMain game) {
         super(game);
@@ -33,6 +38,20 @@ public class NewGameplayScreen extends SimpleScreen {
         blockOfSnow = new Block(game, getConstants().BLOCK_IMAGE_FILEPATH, world, 300, 300, false);
 
         player = new Player(game, world);
+
+        float spaceshipX = player.getSprite().getX() - 2 * player.getSprite().getWidth();
+        float spaceshipY = player.getSprite().getY() + player.getSprite().getHeight() /2;
+
+        spaceship = new Atom(
+                game,
+                "refactor/images/spaceship.png",
+                world,
+                BodyDef.BodyType.StaticBody,
+                spaceshipX,
+                spaceshipY,
+                1,
+                false
+        );
 
     }
 
@@ -56,11 +75,13 @@ public class NewGameplayScreen extends SimpleScreen {
         // Update position of sprites based on their bodies
         player.updatePosition();
         blockOfSnow.updatePosition();
+        spaceship.updatePosition();
 
         // Draw the sprites
         getBatch().begin();
         player.draw();
         blockOfSnow.draw();
+        spaceship.draw();
         getBatch().end();
 
         // Update cameras

@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
+      <change afterPath="$PROJECT_DIR$/assets/refactor/images/background2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/refactor/images/spaceship.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,28 +15,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/player/Directions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/player/MainPlayer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/player/MainPlayer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/player/MainPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/player/MainPlayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/player/PlayerActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/player/PlayerActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/player/PlayerInputProcessor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Block.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/NewFollowingCamera.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Directions.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Directions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/NewGameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/NewGameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/player/Directions.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/Directions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/player/MainPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/player/MainPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/player/PlayerActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/player/PlayerActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/player/PlayerInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/PlayerInputProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/NewFollowingCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/NewFollowingCamera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/Directions.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/Directions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/NewGameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/NewGameplayScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +75,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets",
+    "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets/refactor/images",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -94,8 +84,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/refactor/images" />
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/refactor/fonts" />
       <recent name="$PROJECT_DIR$/assets/refactor/music" />
       <recent name="$PROJECT_DIR$/assets/buttons" />

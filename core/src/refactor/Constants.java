@@ -20,6 +20,7 @@ public class Constants {
     public String MAIN_MENU_BUTTON_SETTINGS;
     public String PLAYER_IMAGE_FILEPATH;
     public float PLAYER_INITIAL_POSITION;
+    public float PLAYER_MOVEMENT_FORCE;
     public String PNG_EXTENSION;
     public float PPM;
     public String PROJECT_DEVELOPER;
