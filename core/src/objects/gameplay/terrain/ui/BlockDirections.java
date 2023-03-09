@@ -1,4 +1,4 @@
-package objects.gameplay.terrain.UI;
+package objects.gameplay.terrain.ui;
 
 public enum BlockDirections {
     UP,

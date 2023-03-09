@@ -3,9 +3,9 @@ package objects.gameplay.terrain;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.World;
 import objects.gameplay.Drawable;
-import objects.gameplay.terrain.UI.BasicRoom;
-import objects.gameplay.terrain.UI.DrawableMaze;
-import objects.gameplay.terrain.UI.SafeRoom;
+import objects.gameplay.terrain.ui.BasicRoom;
+import objects.gameplay.terrain.ui.DrawableMaze;
+import objects.gameplay.terrain.ui.SafeRoom;
 
 public class WorldTerrainGenerator implements Drawable {
     private final SpriteBatch batch;

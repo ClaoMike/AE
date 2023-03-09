@@ -1,4 +1,4 @@
-package objects.gameplay.terrain.UI;
+package objects.gameplay.terrain.ui;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.World;

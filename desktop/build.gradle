@@ -1,17 +1,31 @@
-sourceCompatibility = 1.8
-sourceSets.main.java.srcDirs = [ "src/" ]
-sourceSets.main.resources.srcDirs = ["../assets"]
+plugins {
+    id 'java'
+}
 
-project.ext.mainClassName = "dev.clao.DesktopLauncher"
-project.ext.assetsDir = new File("../assets")
+sourceCompatibility = 1.8
+
+// Set the main source directory
+sourceSets {
+    main {
+        java.srcDirs = ['src']
+        resources.srcDirs = ['../assets']
+    }
+}
+
+// Define the main class name and assets directory
+ext {
+    mainClassName = "dev.clao.DesktopLauncher"
+    assetsDir = new File("../assets")
+}
 
 import org.gradle.internal.os.OperatingSystem
 
-task run(dependsOn: classes, type: JavaExec) {
-    main = project.mainClassName
+// Define the 'run' task
+task run(type: JavaExec) {
+    setMainClass(mainClassName)
     classpath = sourceSets.main.runtimeClasspath
     standardInput = System.in
-    workingDir = project.assetsDir
+    workingDir = assetsDir
     ignoreExitValue = true
 
     if (OperatingSystem.current() == OperatingSystem.MAC_OS) {
@@ -20,19 +34,21 @@ task run(dependsOn: classes, type: JavaExec) {
     }
 }
 
-task debug(dependsOn: classes, type: JavaExec) {
-    main = project.mainClassName
+// Define the 'debug' task
+task debug(type: JavaExec) {
+    setMainClass(mainClassName)
     classpath = sourceSets.main.runtimeClasspath
     standardInput = System.in
-    workingDir = project.assetsDir
+    workingDir = assetsDir
     ignoreExitValue = true
     debug = true
 }
 
+// Define the 'dist' task
 task dist(type: Jar) {
     duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
     manifest {
-        attributes 'Main-Class': project.mainClassName
+        attributes 'Main-Class': mainClassName
     }
     dependsOn configurations.runtimeClasspath
     from {
@@ -41,7 +57,8 @@ task dist(type: Jar) {
     with jar
 }
 
+// Make the 'dist' task depend on the 'classes' task
+dist.dependsOn(classes)
 
-dist.dependsOn classes
-
+// Set the Eclipse project name
 eclipse.project.name = appName + "-desktop"
