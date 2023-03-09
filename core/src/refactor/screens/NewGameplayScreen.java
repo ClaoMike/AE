@@ -1,7 +1,6 @@
 package refactor.screens;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
@@ -16,36 +15,32 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import helpers.GameInfo;
+import refactor.objects.CustomSprite;
+import refactor.objects.CustomSpriteWithBody;
+import refactor.objects.ObjectUserData;
 import refactor.screens.blueprints.SimpleScreen;
-import refactor.screens.uicomponents.BackgroundImage;
-import refactor.screens.uicomponents.CustomFont;
 
 public class NewGameplayScreen extends SimpleScreen {
 
-    private Sprite player;
-    private Sprite blockOfSnow;
+    private CustomSpriteWithBody player;
+    private CustomSprite blockOfSnow;
 
     World world;
     OrthographicCamera debugCamera = new OrthographicCamera();
     Box2DDebugRenderer debugRenderer;
 
-
     public NewGameplayScreen(GameMain game) {
         super(game);
 
-        player = new Sprite(new Texture("player.png"));
-        blockOfSnow = new Sprite(new Texture("snow.png"));
+        world = new World(new Vector2(0, -9.81f), true);
 
-        player.setPosition(0-player.getWidth()/2, 0-player.getHeight()/2);
+        ObjectUserData playerUserData = new ObjectUserData("player");
+        Body playerBody = CustomSpriteWithBody.generateBody(world, BodyDef.BodyType.DynamicBody, 0, 0, playerUserData);
+        player = new CustomSpriteWithBody("player.png", playerBody);
 
-        world = new World(new Vector2(0, 0), true);
+        blockOfSnow = new CustomSprite("snow.png");
 
-        BodyDef bodyDef = new BodyDef();
-        bodyDef.type = BodyDef.BodyType.DynamicBody;
-        bodyDef.position.set(player.getX() / GameInfo.PPM, player.getY() / GameInfo.PPM);
 
-        Body body = world.createBody(bodyDef);
-        body.setUserData("player");
 
         PolygonShape shape = new PolygonShape();
         shape.setAsBox(player.getWidth() / 2 / GameInfo.PPM, player.getHeight() / 2 / GameInfo.PPM);
@@ -55,8 +50,10 @@ public class NewGameplayScreen extends SimpleScreen {
         fixtureDef.density = 1;
         fixtureDef.isSensor = false;
 
-        body.createFixture(fixtureDef);
+        player.getBody().createFixture(fixtureDef);
         shape.dispose();
+
+        player.setPosition(player.getBody().getPosition().x * GameInfo.PPM-player.getWidth()/2, player.getBody().getPosition().y * GameInfo.PPM -player.getHeight()/2);
     }
 
     @Override
@@ -69,9 +66,7 @@ public class NewGameplayScreen extends SimpleScreen {
         mainCamera.position.set(mainCamera.viewportWidth / 2f, mainCamera.viewportHeight / 2f, 0);
         mainCamera.update();
 
-        debugCamera.setToOrtho(false, screenWidth , screenHeight);
-        debugCamera.position.set(mainCamera.position);
-        debugCamera.zoom = mainCamera.zoom;
+        debugCamera.setToOrtho(false, screenWidth/ GameInfo.PPM  , screenHeight/ GameInfo.PPM);
 
         debugRenderer = new Box2DDebugRenderer();
 
@@ -82,8 +77,10 @@ public class NewGameplayScreen extends SimpleScreen {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
+        world.step(Gdx.graphics.getDeltaTime(), GameInfo.VELOCITY_ITERATIONS, GameInfo.POSITION_ITERATIONS);
+
         getBatch().setProjectionMatrix(mainCamera.combined);
-//        updatePlayerPositionTest();
+        updatePlayerPositionTest();
 
         getBatch().begin();
 
@@ -93,6 +90,7 @@ public class NewGameplayScreen extends SimpleScreen {
         getBatch().end();
 
         makeCameraFollowPlayer(mainCamera, player);
+        debugCamera.position.set(player.getBody().getPosition().x, player.getBody().getPosition().y, 0);
         mainCamera.update();
         debugRenderer.render(world, debugCamera.combined);
         debugCamera.update();
@@ -110,7 +108,7 @@ public class NewGameplayScreen extends SimpleScreen {
     }
 
     private void updatePlayerPositionTest() {
-        player.setPosition(player.getX()+1, player.getY());
+        player.setPosition(player.getBody().getPosition().x * GameInfo.PPM, player.getBody().getPosition().y * GameInfo.PPM);
     }
 
 }
