@@ -2,7 +2,7 @@ package refactor.screens.uicomponents;
 
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
-import refactor.GameSettings;
+import refactor.screens.settings.GameSettings;
 
 public class CheckBoxWithTitle extends CustomCheckBox {
     private final CustomButton title;

@@ -9,12 +9,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Json;
 
 import refactor.Constants;
-import refactor.GameSettings;
-import refactor.screens.CreditsScreen;
-import refactor.screens.MainMenuScreen;
-import refactor.screens.NewGameplayScreen;
+import refactor.screens.settings.GameSettings;
+import refactor.screens.credits.CreditsScreen;
+import refactor.screens.mainmenu.MainMenuScreen;
+import refactor.screens.gameplay.GameplayScreen;
 import refactor.screens.Screens;
-import refactor.screens.SettingsScreen;
+import refactor.screens.settings.SettingsScreen;
 
 /**
  * Busy with creating a sprite batch for drawing textures;
@@ -38,8 +38,8 @@ public class GameMain extends Game {
 		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
 		settings = new GameSettings(getConstants());
 
-//		goToScreen(MAIN_MENU);
-		goToScreen(GAMEPLAY);
+		goToScreen(MAIN_MENU);
+//		goToScreen(GAMEPLAY);
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class GameMain extends Game {
 			case GAMEPLAY:
 				backgroundMusic.stop();
 //				setScreen(new GameplayScreen(this));
-				setScreen(new NewGameplayScreen(this)); //TODO: Rename this to GameplayScreen after refactoring everything
+				setScreen(new GameplayScreen(this)); //TODO: Rename this to GameplayScreen after refactoring everything
 
 				break;
 			case MAIN_MENU:

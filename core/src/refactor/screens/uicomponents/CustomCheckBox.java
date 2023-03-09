@@ -7,7 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
-import refactor.GameSettings;
+import refactor.screens.settings.GameSettings;
 
 public class CustomCheckBox extends Actor {
     private boolean isChecked;

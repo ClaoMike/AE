@@ -4,7 +4,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 
-import refactor.GameSettings;
+import refactor.screens.settings.GameSettings;
 
 public class SliderWithTitle extends CustomSlider {
     private final CustomButton title;

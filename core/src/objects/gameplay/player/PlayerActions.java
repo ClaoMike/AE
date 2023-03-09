@@ -1,6 +1,6 @@
 package objects.gameplay.player;
 
-import refactor.objects.Directions;
+import refactor.objects.player.Directions;
 
 public interface PlayerActions {
 

@@ -7,8 +7,7 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import helpers.GameInfo;
 import objects.gameplay.AtomicObject;
-import refactor.objects.Directions;
-import refactor.objects.PlayerInputProcessor;
+import refactor.objects.player.Directions;
 
 public class MainPlayer extends AtomicObject implements PlayerActions {
     private final Body body;

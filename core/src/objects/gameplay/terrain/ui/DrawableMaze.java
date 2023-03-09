@@ -5,8 +5,8 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
 import objects.gameplay.Drawable;
-import objects.gameplay.terrain.back_end.Maze;
-import objects.gameplay.terrain.back_end.Vertex;
+import refactor.objects.maze.Maze;
+import refactor.objects.maze.Vertex;
 
 public class DrawableMaze implements Drawable {
     private final Array<MazeRoom> drawableMaze = new Array<>();
