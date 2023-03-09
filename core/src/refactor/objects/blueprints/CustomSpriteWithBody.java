@@ -22,6 +22,9 @@ public class CustomSpriteWithBody extends CustomSprite {
         return body;
     }
 
+    // TODO:
+    //  1. Implement a function that generates a CircleShape;
+    //  2. See what objects need a circle shape at the end;
     public void generatePolygonShape() {
         shape = new PolygonShape();
         shape.setAsBox(getWidth() / 2 / GameInfo.PPM, getHeight() / 2 / GameInfo.PPM);

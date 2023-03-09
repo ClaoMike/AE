@@ -1,5 +1,6 @@
 package dev.clao;
 
+import static refactor.screens.Screens.GAMEPLAY;
 import static refactor.screens.Screens.MAIN_MENU;
 
 import com.badlogic.gdx.Game;
@@ -38,8 +39,15 @@ public class GameMain extends Game {
 		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
 		settings = new GameSettings(getConstants());
 
-		goToScreen(MAIN_MENU);
-//		goToScreen(GAMEPLAY);
+		//TODO:
+		// 1. Replace the following if with << goToScreen(MAIN_MENU); >> after the implementation is done.
+		// 2. Set the DEBUG_MODE in the constants.json file to false. Cheers!
+		if(constants.DEBUG_MODE_DEFAULT_VALUE) {
+			goToScreen(GAMEPLAY);
+		} else {
+			goToScreen(MAIN_MENU);
+		}
+
 	}
 
 	@Override
@@ -66,8 +74,7 @@ public class GameMain extends Game {
 		switch (s) {
 			case GAMEPLAY:
 				backgroundMusic.stop();
-//				setScreen(new GameplayScreen(this));
-				setScreen(new GameplayScreen(this)); //TODO: Rename this to GameplayScreen after refactoring everything
+				setScreen(new GameplayScreen(this));
 
 				break;
 			case MAIN_MENU:

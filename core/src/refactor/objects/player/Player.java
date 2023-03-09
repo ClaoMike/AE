@@ -10,6 +10,7 @@ import refactor.Constants;
 import refactor.objects.blueprints.Atom;
 
 public class Player extends Atom {
+    // TODO: Set the rotation of the player to false.
     private final Constants constants;
 
     public Player(GameMain game, World world) {

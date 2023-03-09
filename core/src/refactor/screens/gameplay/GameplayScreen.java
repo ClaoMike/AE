@@ -45,6 +45,13 @@ public class GameplayScreen extends SimpleScreen {
                 false
         );
 
+        //TODO:
+        // 1. Add the start platform;
+        // 2. Generate the maze, draw it;
+        // 3. Draw the finish platform;
+        // 4. Draw some kind of reward in the end room;
+        // 5. Add sensors for detecting when the player reaches the end platform;
+        // 6. Show an end menu when the sensors are triggered.
     }
 
     @Override
@@ -82,7 +89,10 @@ public class GameplayScreen extends SimpleScreen {
 
     private void detectUserInput() {
         if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-            System.out.println("ESCAPE"); // TODO: implement this, show a menu
+            // TODO:
+            //  1. Implement a pause menu;
+            //  2. Stop every movement when the menu is on
+            System.out.println("ESCAPE");
         }
     }
 
