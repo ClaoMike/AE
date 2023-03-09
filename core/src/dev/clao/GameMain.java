@@ -38,8 +38,8 @@ public class GameMain extends Game {
 		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
 		settings = new GameSettings(getConstants());
 
-//		goToScreen(MAIN_MENU);
-		goToScreen(GAMEPLAY);
+		goToScreen(MAIN_MENU);
+//		goToScreen(GAMEPLAY);
 	}
 
 	@Override
@@ -47,11 +47,6 @@ public class GameMain extends Game {
 		super.dispose();
 		batch.dispose();
 		backgroundMusic.dispose();
-	}
-
-	@Override
-	public void render () {
-		super.render();
 	}
 
 	private void loadConstants() {

@@ -10,11 +10,9 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import refactor.GameSettings;
 
 public class CustomCheckBox extends Actor {
-    private boolean isChecked = false;
-    private GameSettings settings;
+    private boolean isChecked;
 
     public CustomCheckBox(float width, float height, final GameSettings settings) {
-        this.settings = settings;
         isChecked = settings.getDebugMode();
 
         setSize(width, height);
@@ -32,11 +30,11 @@ public class CustomCheckBox extends Actor {
         super.draw(batch, parentAlpha);
 
         batch.end();
-        ShapeRenderer shapeRenderer = generateShapeRenderer(batch, Color.YELLOW, Color.YELLOW, Color.RED);
+        generateShapeRenderer(batch, Color.YELLOW, Color.YELLOW, Color.RED);
         batch.begin();
     }
 
-    private ShapeRenderer generateShapeRenderer(Batch batch, Color checkedColor, Color uncheckedColor, Color checkColor) {
+    private void generateShapeRenderer(Batch batch, Color checkedColor, Color uncheckedColor, Color checkColor) {
         ShapeRenderer shapeRenderer = new ShapeRenderer();
         shapeRenderer.setProjectionMatrix(batch.getProjectionMatrix());
         shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
@@ -50,11 +48,5 @@ public class CustomCheckBox extends Actor {
             shapeRenderer.line(getX() + getWidth(), getY(), getX(), getY() + getHeight());
         }
         shapeRenderer.end();
-
-        return shapeRenderer;
-    }
-
-    public boolean isChecked() {
-        return isChecked;
     }
 }

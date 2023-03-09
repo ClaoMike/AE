@@ -4,7 +4,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
@@ -12,14 +11,13 @@ import helpers.GameInfo;
 import refactor.Block;
 import refactor.NewFollowingCamera;
 import refactor.Player;
-import refactor.objects.Atom;
 import refactor.screens.blueprints.SimpleScreen;
 
 public class NewGameplayScreen extends SimpleScreen {
-    private World world;
-    private NewFollowingCamera camera;
-    private Player player;
-    private Block blockOfSnow;
+    private final World world;
+    private final NewFollowingCamera camera;
+    private final Player player;
+    private final Block blockOfSnow;
 
     public NewGameplayScreen(GameMain game) {
         super(game);

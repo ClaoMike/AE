@@ -9,13 +9,11 @@ import refactor.GameSettings;
 public class SliderWithTitle extends CustomSlider {
     private final CustomButton title;
     private final String text;
-    private GameSettings settings;
 
     public SliderWithTitle(String title, BitmapFont font, String backgroundFilepath, String knobFilepath, float minValue, float maxValue, float stepSize, float width, final GameSettings settings) {
         super(backgroundFilepath, knobFilepath, minValue, maxValue, stepSize, settings.getMazeSize(), width);
         this.text = title;
         this.title = new CustomButton(text + (int)settings.getMazeSize(), font);
-        this.settings = settings;
 
         getSlider().addListener(new ChangeListener() {
             @Override

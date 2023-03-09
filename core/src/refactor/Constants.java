@@ -6,6 +6,7 @@ public class Constants {
     public String BLOCK_IMAGE_FILEPATH;
     public String DEBUG_MODE_CHECKBOX_TITLE;
     public boolean DEBUG_MODE_DEFAULT_VALUE;
+    public String EMPTY_STRING;
     public int FONT_DEFAULT_SIZE;
     public String FONT_FILEPATH;
     public String GAME_TITLE;
@@ -19,6 +20,7 @@ public class Constants {
     public String MAIN_MENU_BUTTON_SETTINGS;
     public String PLAYER_IMAGE_FILEPATH;
     public float PLAYER_INITIAL_POSITION;
+    public String PNG_EXTENSION;
     public float PPM;
     public String PROJECT_DEVELOPER;
     public String PROJECT_SUPERVISOR;

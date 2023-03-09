@@ -8,8 +8,8 @@ import com.badlogic.gdx.physics.box2d.World;
 import dev.clao.GameMain;
 
 public class Atom {
-    private CustomSpriteWithBody sprite;
-    private GameMain game;
+    private final CustomSpriteWithBody sprite;
+    private final GameMain game;
 
     public Atom(GameMain game, String filepath, World world, BodyDef.BodyType bodyType, float x, float y, float density, boolean isSensor) {
         this.game = game;
@@ -39,6 +39,6 @@ public class Atom {
     }
 
     private String removePNGExtension(String filename) {
-        return filename.replaceAll(".png", "");
+        return filename.replaceAll(game.getConstants().PNG_EXTENSION, game.getConstants().EMPTY_STRING);
     }
 }

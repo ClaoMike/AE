@@ -7,10 +7,7 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 
 public class PlayerContactListener implements ContactListener {
 
-    private final MainPlayer player;
-
     public PlayerContactListener(MainPlayer player) {
-        this.player = player;
     }
 
     @Override

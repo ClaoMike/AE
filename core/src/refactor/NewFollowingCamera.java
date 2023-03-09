@@ -11,12 +11,12 @@ import dev.clao.GameMain;
 import refactor.objects.CustomSpriteWithBody;
 
 public class NewFollowingCamera {
-    private GameMain game;
-    private World world;
-    private OrthographicCamera mainCamera;
+    private final GameMain game;
+    private final World world;
+    private final OrthographicCamera mainCamera;
     private OrthographicCamera debugCamera;
     private Box2DDebugRenderer debugRenderer;
-    private boolean debugModeIsOn;
+    private final boolean debugModeIsOn;
 
     public NewFollowingCamera(GameMain game, World world) {
         this.game = game;
