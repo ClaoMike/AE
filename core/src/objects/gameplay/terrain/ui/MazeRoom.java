@@ -6,15 +6,16 @@ import com.badlogic.gdx.utils.Array;
 
 import helpers.GameInfo;
 import objects.gameplay.AtomicObject;
+import refactor.objects.Directions;
 
 public class MazeRoom extends BasicRoom {
-    public MazeRoom(SpriteBatch batch, World world, float startX, float startY, Array<BlockDirections> allowedDirections) {
+    public MazeRoom(SpriteBatch batch, World world, float startX, float startY, Array<Directions> allowedDirections) {
         super(batch, world, startX, startY);
 
         Array<AtomicObject> blocks = getBlocks();
         destroyObjects(GameInfo.CENTER_ATOMIC_OBJECTS_INDICES, blocks);
 
-        for(BlockDirections direction : allowedDirections) {
+        for(Directions direction : allowedDirections) {
             switch (direction) {
                 case UP:
                     destroyObjects(GameInfo.UP_ATOMIC_OBJECTS_INDICES, blocks);

@@ -9,8 +9,8 @@ import dev.clao.GameMain;
 public class StructureOfBlocks {
     protected final Array<Block> blocks = new Array<>();
     protected final GameMain game;
-    private final World world;
-    private Vector2 coordinates;
+    protected final World world;
+    protected Vector2 coordinates;
     protected String blockFilepath;
     protected Vector2 blockSize;
 

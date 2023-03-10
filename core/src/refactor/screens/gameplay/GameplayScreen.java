@@ -8,11 +8,12 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
-import refactor.objects.blocks.BigBlockWithCornersOnly;
-import refactor.objects.blocks.RowOfBlocksWithEndpointsOnly;
-import refactor.objects.blueprints.Atom;
-import refactor.objects.blocks.Block;
 import refactor.cameras.FollowingCamera;
+import refactor.objects.Directions;
+import refactor.objects.blocks.BigBlockWithCornersOnly;
+import refactor.objects.blocks.BigBlockWithWalls;
+import refactor.objects.blocks.Block;
+import refactor.objects.blueprints.Atom;
 import refactor.objects.player.Player;
 import refactor.screens.blueprints.SimpleScreen;
 
@@ -23,7 +24,8 @@ public class GameplayScreen extends SimpleScreen {
     private final Block blockOfSnow;
     private final Atom spaceship;
 
-    private BigBlockWithCornersOnly bigBlock;
+    private final BigBlockWithCornersOnly bigBlock;
+    private BigBlockWithWalls biggie;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -50,6 +52,14 @@ public class GameplayScreen extends SimpleScreen {
         );
 
         bigBlock = new BigBlockWithCornersOnly(game, world, new Vector2(300, 300));
+
+        Directions[] directions = new Directions[]{Directions.LEFT, Directions.RIGHT, Directions.UP, Directions.DOWN};
+        this.biggie = new BigBlockWithWalls(
+                game,
+                world,
+                new Vector2(300, 300),
+                null
+    );
         //TODO:
         // 1. Add the start platform;
         // 2. Generate the maze, draw it;
@@ -82,6 +92,7 @@ public class GameplayScreen extends SimpleScreen {
         spaceship.updatePosition();
 
         bigBlock.updatePosition();
+        biggie.updatePosition();
 
 
         // Draw the sprites
@@ -91,6 +102,7 @@ public class GameplayScreen extends SimpleScreen {
         spaceship.draw();
 
         bigBlock.draw();
+        biggie.draw();
 
         getBatch().end();
 

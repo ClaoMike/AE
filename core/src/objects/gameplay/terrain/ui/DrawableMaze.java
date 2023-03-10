@@ -5,6 +5,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
 
 import objects.gameplay.Drawable;
+import refactor.objects.Directions;
 import refactor.objects.maze.Maze;
 import refactor.objects.maze.Vertex;
 
@@ -29,16 +30,16 @@ public class DrawableMaze implements Drawable {
 
         for(Array<Vertex> row: maze) {
             for(Vertex v: row) {
-                Array<BlockDirections> allowedDirections = getDirections(v);
+                Array<Directions> allowedDirections = getDirections(v);
 
                 // if it's the maze entrance, demolish the wall
                 if(v.getI() == 0 && v.getJ() == 0) {
-                    allowedDirections.add(BlockDirections.LEFT);
+                    allowedDirections.add(Directions.LEFT);
                 }
 
                 // set exit
                 if(v.getI() == randomRow && v.getJ() == col) {
-                    allowedDirections.add(BlockDirections.RIGHT);
+                    allowedDirections.add(Directions.RIGHT);
                 }
 
                 MazeRoom mr = new MazeRoom(batch, world, newX, y, allowedDirections);
@@ -53,19 +54,19 @@ public class DrawableMaze implements Drawable {
         }
     }
 
-    private Array<BlockDirections> getDirections(Vertex v) {
-        Array<BlockDirections> allowedDirections = new Array<>();
+    private Array<Directions> getDirections(Vertex v) {
+        Array<Directions> allowedDirections = new Array<>();
         Array<Vertex> neighbours = v.getNeighbours();
 
         for (Vertex n: neighbours) {
             if(v.getI() + 1 == n.getI()) {
-                allowedDirections.add(BlockDirections.DOWN);
+                allowedDirections.add(Directions.DOWN);
             } else if(v.getI() - 1 == n.getI()) {
-                allowedDirections.add(BlockDirections.UP);
+                allowedDirections.add(Directions.UP);
             } else if(v.getJ() + 1 == n.getJ()) {
-                allowedDirections.add(BlockDirections.RIGHT);
+                allowedDirections.add(Directions.RIGHT);
             } else if(v.getJ() - 1 == n.getJ()) {
-                allowedDirections.add(BlockDirections.LEFT);
+                allowedDirections.add(Directions.LEFT);
 
             }
         }
