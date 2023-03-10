@@ -8,6 +8,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
+import refactor.objects.blocks.RowOfBlocksWithEndpointsOnly;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.blocks.Block;
 import refactor.cameras.FollowingCamera;
@@ -20,6 +21,8 @@ public class GameplayScreen extends SimpleScreen {
     private final Player player;
     private final Block blockOfSnow;
     private final Atom spaceship;
+
+    private RowOfBlocksWithEndpointsOnly row;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -44,6 +47,8 @@ public class GameplayScreen extends SimpleScreen {
                 1,
                 false
         );
+
+        row = new RowOfBlocksWithEndpointsOnly(game, world, new Vector2(300, 300));
 
         //TODO:
         // 1. Add the start platform;
@@ -76,11 +81,16 @@ public class GameplayScreen extends SimpleScreen {
         blockOfSnow.updatePosition();
         spaceship.updatePosition();
 
+        row.updatePosition();
+
         // Draw the sprites
         getBatch().begin();
         player.draw();
         blockOfSnow.draw();
         spaceship.draw();
+
+        row.draw();
+
         getBatch().end();
 
         // Update cameras

@@ -3,7 +3,7 @@
   "BACKGROUND_MUSIC_FILEPATH": "refactor/music/background.mp3",
   "BLOCK_IMAGE_FILEPATH": "refactor/images/snow.png",
   "DEBUG_MODE_CHECKBOX_TITLE": "Debug Mode: ",
-  "DEBUG_MODE_DEFAULT_VALUE": false,
+  "DEBUG_MODE_DEFAULT_VALUE": true,
   "EMPTY_STRING": "",
   "FONT_FILEPATH": "refactor/fonts/Mabook.ttf",
   "FONT_DEFAULT_SIZE": 50,
