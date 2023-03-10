@@ -1,9 +1,9 @@
 package refactor.objects.player;
 
-import static refactor.objects.player.Directions.DOWN;
-import static refactor.objects.player.Directions.LEFT;
-import static refactor.objects.player.Directions.RIGHT;
-import static refactor.objects.player.Directions.UP;
+import static refactor.objects.Directions.DOWN;
+import static refactor.objects.Directions.LEFT;
+import static refactor.objects.Directions.RIGHT;
+import static refactor.objects.Directions.UP;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;

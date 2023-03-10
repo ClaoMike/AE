@@ -7,6 +7,7 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import refactor.Constants;
+import refactor.objects.Directions;
 import refactor.objects.blueprints.Atom;
 
 public class Player extends Atom {

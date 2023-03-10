@@ -8,6 +8,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
+import refactor.objects.blocks.BigBlockWithCornersOnly;
 import refactor.objects.blocks.RowOfBlocksWithEndpointsOnly;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.blocks.Block;
@@ -22,7 +23,7 @@ public class GameplayScreen extends SimpleScreen {
     private final Block blockOfSnow;
     private final Atom spaceship;
 
-    private RowOfBlocksWithEndpointsOnly row;
+    private BigBlockWithCornersOnly bigBlock;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -48,8 +49,7 @@ public class GameplayScreen extends SimpleScreen {
                 false
         );
 
-        row = new RowOfBlocksWithEndpointsOnly(game, world, new Vector2(300, 300));
-
+        bigBlock = new BigBlockWithCornersOnly(game, world, new Vector2(300, 300));
         //TODO:
         // 1. Add the start platform;
         // 2. Generate the maze, draw it;
@@ -81,7 +81,8 @@ public class GameplayScreen extends SimpleScreen {
         blockOfSnow.updatePosition();
         spaceship.updatePosition();
 
-        row.updatePosition();
+        bigBlock.updatePosition();
+
 
         // Draw the sprites
         getBatch().begin();
@@ -89,7 +90,7 @@ public class GameplayScreen extends SimpleScreen {
         blockOfSnow.draw();
         spaceship.draw();
 
-        row.draw();
+        bigBlock.draw();
 
         getBatch().end();
 

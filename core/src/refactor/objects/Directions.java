@@ -1,4 +1,4 @@
-package refactor.objects.player;
+package refactor.objects;
 
 public enum Directions {
         UP,
