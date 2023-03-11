@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/pairOfBlocks/HorizontalPairOfBlocks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/pairOfBlocks/PairOfBlocks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/pairOfBlocks/VerticalPairOfBlocks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithWallsAndDirt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/HorizontalRowOfBlocks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,26 +14,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/BigBlockWithCornersOnly.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/BigBlockWithWalls$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/BigBlockWithWalls.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/HorizontalPairOfBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/PairOfBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/RowOfBlocksWithEndpointsOnly.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/StructureOfBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/VerticalPairOfBlocks.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/BigBlockWithCornersOnly.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithCornersOnly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/BigBlockWithWalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithWalls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Corners.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/Corners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/HorizontalPairOfBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/PairOfBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/RowOfBlocksWithEndpointsOnly.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/RowOfBlocksWithEndpointsOnly.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/StructureOfBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/StructureOfBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/VerticalPairOfBlocks.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>

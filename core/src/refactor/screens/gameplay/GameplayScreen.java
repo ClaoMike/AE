@@ -9,11 +9,9 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
-import refactor.objects.Directions;
 import refactor.objects.blocks.Block;
-import refactor.objects.blocks.pairOfBlocks.PairOfBlocks;
-import refactor.objects.blocks.pairOfBlocks.VerticalPairOfBlocks;
 import refactor.objects.blocks.structures.BigBlockWithWalls;
+import refactor.objects.blocks.structures.HorizontalRowOfBlocks;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.player.Player;
 import refactor.screens.blueprints.SimpleScreen;
@@ -25,6 +23,8 @@ public class GameplayScreen extends SimpleScreen {
     private final Block blockOfSnow;
     private final Atom spaceship;
     private BigBlockWithWalls biggie;
+
+    private HorizontalRowOfBlocks mockRow;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -52,8 +52,10 @@ public class GameplayScreen extends SimpleScreen {
 
         GameUtils gameUtils = new GameUtils(game, world);
 
-        Directions[] directions = new Directions[]{ Directions.RIGHT, Directions.UP, Directions.DOWN, Directions.LEFT};
-        this.biggie = new BigBlockWithWalls(gameUtils, new Vector2(300, 300), directions);
+//        Directions[] directions = new Directions[]{ Directions.RIGHT, Directions.UP, Directions.DOWN, Directions.LEFT};
+//        this.biggie = new BigBlockWithWalls(gameUtils, new Vector2(300, 300), directions);
+
+        mockRow = new HorizontalRowOfBlocks(gameUtils, new Vector2(300, 300), 3, true);
 
         //TODO:
         // 1. Add the start platform;
@@ -86,7 +88,8 @@ public class GameplayScreen extends SimpleScreen {
         blockOfSnow.updatePosition();
         spaceship.updatePosition();
 
-        biggie.updatePosition();
+//        biggie.updatePosition();
+        mockRow.updatePosition();
 
 
         // Draw the sprites
@@ -95,7 +98,8 @@ public class GameplayScreen extends SimpleScreen {
         blockOfSnow.draw();
         spaceship.draw();
 
-        biggie.draw();
+//        biggie.draw();
+        mockRow.draw();
 
         getBatch().end();
 
