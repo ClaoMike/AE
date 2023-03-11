@@ -23,8 +23,6 @@ public class GameplayScreen extends SimpleScreen {
     private final Player player;
     private final Block blockOfSnow;
     private final Atom spaceship;
-
-    private final BigBlockWithCornersOnly bigBlock;
     private BigBlockWithWalls biggie;
 
     public GameplayScreen(GameMain game) {
@@ -51,12 +49,11 @@ public class GameplayScreen extends SimpleScreen {
                 false
         );
 
-        bigBlock = new BigBlockWithCornersOnly(game, world, new Vector2(300, 300));
+        GameUtils gameUtils = new GameUtils(game, world);
 
         Directions[] directions = new Directions[]{ Directions.DOWN};
-        this.biggie = new BigBlockWithWalls(game, world, new Vector2(300, 300),
-                directions
-    );
+        this.biggie = new BigBlockWithWalls(gameUtils, new Vector2(300, 300), directions);
+
         //TODO:
         // 1. Add the start platform;
         // 2. Generate the maze, draw it;
@@ -88,7 +85,6 @@ public class GameplayScreen extends SimpleScreen {
         blockOfSnow.updatePosition();
         spaceship.updatePosition();
 
-        bigBlock.updatePosition();
         biggie.updatePosition();
 
 
@@ -98,7 +94,6 @@ public class GameplayScreen extends SimpleScreen {
         blockOfSnow.draw();
         spaceship.draw();
 
-        bigBlock.draw();
         biggie.draw();
 
         getBatch().end();

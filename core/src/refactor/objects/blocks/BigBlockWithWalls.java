@@ -5,18 +5,17 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import refactor.objects.Directions;
+import refactor.screens.gameplay.GameUtils;
 
-public class BigBlockWithWalls extends StructureOfBlocks {
+public class BigBlockWithWalls extends BigBlockWithCornersOnly {
     private Directions[] wallDirections;
 
-    public BigBlockWithWalls(GameMain game, World world, Vector2 coordinates, Directions[] wallDirections) {
-        super(game, world, coordinates);
+    public BigBlockWithWalls(GameUtils utils, Vector2 coordinates, Directions[] wallDirections) {
+        super(utils, coordinates);
 
         this.wallDirections = wallDirections;
         addWalls();
         addDirt();
-
-
     }
 
     private void addWalls() {
