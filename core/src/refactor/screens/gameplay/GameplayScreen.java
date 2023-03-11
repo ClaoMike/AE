@@ -10,9 +10,10 @@ import com.badlogic.gdx.physics.box2d.World;
 import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
 import refactor.objects.Directions;
-import refactor.objects.blocks.BigBlockWithCornersOnly;
-import refactor.objects.blocks.BigBlockWithWalls;
 import refactor.objects.blocks.Block;
+import refactor.objects.blocks.pairOfBlocks.PairOfBlocks;
+import refactor.objects.blocks.pairOfBlocks.VerticalPairOfBlocks;
+import refactor.objects.blocks.structures.BigBlockWithWalls;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.player.Player;
 import refactor.screens.blueprints.SimpleScreen;
@@ -51,7 +52,7 @@ public class GameplayScreen extends SimpleScreen {
 
         GameUtils gameUtils = new GameUtils(game, world);
 
-        Directions[] directions = new Directions[]{ Directions.DOWN};
+        Directions[] directions = new Directions[]{ Directions.RIGHT, Directions.UP, Directions.DOWN, Directions.LEFT};
         this.biggie = new BigBlockWithWalls(gameUtils, new Vector2(300, 300), directions);
 
         //TODO:

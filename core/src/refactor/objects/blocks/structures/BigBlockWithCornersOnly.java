@@ -1,4 +1,4 @@
-package refactor.objects.blocks;
+package refactor.objects.blocks.structures;
 
 import com.badlogic.gdx.math.Vector2;
 import refactor.screens.gameplay.GameUtils;
