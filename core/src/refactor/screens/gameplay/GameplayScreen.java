@@ -53,12 +53,9 @@ public class GameplayScreen extends SimpleScreen {
 
         bigBlock = new BigBlockWithCornersOnly(game, world, new Vector2(300, 300));
 
-        Directions[] directions = new Directions[]{Directions.LEFT, Directions.RIGHT, Directions.UP, Directions.DOWN};
-        this.biggie = new BigBlockWithWalls(
-                game,
-                world,
-                new Vector2(300, 300),
-                null
+        Directions[] directions = new Directions[]{ Directions.DOWN};
+        this.biggie = new BigBlockWithWalls(game, world, new Vector2(300, 300),
+                directions
     );
         //TODO:
         // 1. Add the start platform;

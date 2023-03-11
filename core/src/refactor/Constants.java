@@ -6,6 +6,7 @@ public class Constants {
     public String BLOCK_IMAGE_FILEPATH;
     public String DEBUG_MODE_CHECKBOX_TITLE;
     public boolean DEBUG_MODE_DEFAULT_VALUE;
+    public String BLOCK_DIRT_IMAGE_FILEPATH;
     public String EMPTY_STRING;
     public int FONT_DEFAULT_SIZE;
     public String FONT_FILEPATH;

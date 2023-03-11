@@ -5,27 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/BigBlockWithWalls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/refactor/images/dirt.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/terrain/UI/BlockDirections.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/terrain/UI/DrawableMaze.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/terrain/UI/DrawableMaze.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/terrain/UI/MazeRoom$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/terrain/UI/MazeRoom$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/terrain/UI/MazeRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/objects/gameplay/terrain/UI/MazeRoom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/StructureOfBlocks.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/StructureOfBlocks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/BigBlockWithWalls$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/BigBlockWithWalls$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/BigBlockWithWalls.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/BigBlockWithWalls.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/ui/BlockDirections.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/ui/DrawableMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/ui/DrawableMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/ui/MazeRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/objects/gameplay/terrain/ui/MazeRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/StructureOfBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/StructureOfBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/BigBlockWithWalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/BigBlockWithWalls.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
