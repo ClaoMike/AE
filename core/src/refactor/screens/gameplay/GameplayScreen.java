@@ -12,6 +12,7 @@ import refactor.cameras.FollowingCamera;
 import refactor.objects.blocks.Block;
 import refactor.objects.blocks.structures.BigBlockWithWalls;
 import refactor.objects.blocks.structures.HorizontalRowOfBlocks;
+import refactor.objects.blocks.structures.Platform;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.player.Player;
 import refactor.screens.blueprints.SimpleScreen;
@@ -20,19 +21,16 @@ public class GameplayScreen extends SimpleScreen {
     private final World world;
     private final FollowingCamera camera;
     private final Player player;
-    private final Block blockOfSnow;
     private final Atom spaceship;
     private BigBlockWithWalls biggie;
 
-    private HorizontalRowOfBlocks mockRow;
+    private Platform platform;
 
     public GameplayScreen(GameMain game) {
         super(game);
 
         world = new World(new Vector2(0, 0), true);
         camera = new FollowingCamera(game, world);
-
-        blockOfSnow = new Block(game, getConstants().BLOCK_IMAGE_FILEPATH, world, 300, 300, false);
 
         player = new Player(game, world);
 
@@ -55,7 +53,7 @@ public class GameplayScreen extends SimpleScreen {
 //        Directions[] directions = new Directions[]{ Directions.RIGHT, Directions.UP, Directions.DOWN, Directions.LEFT};
 //        this.biggie = new BigBlockWithWalls(gameUtils, new Vector2(300, 300), directions);
 
-        mockRow = new HorizontalRowOfBlocks(gameUtils, new Vector2(300, 300), 3, true);
+        platform = new Platform(gameUtils, new Vector2(0, 0));
 
         //TODO:
         // 1. Add the start platform;
@@ -85,21 +83,21 @@ public class GameplayScreen extends SimpleScreen {
 
         // Update position of sprites based on their bodies
         player.updatePosition();
-        blockOfSnow.updatePosition();
         spaceship.updatePosition();
 
 //        biggie.updatePosition();
-        mockRow.updatePosition();
+
+        platform.updatePosition();
 
 
         // Draw the sprites
         getBatch().begin();
         player.draw();
-        blockOfSnow.draw();
         spaceship.draw();
 
 //        biggie.draw();
-        mockRow.draw();
+
+        platform.draw();
 
         getBatch().end();
 
