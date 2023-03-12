@@ -29,7 +29,7 @@
   "SLIDER_BACKGROUND": "images/mainmenu/slider/slider_background.png",
   "SLIDER_KNOB_BACKGROUND": "images/mainmenu/slider/slider_knob_background.png",
   "SLIDER_MAZE_SIZE_TITLE": "Maze Size: ",
-  "SPACESHIP_IMAGE_FILEPATH": "images/gameplay/spaceship/spaceship.png",
+  "SPACESHIP_IMAGE_FILEPATH": "images/gameplay/spaceship/spaceship2.png",
   "UNIVERSITY_NAME": "The University of Manchester",
   "VELOCITY_ITERATIONS": 6,
   "POSITION_ITERATIONS": 2

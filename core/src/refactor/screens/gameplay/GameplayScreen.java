@@ -13,8 +13,13 @@ import refactor.objects.blocks.BlockTypes;
 import refactor.objects.blocks.cube.CubeArrangements;
 import refactor.objects.blocks.cube.Cube;
 import refactor.objects.blocks.platforms.Platform;
+import refactor.objects.blueprints.Atom;
+import refactor.objects.blueprints.CustomSprite;
+import refactor.objects.blueprints.CustomSpriteWithBody;
 import refactor.objects.player.Player;
+import refactor.objects.player.Spaceship;
 import refactor.screens.blueprints.SimpleScreen;
+import sun.jvm.hotspot.gc.shared.Space;
 
 public class GameplayScreen extends SimpleScreen {
     private final World world;
@@ -22,6 +27,7 @@ public class GameplayScreen extends SimpleScreen {
     private final Player player;
 
     private Platform platform;
+    private Spaceship spaceship;
 
 
     public GameplayScreen(GameMain game) {
@@ -35,10 +41,10 @@ public class GameplayScreen extends SimpleScreen {
         GameUtils utils = new GameUtils(game, world);
 
         float screenWidth = Gdx.graphics.getWidth();
-        Vector2 coordinates = new Vector2(-screenWidth/2, 150);
+        Vector2 coordinates = new Vector2(-screenWidth/2-400, 150);
 
         platform = new Platform(coordinates, (int)(screenWidth/100/4), Directions.LEFT, utils);
-
+        spaceship = new Spaceship(game, world, -player.getSprite().getWidth()*3, 0);
         //TODO:
         // 2. Generate the maze, draw it;
         // 3. Draw the finish platform;
@@ -68,6 +74,7 @@ public class GameplayScreen extends SimpleScreen {
         player.updatePosition();
 
         platform.updatePosition();
+        spaceship.updatePosition();
 
         // Draw the sprites
         getBatch().begin();
@@ -77,6 +84,7 @@ public class GameplayScreen extends SimpleScreen {
 
         //player
         player.draw();
+        spaceship.draw();
 
         getBatch().end();
 
