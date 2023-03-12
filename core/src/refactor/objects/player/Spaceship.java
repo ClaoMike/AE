@@ -9,10 +9,11 @@ import dev.clao.GameMain;
 import helpers.GameInfo;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.blueprints.CustomSpriteWithBody;
+import refactor.screens.gameplay.GameUtils;
 
 public class Spaceship extends Atom {
-    public Spaceship(GameMain game, World world, float x, float y) {
-        super(game, game.getConstants().SPACESHIP_IMAGE_FILEPATH, world, BodyDef.BodyType.StaticBody, x, y, 1, false);
+    public Spaceship(GameUtils utils, float x, float y) {
+        super(utils.game, utils.game.getConstants().SPACESHIP_IMAGE_FILEPATH, utils.world, BodyDef.BodyType.StaticBody, x, y, 1, false);
     }
 
     @Override

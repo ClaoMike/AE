@@ -9,23 +9,24 @@ import dev.clao.GameMain;
 import refactor.Constants;
 import refactor.objects.Directions;
 import refactor.objects.blueprints.Atom;
+import refactor.screens.gameplay.GameUtils;
 
 public class Player extends Atom {
     // TODO: Set the rotation of the player to false.
     private final Constants constants;
 
-    public Player(GameMain game, World world) {
+    public Player(GameUtils utils) {
         super(
-                game,
-                game.getConstants().PLAYER_IMAGE_FILEPATH,
-                world, BodyDef.BodyType.DynamicBody,
-                game.getConstants().PLAYER_INITIAL_POSITION,
-                game.getConstants().PLAYER_INITIAL_POSITION,
+                utils.game,
+                utils.game.getConstants().PLAYER_IMAGE_FILEPATH,
+                utils.world, BodyDef.BodyType.DynamicBody,
+                utils.game.getConstants().PLAYER_INITIAL_POSITION,
+                utils.game.getConstants().PLAYER_INITIAL_POSITION,
                 1,
                 false
         );
 
-        this.constants = game.getConstants();
+        this.constants = utils.game.getConstants();
 
         new PlayerInputProcessor(this);
     }

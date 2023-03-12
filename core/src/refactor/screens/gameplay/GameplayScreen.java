@@ -9,42 +9,40 @@ import com.badlogic.gdx.physics.box2d.World;
 import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
 import refactor.objects.Directions;
-import refactor.objects.blocks.BlockTypes;
-import refactor.objects.blocks.cube.CubeArrangements;
-import refactor.objects.blocks.cube.Cube;
 import refactor.objects.blocks.platforms.Platform;
-import refactor.objects.blueprints.Atom;
-import refactor.objects.blueprints.CustomSprite;
-import refactor.objects.blueprints.CustomSpriteWithBody;
 import refactor.objects.player.Player;
 import refactor.objects.player.Spaceship;
 import refactor.screens.blueprints.SimpleScreen;
-import sun.jvm.hotspot.gc.shared.Space;
 
 public class GameplayScreen extends SimpleScreen {
+    private GameUtils utils;
     private final World world;
     private final FollowingCamera camera;
-    private final Player player;
 
-    private Platform platform;
     private Spaceship spaceship;
-
+    private final Player player;
+    private Platform platform;
 
     public GameplayScreen(GameMain game) {
         super(game);
 
+        // world, utils, camera
         world = new World(new Vector2(0, 0), true);
-        camera = new FollowingCamera(game, world);
+        utils = new GameUtils(game, world);
+        camera = new FollowingCamera(utils);
 
-        player = new Player(game, world);
-
-        GameUtils utils = new GameUtils(game, world);
-
+        //terrain
         float screenWidth = Gdx.graphics.getWidth();
         Vector2 coordinates = new Vector2(-screenWidth/2-400, 150);
 
         platform = new Platform(coordinates, (int)(screenWidth/100/4), Directions.LEFT, utils);
-        spaceship = new Spaceship(game, world, -player.getSprite().getWidth()*3, 0);
+
+        // spaceship
+        spaceship = new Spaceship(utils, -300, 0);
+
+        //player
+        player = new Player(utils);
+
         //TODO:
         // 2. Generate the maze, draw it;
         // 3. Draw the finish platform;
@@ -55,6 +53,28 @@ public class GameplayScreen extends SimpleScreen {
 
     @Override
     public void show() {
+    }
+
+    private void updatePositions() {
+        // terrain
+        platform.updatePosition();
+
+        // spaceship
+        spaceship.updatePosition();
+
+        // player
+        player.updatePosition();
+    }
+
+    private void draw() {
+        // terrain
+        platform.draw();
+
+        // spaceship
+        spaceship.draw();
+
+        // player
+        player.draw();
     }
 
     @Override
@@ -71,21 +91,11 @@ public class GameplayScreen extends SimpleScreen {
         detectUserInput();
 
         // Update position of sprites based on their bodies
-        player.updatePosition();
-
-        platform.updatePosition();
-        spaceship.updatePosition();
+        updatePositions();
 
         // Draw the sprites
         getBatch().begin();
-
-        // terrain
-        platform.draw();
-
-        //player
-        player.draw();
-        spaceship.draw();
-
+        draw();
         getBatch().end();
 
         // Update cameras

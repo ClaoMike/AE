@@ -9,6 +9,7 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import refactor.objects.blueprints.CustomSpriteWithBody;
+import refactor.screens.gameplay.GameUtils;
 
 public class FollowingCamera {
     private final GameMain game;
@@ -18,9 +19,9 @@ public class FollowingCamera {
     private Box2DDebugRenderer debugRenderer;
     private final boolean debugModeIsOn;
 
-    public FollowingCamera(GameMain game, World world) {
-        this.game = game;
-        this.world = world;
+    public FollowingCamera(GameUtils utils) {
+        this.game = utils.game;
+        this.world = utils.world;
         this.debugModeIsOn = game.settings.getDebugMode();
 
         float screenWidth = Gdx.graphics.getWidth();
