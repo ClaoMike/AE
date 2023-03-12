@@ -1,17 +1,16 @@
 package refactor.objects.blocks.platforms;
 
-
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
-
+import refactor.Constants;
 import refactor.objects.Directions;
 import refactor.objects.blocks.cube.Cube;
 import refactor.objects.blocks.cube.CubeArrangements;
 import refactor.screens.gameplay.GameUtils;
 
 public class Platform {
-    private GameUtils utils;
-    private Array<Cube> cubes = new Array<>();
+    private final GameUtils utils;
+    private final Array<Cube> cubes = new Array<>();
 
     public Platform(Vector2 coordinates, int cubesCount, Directions directions, GameUtils utils) {
         this.utils = utils;
@@ -22,7 +21,7 @@ public class Platform {
                 addRoad(nextCoordinates);
                 addSnowBorders(nextCoordinates);
 
-                nextCoordinates.x += 400;
+                nextCoordinates.x += 4 * Constants.BLOCK_SIZE;
             }
             addConnection(nextCoordinates, directions);
             addSnowBorders(nextCoordinates);
@@ -32,7 +31,7 @@ public class Platform {
             addSnowBorders(nextCoordinates);
 
             for(int i = 0; i < cubesCount; i++) {
-                nextCoordinates.x += 400;
+                nextCoordinates.x += 4 * Constants.BLOCK_SIZE;
                 addRoad(nextCoordinates);
                 addSnowBorders(nextCoordinates);
             }

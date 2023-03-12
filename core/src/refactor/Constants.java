@@ -1,6 +1,7 @@
 package refactor;
 
 public class Constants {
+    public static final int BLOCK_SIZE = 100;
     public static final String SNOW_IMAGE_FILEPATH = "images/gameplay/terrain/snow.png";
     public static final String DIRT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt.png";
     public static final String DIRT_WITH_SNOW_UP_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow/up.png";

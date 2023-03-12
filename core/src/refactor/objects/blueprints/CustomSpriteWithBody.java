@@ -47,7 +47,6 @@ public class CustomSpriteWithBody extends CustomSprite {
 //        setPosition(body.getPosition().x * GameInfo.PPM - getWidth()/2, body.getPosition().y * GameInfo.PPM - getHeight()/2);
         // TODO: see this more closely.
         setPosition(body.getPosition().x * GameInfo.PPM , body.getPosition().y * GameInfo.PPM );
-
     }
 
     public static Body generateBody(World world, BodyDef.BodyType type, float x, float y, ObjectUserData userData) {

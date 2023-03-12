@@ -10,18 +10,19 @@ import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
 import refactor.objects.Directions;
 import refactor.objects.blocks.platforms.Platform;
+import refactor.objects.maze.Maze;
 import refactor.objects.player.Player;
-import refactor.objects.player.Spaceship;
+import refactor.objects.spaceship.Spaceship;
 import refactor.screens.blueprints.SimpleScreen;
 
 public class GameplayScreen extends SimpleScreen {
-    private GameUtils utils;
+    private final GameUtils utils;
     private final World world;
     private final FollowingCamera camera;
-
-    private Spaceship spaceship;
+    private final Spaceship spaceship;
     private final Player player;
     private Platform platform;
+    private Maze maze;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -36,6 +37,8 @@ public class GameplayScreen extends SimpleScreen {
         Vector2 coordinates = new Vector2(-screenWidth/2-400, 150);
 
         platform = new Platform(coordinates, (int)(screenWidth/100/4), Directions.LEFT, utils);
+        maze = new Maze(game.settings.getMazeSize());
+        maze.printToConsole(); // TODO: continue from here
 
         // spaceship
         spaceship = new Spaceship(utils, -300, 0);

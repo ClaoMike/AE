@@ -3,6 +3,7 @@ package refactor.objects.blocks.cube;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
+import refactor.Constants;
 import refactor.objects.blocks.Block;
 import refactor.objects.blocks.BlockTypes;
 import refactor.objects.blocks.dirt.DirtSprite;
@@ -20,9 +21,9 @@ import refactor.objects.blueprints.CustomSprite;
 import refactor.screens.gameplay.GameUtils;
 
 public class Cube {
-    private GameUtils utils;
-    private Array<CustomSprite> sprites = new Array<>();
-    private Array<Block> blocks = new Array<>();
+    private final GameUtils utils;
+    private final Array<CustomSprite> sprites = new Array<>();
+    private final Array<Block> blocks = new Array<>();
 
     public Cube(BlockTypes[][] arrangement, Vector2 coordinates, GameUtils utils) {
         this.utils = utils;
@@ -30,10 +31,10 @@ public class Cube {
         Vector2 nextCoordinates = coordinates.cpy();
         for(int i = 0; i < arrangement.length; i++) {
             nextCoordinates.x = coordinates.x;
-            nextCoordinates.y = coordinates.y - 100 * i;
+            nextCoordinates.y = coordinates.y - Constants.BLOCK_SIZE * i;
             for(int j = 0; j < arrangement[i].length; j++) {
 
-                nextCoordinates.x = coordinates.x + 100 * j;
+                nextCoordinates.x = coordinates.x + Constants.BLOCK_SIZE * j;
 
                 switch (arrangement[i][j]) {
                     case SNOW_BODY:
