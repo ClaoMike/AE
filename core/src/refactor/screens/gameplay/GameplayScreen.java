@@ -9,6 +9,8 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
+import refactor.objects.blocks.cube.BlockTypes;
+import refactor.objects.blocks.cube.Cube;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.player.Player;
 import refactor.screens.blueprints.SimpleScreen;
@@ -18,6 +20,9 @@ public class GameplayScreen extends SimpleScreen {
     private final FollowingCamera camera;
     private final Player player;
     private final Atom spaceship;
+
+    private BlockTypes[][] blocks;
+    private Cube cube;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -41,7 +46,17 @@ public class GameplayScreen extends SimpleScreen {
                 false
         );
 
-        GameUtils gameUtils = new GameUtils(game, world);
+        GameUtils utils = new GameUtils(game, world);
+
+        Vector2 coordinates = new Vector2(300, 300);
+        blocks = new BlockTypes[][]{
+                {BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SNOW_UP, BlockTypes.DIRT_SNOW_DOWN, BlockTypes.DIRT_SNOW_LEFT},
+                {BlockTypes.DIRT_SNOW_RIGHT, BlockTypes.DIRT_SNOW_CORNER_BOTTOM_LEFT, BlockTypes.DIRT_SNOW_CORNER_BOTTOM_RIGHT, BlockTypes.DIRT_SNOW_CORNER_TOP_LEFT},
+                {BlockTypes.DIRT_SNOW_CORNER_TOP_RIGHT, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE},
+                {BlockTypes.SNOW_BODY, BlockTypes.DIRT_SNOW_DOWN, BlockTypes.DIRT_SNOW_DOWN, BlockTypes.DIRT_SNOW_DOWN},
+        };
+        cube = new Cube(blocks, coordinates, utils);
+
         //TODO:
         // 1. Add the start platform;
         // 2. Generate the maze, draw it;
@@ -72,10 +87,13 @@ public class GameplayScreen extends SimpleScreen {
         player.updatePosition();
         spaceship.updatePosition();
 
+        cube.updatePosition();
+
         // Draw the sprites
         getBatch().begin();
 
         // terrain
+        cube.draw();
 
         // spaceship
         spaceship.draw();

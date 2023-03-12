@@ -5,7 +5,7 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
-import refactor.objects.blocks.structures.Corners;
+import refactor.objects.blocks.cube.Corners;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.blueprints.CustomSprite;
 

@@ -1,10 +1,6 @@
 {
   "BACKGROUND_IMAGE_FILEPATH": "images/mainmenu/background/background.png",
   "BACKGROUND_MUSIC_FILEPATH": "music/background.mp3",
-  "SNOW_IMAGE_FILEPATH": "images/gameplay/terrain/snow.png",
-  "DIRT_IMAGE_FILEPATH": "images/gameplay/terrain/dirt.png",
-  "DIRT_WITH_SNOW_IMAGE_FILEPATH": "images/gameplay/terrain/dirt.png",
-  "DIRT_WITH_SNOW_CORNER_IMAGE_FILEPATH": "images/gameplay/terrain/dirt.png",
   "DEBUG_MODE_CHECKBOX_TITLE": "Debug Mode: ",
   "DEBUG_MODE_DEFAULT_VALUE": true,
   "EMPTY_STRING": "",

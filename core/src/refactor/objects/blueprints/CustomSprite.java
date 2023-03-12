@@ -7,4 +7,8 @@ public class CustomSprite extends Sprite {
     public CustomSprite(String filepath) {
         super(new Texture(filepath));
     }
+
+    public void dispose() {
+        getTexture().dispose();
+    }
 }

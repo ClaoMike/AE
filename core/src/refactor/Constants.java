@@ -1,10 +1,18 @@
 package refactor;
 
 public class Constants {
-    public String SNOW_IMAGE_FILEPATH;
-    public String DIRT_IMAGE_FILEPATH;
-    public String DIRT_WITH_SNOW_IMAGE_FILEPATH;
-    public String DIRT_WITH_SNOW_CORNER_IMAGE_FILEPATH;
+    public static final String SNOW_IMAGE_FILEPATH = "images/gameplay/terrain/snow.png";
+    public static final String DIRT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt.png";
+    public static final String DIRT_WITH_SNOW_UP_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow/up.png";
+    public static final String DIRT_WITH_SNOW_DOWN_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow/down.png";
+    public static final String DIRT_WITH_SNOW_LEFT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow/left.png";
+    public static final String DIRT_WITH_SNOW_RIGHT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow/right.png";
+
+    public static final String DIRT_WITH_SNOW_CORNER_TOP_LEFT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow_corner/top_left.png";
+    public static final String DIRT_WITH_SNOW_CORNER_TOP_RIGHT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow_corner/top_right.png";
+    public static final String DIRT_WITH_SNOW_CORNER_BOTTOM_LEFT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow_corner/bottom_left.png";
+    public static final String DIRT_WITH_SNOW_CORNER_BOTTOM_RIGHT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt_with_snow_corner/bottom_right.png";
+
     public String BACKGROUND_IMAGE_FILEPATH;
     public String BACKGROUND_MUSIC_FILEPATH;
     public String DEBUG_MODE_CHECKBOX_TITLE;

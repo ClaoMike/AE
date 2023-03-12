@@ -1,0 +1,15 @@
+package refactor.objects.blocks.cube;
+
+public enum BlockTypes {
+    SNOW_SPRITE,
+    SNOW_BODY,
+    DIRT_SPRITE,
+    DIRT_SNOW_UP,
+    DIRT_SNOW_DOWN,
+    DIRT_SNOW_RIGHT,
+    DIRT_SNOW_LEFT,
+    DIRT_SNOW_CORNER_TOP_RIGHT,
+    DIRT_SNOW_CORNER_TOP_LEFT,
+    DIRT_SNOW_CORNER_BOTTOM_RIGHT,
+    DIRT_SNOW_CORNER_BOTTOM_LEFT,
+}
