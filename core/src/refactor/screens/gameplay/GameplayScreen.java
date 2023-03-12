@@ -19,7 +19,7 @@ public class GameplayScreen extends SimpleScreen {
     private final World world;
     private final FollowingCamera camera;
     private final Player player;
-    private final Atom spaceship;
+//    private final Atom spaceship;
 
     private BlockTypes[][] blocks;
     private Cube cube;
@@ -35,20 +35,20 @@ public class GameplayScreen extends SimpleScreen {
         float spaceshipX = player.getSprite().getX() - 2 * player.getSprite().getWidth();
         float spaceshipY = player.getSprite().getY() + player.getSprite().getHeight() / 2;
 
-        spaceship = new Atom(
-                game,
-                getConstants().SPACESHIP_IMAGE_FILEPATH,
-                world,
-                BodyDef.BodyType.StaticBody,
-                spaceshipX,
-                spaceshipY,
-                1,
-                false
-        );
+//        spaceship = new Atom(
+//                game,
+//                getConstants().SPACESHIP_IMAGE_FILEPATH,
+//                world,
+//                BodyDef.BodyType.StaticBody,
+//                spaceshipX,
+//                spaceshipY,
+//                1,
+//                false
+//        );
 
         GameUtils utils = new GameUtils(game, world);
 
-        Vector2 coordinates = new Vector2(300, 300);
+        Vector2 coordinates = new Vector2(500, 350);
         blocks = new BlockTypes[][]{
                 {BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SNOW_UP, BlockTypes.DIRT_SNOW_DOWN, BlockTypes.DIRT_SNOW_LEFT},
                 {BlockTypes.DIRT_SNOW_RIGHT, BlockTypes.DIRT_SNOW_CORNER_BOTTOM_LEFT, BlockTypes.DIRT_SNOW_CORNER_BOTTOM_RIGHT, BlockTypes.DIRT_SNOW_CORNER_TOP_LEFT},
@@ -85,7 +85,7 @@ public class GameplayScreen extends SimpleScreen {
 
         // Update position of sprites based on their bodies
         player.updatePosition();
-        spaceship.updatePosition();
+//        spaceship.updatePosition();
 
         cube.updatePosition();
 
@@ -96,7 +96,7 @@ public class GameplayScreen extends SimpleScreen {
         cube.draw();
 
         // spaceship
-        spaceship.draw();
+//        spaceship.draw();
 
         //player
         player.draw();

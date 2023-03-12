@@ -5,26 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
-      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow/down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow/left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner/bottom_left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner/bottom_right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner/top_left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/BlockTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/Cube.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirt/DirtSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirtAndSnow/DSDownSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirtAndSnow/DSLeftSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirtAndSnow/DSRightSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirtAndSnow/DSUpSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirtAndSnowCorner/DSBottomLeftCornerSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirtAndSnowCorner/DSBottomRightCornerSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirtAndSnowCorner/DSTopLeftCornerSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/dirtAndSnowCorner/DSTopRightCornerSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/snow/SnowBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/snow/SnowSprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/UpdatedCustomSprite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -32,48 +12,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow/up.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner/top_right.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/Block$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/Block$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/Block.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/pairOfBlocks/HorizontalPairOfBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/pairOfBlocks/PairOfBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/pairOfBlocks/VerticalPairOfBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/BigBlockWithCornersOnly.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/BigBlockWithWalls$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/BigBlockWithWalls.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/BigBlockWithWallsAndDirt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/Corners.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/HorizontalRowOfBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/NewPlatform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/Platform.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/RowOfBlocksWithEndpointsOnly.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/StructureOfBlocks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/CustomSprite.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/CustomSprite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/cube/Cube.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/cube/Cube.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/CustomSpriteWithBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/CustomSpriteWithBody.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/pairOfBlocks/HorizontalPairOfBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/pairOfBlocks/PairOfBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/pairOfBlocks/VerticalPairOfBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithCornersOnly.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithWalls.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithWallsAndDirt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/Corners.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/Corners.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/HorizontalRowOfBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/NewPlatform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/Platform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/RowOfBlocksWithEndpointsOnly.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/StructureOfBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/CustomSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/CustomSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/Cube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/CustomSpriteWithBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/CustomSpriteWithBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/images/gameplay/terrain/dirt_with_snow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/images/gameplay/terrain/dirt_with_snow_corner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -36,7 +36,7 @@ public class Cube {
 
                 switch (arrangement[i][j]) {
                     case SNOW_BODY:
-//                        blocks.add(new SnowBlock(utils, nextCoordinates));
+                        blocks.add(new SnowBlock(utils, nextCoordinates));
                         break;
                     case SNOW_SPRITE:
                         sprites.add(new SnowSprite(nextCoordinates));
@@ -78,14 +78,23 @@ public class Cube {
         for(CustomSprite sprite : sprites) {
             utils.game.getBatch().draw(sprite, sprite.getX(), sprite.getY());
         }
+        for(Block block: blocks) {
+            block.draw();
+        }
     }
 
     public void updatePosition() {
+        for(Block block: blocks) {
+            block.updatePosition();
+        }
     }
 
     public void dispose() {
         for(CustomSprite sprite : sprites) {
             sprite.dispose();
+        }
+        for(Block block: blocks) {
+            block.dispose();
         }
     }
 
