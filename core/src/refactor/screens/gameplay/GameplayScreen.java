@@ -9,10 +9,6 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
-import refactor.objects.blocks.Block;
-import refactor.objects.blocks.structures.BigBlockWithWalls;
-import refactor.objects.blocks.structures.HorizontalRowOfBlocks;
-import refactor.objects.blocks.structures.Platform;
 import refactor.objects.blueprints.Atom;
 import refactor.objects.player.Player;
 import refactor.screens.blueprints.SimpleScreen;
@@ -22,9 +18,6 @@ public class GameplayScreen extends SimpleScreen {
     private final FollowingCamera camera;
     private final Player player;
     private final Atom spaceship;
-    private BigBlockWithWalls biggie;
-
-    private Platform platform;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -49,12 +42,6 @@ public class GameplayScreen extends SimpleScreen {
         );
 
         GameUtils gameUtils = new GameUtils(game, world);
-
-//        Directions[] directions = new Directions[]{ Directions.RIGHT, Directions.UP, Directions.DOWN, Directions.LEFT};
-//        this.biggie = new BigBlockWithWalls(gameUtils, new Vector2(300, 300), directions);
-
-        platform = new Platform(gameUtils, new Vector2(0, 0));
-
         //TODO:
         // 1. Add the start platform;
         // 2. Generate the maze, draw it;
@@ -85,19 +72,16 @@ public class GameplayScreen extends SimpleScreen {
         player.updatePosition();
         spaceship.updatePosition();
 
-//        biggie.updatePosition();
-
-        platform.updatePosition();
-
-
         // Draw the sprites
         getBatch().begin();
-        player.draw();
+
+        // terrain
+
+        // spaceship
         spaceship.draw();
 
-//        biggie.draw();
-
-        platform.draw();
+        //player
+        player.draw();
 
         getBatch().end();
 

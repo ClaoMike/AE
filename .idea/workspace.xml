@@ -5,20 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
-      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/Platform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/CSpriteRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/NewPlatform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/refactor/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/buttons/credits.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/buttons/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/buttons/play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/buttons/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dirt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/fonts/Mabook.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/assets/fonts/Mabook.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/images/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/mainmenu/background/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/images/background2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/mainmenu/background/background2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/images/dirt.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/images/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/gameplay/player/player.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/images/slider_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/mainmenu/slider/slider_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/images/slider_knob_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/mainmenu/slider/slider_knob_background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/images/snow.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/gameplay/terrain/snow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/images/spaceship.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/gameplay/spaceship/spaceship.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/refactor/music/background.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/assets/music/background.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/BigBlockWithWalls$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/BigBlockWithWalls$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/BigBlockWithWalls.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/BigBlockWithWalls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/Platform.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/Platform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/StructureOfBlocks.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/structures/StructureOfBlocks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithWalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithWalls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithWallsAndDirt.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/BigBlockWithWallsAndDirt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/StructureOfBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/structures/StructureOfBlocks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/buttons/credits.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/buttons/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/buttons/play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/buttons/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/dirt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/fonts/Mabook.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/background2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/dirt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/player.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/slider_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/slider_knob_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/snow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/images/spaceship.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/json/constants.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/refactor/music/background.mp3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,10 +132,11 @@
       <recent name="$PROJECT_DIR$/assets/buttons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/refactor/images" />
-      <recent name="$PROJECT_DIR$/assets/refactor/json" />
-      <recent name="$PROJECT_DIR$/assets/refactor" />
-      <recent name="$PROJECT_DIR$/assets/buttons" />
+      <recent name="$PROJECT_DIR$/assets" />
+      <recent name="$PROJECT_DIR$/assets/refactor/images/mainmenu/slider" />
+      <recent name="$PROJECT_DIR$/assets/refactor/images/mainmenu/background" />
+      <recent name="$PROJECT_DIR$/assets/refactor/images/mainmenu" />
+      <recent name="$PROJECT_DIR$/assets/refactor/images/gameplay/spaceship" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="refactor.objects.blocks.structures" />

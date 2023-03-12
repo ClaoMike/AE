@@ -6,10 +6,12 @@ import com.badlogic.gdx.utils.Array;
 
 import dev.clao.GameMain;
 import refactor.objects.blocks.Block;
+import refactor.objects.blueprints.CustomSprite;
 import refactor.screens.gameplay.GameUtils;
 
 public class StructureOfBlocks {
     protected final Array<Block> blocks = new Array<>();
+    protected Array<CustomSprite> sprites = new Array<>();
     protected final GameMain game;
     protected final World world;
     protected Vector2 coordinates;
@@ -21,7 +23,7 @@ public class StructureOfBlocks {
         this.world = world;
         this.coordinates = coordinates.cpy();
 
-        blockFilepath = game.getConstants().BLOCK_IMAGE_FILEPATH;
+        blockFilepath = game.getConstants().SNOW_IMAGE_FILEPATH;
         blockSize = Block.getSize(blockFilepath);
     }
 
@@ -30,13 +32,17 @@ public class StructureOfBlocks {
         this.world = utils.world;
         this.coordinates = coordinates.cpy();
 
-        blockFilepath = game.getConstants().BLOCK_IMAGE_FILEPATH;
+        blockFilepath = game.getConstants().SNOW_IMAGE_FILEPATH;
         blockSize = Block.getSize(blockFilepath);
     }
 
     public void draw() {
         for(Block b: blocks) {
             b.draw();
+        }
+
+        for(CustomSprite s: sprites) {
+            game.getBatch().draw(s, s.getX(), s.getY());
         }
     }
 

@@ -12,23 +12,24 @@ public class Platform extends StructureOfBlocks {
         float screenWidth = Gdx.graphics.getWidth();
 
         int front = (int)(screenWidth/4/blockSize.x) +1;
+        float coef = 1.5f;
 
-        Vector2 nextCoordinates = new Vector2( coordinates.x, coordinates.y + 2*blockSize.y);
+        Vector2 nextCoordinates = new Vector2( coordinates.x, coordinates.y + coef*blockSize.y);
 
         HorizontalRowOfBlocks row1 = new HorizontalRowOfBlocks(utils, nextCoordinates, front, false);
 
-        nextCoordinates = new Vector2( coordinates.x, coordinates.y - 2* blockSize.y);
+        nextCoordinates = new Vector2( coordinates.x, coordinates.y - coef* blockSize.y);
 
         HorizontalRowOfBlocks row2 = new HorizontalRowOfBlocks(utils, nextCoordinates, front, false);
 
         blocks.addAll(row1.blocks);
         blocks.addAll(row2.blocks);
 
-        nextCoordinates = new Vector2( coordinates.x, coordinates.y - 2 * blockSize.y);
+        nextCoordinates = new Vector2( coordinates.x, coordinates.y - coef * blockSize.y);
 
         HorizontalRowOfBlocks row3 = new HorizontalRowOfBlocks(utils, nextCoordinates, front, true);
 
-        nextCoordinates = new Vector2( coordinates.x, coordinates.y + 2* blockSize.y);
+        nextCoordinates = new Vector2( coordinates.x, coordinates.y + coef * blockSize.y);
 
         HorizontalRowOfBlocks row4 = new HorizontalRowOfBlocks(utils, nextCoordinates, front, true);
 

@@ -9,4 +9,6 @@ public class BigBlockWithWallsAndDirt extends  BigBlockWithWalls {
     public BigBlockWithWallsAndDirt(GameUtils utils, Vector2 coordinates, Directions[] wallDirections) {
         super(utils, coordinates, wallDirections);
     }
+
+
 }

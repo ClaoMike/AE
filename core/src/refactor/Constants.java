@@ -1,19 +1,21 @@
 package refactor;
 
 public class Constants {
+    public String SNOW_IMAGE_FILEPATH;
+    public String DIRT_IMAGE_FILEPATH;
+    public String DIRT_WITH_SNOW_IMAGE_FILEPATH;
+    public String DIRT_WITH_SNOW_CORNER_IMAGE_FILEPATH;
     public String BACKGROUND_IMAGE_FILEPATH;
     public String BACKGROUND_MUSIC_FILEPATH;
-    public String BLOCK_IMAGE_FILEPATH;
     public String DEBUG_MODE_CHECKBOX_TITLE;
     public boolean DEBUG_MODE_DEFAULT_VALUE;
-    public String BLOCK_DIRT_IMAGE_FILEPATH;
     public String EMPTY_STRING;
     public int FONT_DEFAULT_SIZE;
     public String FONT_FILEPATH;
     public String GAME_TITLE;
     public int GAME_TITLE_BOTTOM_PADDING;
     public String GAME_VERSION;
-    public static final String JSON_CONSTANTS_FILEPATH = "refactor/json/constants.json";
+    public static final String JSON_CONSTANTS_FILEPATH = "json/constants.json";
     public int MAIN_MENU_BUTTON_BOTTOM_PADDING;
     public String MAIN_MENU_BUTTON_CREDITS;
     public String MAIN_MENU_BUTTON_EXIT;
