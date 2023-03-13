@@ -8,22 +8,4 @@ package helpers;
 public class GameInfo {
     // MAIN
     public static final int PPM = 100;
-
-    public static final String DIRT = "snow.png";
-
-    // ATOMIC OBJECT
-    public static final float CIRCLE_SHAPE_RADIUS = 0.5f;
-
-    // BASIC ROOM
-    public static final int NUMBER_OF_BLOCKS_IN_BASIC_ROOM = 4;
-
-    // MAZE ROOM
-    public static final int[] CENTER_ATOMIC_OBJECTS_INDICES = {5, 6, 9, 10};
-    public static final int[] LEFT_ATOMIC_OBJECTS_INDICES = {4, 8};
-    public static final int[] RIGHT_ATOMIC_OBJECTS_INDICES = {7, 11};
-    public static final int[] UP_ATOMIC_OBJECTS_INDICES = {13, 14};
-    public static final int[] DOWN_ATOMIC_OBJECTS_INDICES = {1, 2};
-
-    // PLATFORM
-    public static final int NUMBER_OF_BASIC_ROOMS_IN_PLATFORM = 3;
 }

@@ -1,7 +1,5 @@
 package refactor.screens.gameplay;
 
-import static com.badlogic.gdx.scenes.scene2d.InputEvent.Type.exit;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
@@ -10,26 +8,18 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
-import refactor.objects.Directions;
-import refactor.objects.blocks.CubeMaze;
-import refactor.objects.blocks.platforms.Platform;
+import refactor.objects.blocks.Terrain;
 import refactor.objects.player.Player;
 import refactor.objects.spaceship.Spaceship;
 import refactor.screens.blueprints.SimpleScreen;
-
-import java.util.Random;
 
 public class GameplayScreen extends SimpleScreen {
     private final GameUtils utils;
     private final World world;
     private final FollowingCamera camera;
+    private Terrain terrain;
     private final Spaceship spaceship;
     private final Player player;
-    private Platform startPlatform;
-    private CubeMaze maze;
-    private Platform endPlatform;
-
-
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -40,21 +30,7 @@ public class GameplayScreen extends SimpleScreen {
         camera = new FollowingCamera(utils);
 
         //terrain
-        float screenWidth = Gdx.graphics.getWidth();
-        Vector2 coordinates = new Vector2(-screenWidth/2-400, 150);
-
-        startPlatform = new Platform(coordinates, (int)(screenWidth/100/4), Directions.LEFT, utils);
-
-        Random rand = new Random();
-        int n = rand.nextInt(game.settings.getMazeSize()) + 1;
-        Vector2 mazeCoordinates = new Vector2(startPlatform.getEndX(), 150 + n * 400);
-        int entranceRow = n-1;
-        int exitRow = rand.nextInt(game.settings.getMazeSize());
-
-        maze = new CubeMaze(game.settings.getMazeSize(), mazeCoordinates, utils, entranceRow, exitRow);
-
-        Vector2 endPlatformCoordinates = new Vector2(maze.getEndX(), maze.getExitY());
-        endPlatform = new Platform(endPlatformCoordinates, (int)(screenWidth/100/4), Directions.RIGHT, utils);
+        terrain = new Terrain(utils);
 
         // spaceship
         spaceship = new Spaceship(utils, -300, 0);
@@ -63,8 +39,8 @@ public class GameplayScreen extends SimpleScreen {
         player = new Player(utils);
 
         //TODO:
-        // 2. Generate the maze, draw it;
-        // 3. Draw the finish platform;
+        // 2.Rearrange things in classes;
+        // 3. Fill the map with snow;
         // 4. Draw some kind of reward in the end room;
         // 5. Add sensors for detecting when the player reaches the end platform;
         // 6. Show an end menu when the sensors are triggered.
@@ -76,9 +52,7 @@ public class GameplayScreen extends SimpleScreen {
 
     private void updatePositions() {
         // terrain
-        startPlatform.updatePosition();
-        maze.updatePosition();
-        endPlatform.updatePosition();
+        terrain.updatePosition();
 
         // spaceship
         spaceship.updatePosition();
@@ -89,9 +63,7 @@ public class GameplayScreen extends SimpleScreen {
 
     private void draw() {
         // terrain
-        startPlatform.draw();
-        maze.draw();
-        endPlatform.draw();
+        terrain.draw();
 
         // spaceship
         spaceship.draw();
