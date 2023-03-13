@@ -8,6 +8,7 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
+import refactor.Constants;
 import refactor.objects.blueprints.CustomSpriteWithBody;
 import refactor.screens.gameplay.GameUtils;
 
@@ -32,7 +33,7 @@ public class FollowingCamera {
 
         if(debugModeIsOn) {
             debugCamera = new OrthographicCamera();
-            debugCamera.setToOrtho(false, screenWidth / game.getConstants().PPM, screenHeight / game.getConstants().PPM);
+            debugCamera.setToOrtho(false, screenWidth / Constants.PPM, screenHeight / Constants.PPM);
 
             debugRenderer = new Box2DDebugRenderer();
         }
@@ -66,8 +67,8 @@ public class FollowingCamera {
         mainCamera.update();
 
         if(debugModeIsOn) {
-            debugCamera.viewportWidth = width / game.getConstants().PPM ;
-            debugCamera.viewportHeight = height / game.getConstants().PPM ;
+            debugCamera.viewportWidth = width / Constants.PPM ;
+            debugCamera.viewportHeight = height / Constants.PPM ;
             debugCamera.update();
         }
     }

@@ -10,9 +10,9 @@ import refactor.objects.blocks.platforms.Platform;
 import refactor.screens.gameplay.GameUtils;
 
 public class Terrain {
-    private Platform startPlatform;
-    private CubeMaze maze;
-    private Platform endPlatform;
+    private final Platform startPlatform;
+    private final CubeMaze maze;
+    private final Platform endPlatform;
 
     public Terrain(GameUtils utils) {
         float screenWidth = Gdx.graphics.getWidth();

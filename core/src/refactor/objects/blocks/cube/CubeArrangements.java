@@ -4,7 +4,7 @@ import refactor.objects.blocks.BlockTypes;
 
 public class CubeArrangements {
 
-    public static class Connenction {
+    public static class Connection {
         public static final BlockTypes[][] rightArrangement = new BlockTypes[][]{
                 {BlockTypes.DIRT_SNOW_UP, BlockTypes.DIRT_SNOW_UP, BlockTypes.DIRT_SNOW_UP, BlockTypes.DIRT_SNOW_CORNER_TOP_RIGHT},
                 {BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE},
@@ -53,9 +53,7 @@ public class CubeArrangements {
         BlockTypes[][] copy = new BlockTypes[a.length][a[0].length];
 
         for(int i=0; i<a.length;i++) {
-            for(int j=0; j<a[i].length;j++) {
-                copy[i][j] = a[i][j];
-            }
+            System.arraycopy(a[i], 0, copy[i], 0, a[i].length);
         }
 
         return copy;
@@ -64,10 +62,9 @@ public class CubeArrangements {
     public static void printToConsole(BlockTypes[][] arrangement) {
         System.out.println();
 
-        for(int t = 0; t < arrangement.length; t++) {
-            for(int s = 0; s < arrangement[t].length; s++){
-                System.out.print(arrangement[t][s] + " ");
-
+        for (BlockTypes[] blockTypes : arrangement) {
+            for (BlockTypes blockType : blockTypes) {
+                System.out.print(blockType + " ");
             }
             System.out.println();
         }

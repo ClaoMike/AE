@@ -44,8 +44,6 @@ public class CustomSpriteWithBody extends CustomSprite {
     }
 
     public void updatePositionToBody() {
-//        setPosition(body.getPosition().x * GameInfo.PPM - getWidth()/2, body.getPosition().y * GameInfo.PPM - getHeight()/2);
-        // TODO: see this more closely.
         setPosition(body.getPosition().x * Constants.PPM , body.getPosition().y * Constants.PPM );
     }
 

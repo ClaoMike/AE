@@ -3,9 +3,7 @@ package refactor.objects.player;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.World;
 
-import dev.clao.GameMain;
 import refactor.Constants;
 import refactor.objects.Directions;
 import refactor.objects.blueprints.Atom;
@@ -23,7 +21,7 @@ public class Player extends Atom {
                 utils.game.getConstants().PLAYER_INITIAL_POSITION,
                 utils.game.getConstants().PLAYER_INITIAL_POSITION,
                 1,
-                true
+                utils.game.settings.getDebugMode()
         );
 
         this.constants = utils.game.getConstants();

@@ -11,16 +11,15 @@ import refactor.objects.maze.Vertex;
 import refactor.screens.gameplay.GameUtils;
 
 public class CubeMaze {
-    private Maze maze;
-    private Array<Cube> cubes = new Array<>();
-    private float endX;
-    private float exitY;
+    private final Array<Cube> cubes = new Array<>();
+    private final float endX;
+    private final float exitY;
 
     public CubeMaze(int mazeSize, Vector2 coordinates, GameUtils utils, int entranceRow, int exitRow) {
         endX = coordinates.x + (mazeSize+1) * 4 * Constants.BLOCK_SIZE;
         exitY = coordinates.y - 4*Constants.BLOCK_SIZE * (exitRow+1);
 
-        maze = new Maze(mazeSize);
+        Maze maze = new Maze(mazeSize);
         Vector2 nextCoordinates = coordinates.cpy();
 
         for(int i = 0; i < maze.getVertices().size; i++) {

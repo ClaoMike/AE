@@ -14,10 +14,9 @@ import refactor.objects.spaceship.Spaceship;
 import refactor.screens.blueprints.SimpleScreen;
 
 public class GameplayScreen extends SimpleScreen {
-    private final GameUtils utils;
     private final World world;
     private final FollowingCamera camera;
-    private Terrain terrain;
+    private final Terrain terrain;
     private final Spaceship spaceship;
     private final Player player;
 
@@ -26,7 +25,7 @@ public class GameplayScreen extends SimpleScreen {
 
         // world, utils, camera
         world = new World(new Vector2(0, 0), true);
-        utils = new GameUtils(game, world);
+        GameUtils utils = new GameUtils(game, world);
         camera = new FollowingCamera(utils);
 
         //terrain

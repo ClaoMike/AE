@@ -11,7 +11,7 @@ import refactor.screens.gameplay.GameUtils;
 public class Platform {
     private final GameUtils utils;
     private final Array<Cube> cubes = new Array<>();
-    private float endX;
+    private final float endX;
 
     public Platform(Vector2 coordinates, int cubesCount, Directions directions, GameUtils utils) {
         this.utils = utils;
@@ -57,9 +57,9 @@ public class Platform {
 
     private void addConnection(Vector2 coordinates, Directions direction) {
         if(Directions.RIGHT == direction)
-            cubes.add(new Cube(CubeArrangements.Connenction.leftArrangement, coordinates, utils));
+            cubes.add(new Cube(CubeArrangements.Connection.leftArrangement, coordinates, utils));
         else if(Directions.LEFT == direction)
-            cubes.add(new Cube(CubeArrangements.Connenction.rightArrangement, coordinates, utils));
+            cubes.add(new Cube(CubeArrangements.Connection.rightArrangement, coordinates, utils));
     }
 
     public void draw() {
