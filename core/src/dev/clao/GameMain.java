@@ -1,21 +1,21 @@
 package dev.clao;
 
-import static refactor.screens.Screens.GAMEPLAY;
-import static refactor.screens.Screens.MAIN_MENU;
+import static game_classes.screen.Screens.GAMEPLAY;
+import static game_classes.screen.Screens.MAIN_MENU;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Json;
 
-import dev.clao.music.BackgroundMusic;
-import refactor.Constants;
-import refactor.screens.settings.GameSettings;
-import refactor.screens.credits.CreditsScreen;
-import refactor.screens.mainmenu.MainMenuScreen;
-import refactor.screens.gameplay.GameplayScreen;
-import refactor.screens.Screens;
-import refactor.screens.settings.SettingsScreen;
+import game_classes.music.BackgroundMusic;
+import game_classes.Constants;
+import game_classes.screen.settings.GameSettings;
+import game_classes.screen.credits.CreditsScreen;
+import game_classes.screen.main_menu.MainMenuScreen;
+import game_classes.screen.gameplay.GameplayScreen;
+import game_classes.screen.Screens;
+import game_classes.screen.settings.SettingsScreen;
 
 /**
  * Busy with creating a sprite batch for drawing textures;

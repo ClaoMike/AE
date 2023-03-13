@@ -12,20 +12,99 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainmenu/background/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/main_menu/background/background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainmenu/background/background2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/main_menu/background/background2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainmenu/slider/slider_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/main_menu/slider/slider_background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/mainmenu/slider/slider_knob_background.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/main_menu/slider/slider_knob_background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/cameras/FollowingCamera.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/CoordinatesCalculator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/Directions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/Block.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/BlockTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/Corners.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/CubeMaze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/Terrain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/cube/Cube$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/cube/Cube.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/cube/CubeArrangements$Connection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/cube/CubeArrangements$Maze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/cube/CubeArrangements$Platform.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/cube/CubeArrangements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirt/DirtSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirtAndSnow/DSDownSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirtAndSnow/DSLeftSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirtAndSnow/DSRightSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirtAndSnow/DSUpSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirtAndSnowCorner/DSBottomLeftCornerSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirtAndSnowCorner/DSBottomRightCornerSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirtAndSnowCorner/DSTopLeftCornerSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/dirtAndSnowCorner/DSTopRightCornerSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/platforms/Platform.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/snow/SnowBlock.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blocks/snow/SnowSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/Atom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/CustomSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/CustomSpriteWithBody.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/ObjectUserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/blueprints/UpdatedCustomSprite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/maze/Maze.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/maze/Vertex.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/player/Player$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/player/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/player/PlayerInputProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/objects/spaceship/Spaceship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/refactor/screens/gameplay/GameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Block.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/maze/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/maze/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/maze/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/maze/Vertex.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/ButtonTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/ButtonTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomCheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomCheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/music/BackgroundMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/music/BackgroundMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/cameras/FollowingCamera.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/camera/FollowingCamera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/CoordinatesCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/CoordinatesCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/Directions.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/Directions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/BlockTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/BlockTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Corners.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/Corners.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/CubeMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/cube/CubeMaze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/Terrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/Terrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/Cube.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/cube/Cube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/CubeArrangements.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/cube/CubeArrangements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirt/DirtSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirt/DirtSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirtAndSnow/DSDownSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirtAndSnow/DSDownSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirtAndSnow/DSLeftSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirtAndSnow/DSLeftSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirtAndSnow/DSRightSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirtAndSnow/DSRightSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirtAndSnow/DSUpSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirtAndSnow/DSUpSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirtAndSnowCorner/DSBottomLeftCornerSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirtAndSnowCorner/DSBottomLeftCornerSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirtAndSnowCorner/DSBottomRightCornerSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirtAndSnowCorner/DSBottomRightCornerSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirtAndSnowCorner/DSTopLeftCornerSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirtAndSnowCorner/DSTopLeftCornerSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/dirtAndSnowCorner/DSTopRightCornerSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/dirtAndSnowCorner/DSTopRightCornerSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/platforms/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/platform/Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/snow/SnowBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/snow/SnowBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/snow/SnowSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/snow/SnowSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/Atom.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/Atom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/CustomSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/CustomSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/CustomSpriteWithBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/CustomSpriteWithBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/ObjectUserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/ObjectUserData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blueprints/UpdatedCustomSprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/UpdatedCustomSprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/maze/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/maze/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/maze/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/maze/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/player/PlayerInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/player/PlayerInputProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/spaceship/Spaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/spaceship/Spaceship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/Screens.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/Screens.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/blueprints/SimpleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/blueprint/SimpleScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/blueprints/UIScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/blueprint/UIScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/credits/CreditsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/credits/CreditsScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/mainmenu/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/main_menu/MainMenuScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/settings/GameSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/settings/GameSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/settings/SettingsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/settings/SettingsScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/BackgroundImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/BackgroundImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/ButtonTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/ButtonTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CheckBoxWithTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CheckBoxWithTitle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomCheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomCheckBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomFont.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomFont.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/CustomSlider.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomSlider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/uicomponents/SliderWithTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/SliderWithTitle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,18 +171,18 @@
       <recent name="$PROJECT_DIR$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core/src" />
       <recent name="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner" />
       <recent name="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/assets/refactor/images/mainmenu/slider" />
-      <recent name="$PROJECT_DIR$/assets/refactor/images/mainmenu/background" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="refactor.objects.terrain" />
+      <recent name="refactor.objects.terrain.cube" />
+      <recent name="refactor.objects.terrain.maze" />
       <recent name="refactor.objects.spaceship" />
       <recent name="refactor.objects.blocks" />
-      <recent name="refactor.objects.blocks.structures.dirt" />
-      <recent name="refactor.objects.blocks.structures.snow" />
-      <recent name="refactor.objects.blueprints" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
