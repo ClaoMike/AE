@@ -39,7 +39,9 @@ public class GameplayScreen extends SimpleScreen {
         player = new Player(utils);
 
         //TODO:
-        // 3. Fill the map with snow;
+        // 1. Sensor for reaching the end;
+        // 2. Stop movement when sensor is touched;
+        // 3. Draw a satellite/rover;
         // 4. Draw some kind of reward in the end room;
         // 5. Add sensors for detecting when the player reaches the end platform;
         // 6. Show an end menu when the sensors are triggered.

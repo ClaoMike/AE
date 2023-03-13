@@ -11,14 +11,19 @@ public class Atom {
     private final CustomSpriteWithBody sprite;
     private final GameMain game;
 
-    public Atom(GameMain game, String filepath, World world, BodyDef.BodyType bodyType, float x, float y, float density, boolean isSensor) {
+    public Atom(GameMain game, String filepath, World world, BodyDef.BodyType bodyType, float x, float y, float density, boolean isSensor, float radius) {
         this.game = game;
 
         ObjectUserData userData = new ObjectUserData(removePNGExtension(filepath));
         Body body = CustomSpriteWithBody.generateBody(world, bodyType, x, y, userData);
 
         sprite = new CustomSpriteWithBody(filepath, body);
-        sprite.generatePolygonShape();
+        if(radius > 0) {
+            sprite.generateCircleShape(radius);
+        } else {
+            sprite.generatePolygonShape();
+        }
+
 
         FixtureDef fixtureDef = CustomSpriteWithBody.generateFixtureDef(sprite.getShape(), density, isSensor);
 

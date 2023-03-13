@@ -10,7 +10,7 @@ import game_classes.screen.gameplay.GameUtils;
 
 public class Spaceship extends Atom {
     public Spaceship(GameUtils utils, float x, float y) {
-        super(utils.game, utils.game.getConstants().SPACESHIP_IMAGE_FILEPATH, utils.world, BodyDef.BodyType.StaticBody, x, y, 1, false);
+        super(utils.game, utils.game.getConstants().SPACESHIP_IMAGE_FILEPATH, utils.world, BodyDef.BodyType.StaticBody, x, y, 1, false, 0);
     }
 
     @Override

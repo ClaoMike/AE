@@ -39,9 +39,6 @@ public class GameMain extends Game {
 		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
 		settings = new GameSettings(getConstants());
 
-		//TODO:
-		// 1. Replace the following if with << goToScreen(MAIN_MENU); >> after the implementation is done.
-		// 2. Set the DEBUG_MODE in the constants.json file to false. Cheers!
 		if(constants.DEBUG_MODE_DEFAULT_VALUE) {
 			goToScreen(GAMEPLAY);
 		} else {

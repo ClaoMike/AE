@@ -9,7 +9,7 @@ import game_classes.object.blueprint.Atom;
 
 public class Block extends Atom {
     public Block(GameMain game, String filepath, World world, Vector2 coordinates, boolean isSensor) {
-        super(game, filepath, world, BodyDef.BodyType.StaticBody, coordinates.x, coordinates.y, 1, isSensor);
+        super(game, filepath, world, BodyDef.BodyType.StaticBody, coordinates.x, coordinates.y, 1, isSensor, 0);
     }
 
     public void dispose() {

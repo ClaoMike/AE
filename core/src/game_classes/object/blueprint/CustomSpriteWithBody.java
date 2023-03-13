@@ -2,6 +2,7 @@ package game_classes.object.blueprint;
 
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.Shape;
@@ -11,7 +12,7 @@ import game_classes.Constants;
 
 public class CustomSpriteWithBody extends CustomSprite {
     private final Body body;
-    private PolygonShape shape;
+    private Shape shape;
 
     public CustomSpriteWithBody(String filepath, Body body) {
         super(filepath);
@@ -22,12 +23,16 @@ public class CustomSpriteWithBody extends CustomSprite {
         return body;
     }
 
-    // TODO:
-    //  1. Implement a function that generates a CircleShape;
-    //  2. See what objects need a circle shape at the end;
     public void generatePolygonShape() {
-        shape = new PolygonShape();
-        shape.setAsBox(getWidth() / 2 / Constants.PPM, getHeight() / 2 / Constants.PPM);
+        PolygonShape s = new PolygonShape();
+        s.setAsBox(getWidth() / 2 / Constants.PPM, getHeight() / 2 / Constants.PPM);
+        shape = s;
+    }
+
+    public void generateCircleShape(float radius) {
+        CircleShape s = new CircleShape();
+        s.setRadius(radius);
+        shape = s;
     }
 
     public Shape getShape() {

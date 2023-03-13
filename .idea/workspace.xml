@@ -12,10 +12,25 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/blueprint/Atom.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/blueprint/Atom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/blueprint/CustomSpriteWithBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/blueprint/CustomSpriteWithBody.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/player/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/player/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/spaceship/Spaceship.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/spaceship/Spaceship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/terrain/block/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/terrain/block/Block.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/terrain/cube/CubeMaze.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/terrain/cube/CubeMaze.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/terrain/cube/CubeMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/cube/CubeMaze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/Atom.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/Atom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/CustomSpriteWithBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/CustomSpriteWithBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/spaceship/Spaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/spaceship/Spaceship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/terrain/block/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
