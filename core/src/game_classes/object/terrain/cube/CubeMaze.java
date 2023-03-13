@@ -156,6 +156,19 @@ public class CubeMaze {
                 nextCoordinates.x += 4 * Constants.BLOCK_SIZE;
                 Cube cube = new Cube(arrangement, nextCoordinates, utils);
                 cubes.add(cube);
+
+                if(i == 0){
+                    Vector2 borderCoordinates = new Vector2(nextCoordinates.x, nextCoordinates.y + 4* Constants.BLOCK_SIZE);
+                    Cube border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+                    cubes.add(border);
+                }
+
+                if(i == mazeSize-1){
+                    Vector2 borderCoordinates = new Vector2(nextCoordinates.x, nextCoordinates.y - 4* Constants.BLOCK_SIZE);
+                    Cube border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+                    cubes.add(border);
+                }
+
             }
         }
     }

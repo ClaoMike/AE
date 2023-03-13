@@ -47,6 +47,13 @@ public class CubeArrangements {
                 {BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE},
                 {BlockTypes.SNOW_BODY, BlockTypes.DIRT_SPRITE,BlockTypes.DIRT_SPRITE, BlockTypes.SNOW_BODY},
         };
+
+        public static final BlockTypes[][] snow = new BlockTypes[][]{
+                {BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE},
+                {BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE},
+                {BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE},
+                {BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE, BlockTypes.SNOW_SPRITE}
+        };
     }
 
     public static BlockTypes[][] getFreshCopyOf(BlockTypes[][] a){
