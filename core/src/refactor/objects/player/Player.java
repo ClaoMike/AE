@@ -23,7 +23,7 @@ public class Player extends Atom {
                 utils.game.getConstants().PLAYER_INITIAL_POSITION,
                 utils.game.getConstants().PLAYER_INITIAL_POSITION,
                 1,
-                false
+                true
         );
 
         this.constants = utils.game.getConstants();

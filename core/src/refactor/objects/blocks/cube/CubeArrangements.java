@@ -40,5 +40,38 @@ public class CubeArrangements {
         };
     }
 
+    public static class Maze {
+        public static final BlockTypes[][] corners = new BlockTypes[][]{
+                {BlockTypes.SNOW_BODY, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.SNOW_BODY},
+                {BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE},
+                {BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE, BlockTypes.DIRT_SPRITE},
+                {BlockTypes.SNOW_BODY, BlockTypes.DIRT_SPRITE,BlockTypes.DIRT_SPRITE, BlockTypes.SNOW_BODY},
+        };
+    }
+
+    public static BlockTypes[][] getFreshCopyOf(BlockTypes[][] a){
+        BlockTypes[][] copy = new BlockTypes[a.length][a[0].length];
+
+        for(int i=0; i<a.length;i++) {
+            for(int j=0; j<a[i].length;j++) {
+                copy[i][j] = a[i][j];
+            }
+        }
+
+        return copy;
+    }
+
+    public static void printToConsole(BlockTypes[][] arrangement) {
+        System.out.println();
+
+        for(int t = 0; t < arrangement.length; t++) {
+            for(int s = 0; s < arrangement[t].length; s++){
+                System.out.print(arrangement[t][s] + " ");
+
+            }
+            System.out.println();
+        }
+    }
+
 
 }
