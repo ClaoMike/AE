@@ -5,15 +5,21 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.utils.Array;
 
 import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
 import refactor.objects.Directions;
+import refactor.objects.blocks.CubeMaze;
+import refactor.objects.blocks.cube.Cube;
+import refactor.objects.blocks.cube.CubeArrangements;
 import refactor.objects.blocks.platforms.Platform;
 import refactor.objects.maze.Maze;
 import refactor.objects.player.Player;
 import refactor.objects.spaceship.Spaceship;
 import refactor.screens.blueprints.SimpleScreen;
+
+import java.util.Random;
 
 public class GameplayScreen extends SimpleScreen {
     private final GameUtils utils;
@@ -22,7 +28,8 @@ public class GameplayScreen extends SimpleScreen {
     private final Spaceship spaceship;
     private final Player player;
     private Platform platform;
-    private Maze maze;
+    private CubeMaze maze;
+
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -37,8 +44,11 @@ public class GameplayScreen extends SimpleScreen {
         Vector2 coordinates = new Vector2(-screenWidth/2-400, 150);
 
         platform = new Platform(coordinates, (int)(screenWidth/100/4), Directions.LEFT, utils);
-        maze = new Maze(game.settings.getMazeSize());
-        maze.printToConsole(); // TODO: continue from here
+//        maze = new Maze();
+//        Random rand = new Random();
+//        int n = rand.nextInt(maze.getVertices().size);
+        Vector2 mazeCoordinates = new Vector2(platform.getEndX(), 500);
+        maze = new CubeMaze(game.settings.getMazeSize(), mazeCoordinates, utils);
 
         // spaceship
         spaceship = new Spaceship(utils, -300, 0);
@@ -61,6 +71,7 @@ public class GameplayScreen extends SimpleScreen {
     private void updatePositions() {
         // terrain
         platform.updatePosition();
+        maze.updatePosition();
 
         // spaceship
         spaceship.updatePosition();
@@ -72,6 +83,7 @@ public class GameplayScreen extends SimpleScreen {
     private void draw() {
         // terrain
         platform.draw();
+        maze.draw();
 
         // spaceship
         spaceship.draw();

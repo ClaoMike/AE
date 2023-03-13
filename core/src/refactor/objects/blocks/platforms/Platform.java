@@ -11,9 +11,11 @@ import refactor.screens.gameplay.GameUtils;
 public class Platform {
     private final GameUtils utils;
     private final Array<Cube> cubes = new Array<>();
+    private float endX;
 
     public Platform(Vector2 coordinates, int cubesCount, Directions directions, GameUtils utils) {
         this.utils = utils;
+        this.endX = coordinates.x + cubesCount * 4 * Constants.BLOCK_SIZE;
 
         Vector2 nextCoordinates = coordinates.cpy();
         if(directions == Directions.LEFT) {
@@ -76,6 +78,10 @@ public class Platform {
         for (Cube c: cubes) {
             c.updatePosition();
         }
+    }
+
+    public float getEndX() {
+        return endX;
     }
 
 }
