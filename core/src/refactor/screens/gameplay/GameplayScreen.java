@@ -48,7 +48,10 @@ public class GameplayScreen extends SimpleScreen {
         int n = rand.nextInt(game.settings.getMazeSize()) + 1;
         Vector2 mazeCoordinates = new Vector2(platform.getEndX(), 150 + n * 400);
 
-        maze = new CubeMaze(game.settings.getMazeSize(), mazeCoordinates, utils, n-1);
+        int entranceRow = n-1;
+        int exitRow = rand.nextInt(game.settings.getMazeSize());
+
+        maze = new CubeMaze(game.settings.getMazeSize(), mazeCoordinates, utils, entranceRow, exitRow);
 
         // spaceship
         spaceship = new Spaceship(utils, -300, 0);
