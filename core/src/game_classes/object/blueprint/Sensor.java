@@ -14,7 +14,7 @@ public class Sensor {
         PolygonShape shape = new PolygonShape();
         shape.setAsBox(Constants.BLOCK_SIZE /2 / Constants.PPM, Constants.BLOCK_SIZE / 2 / Constants.PPM * 4);
 
-        FixtureDef fixtureDef = CustomSpriteWithBody.generateFixtureDef(shape, 0, true);
+        FixtureDef fixtureDef = CustomSpriteWithBody.generateFixtureDef(shape, 0, false);
         body.createFixture(fixtureDef);
 
         shape.dispose();

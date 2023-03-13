@@ -7,12 +7,15 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
 
 import game_classes.Constants;
+import game_classes.object.player.Player;
 
 public class EndDetection implements ContactListener {
     private GameUtils utils;
+    private Player player;
 
-    public EndDetection(GameUtils utils) {
+    public EndDetection(GameUtils utils, Player player) {
         this.utils = utils;
+        this.player = player;
         utils.world.setContactListener(this);
     }
 
@@ -25,9 +28,8 @@ public class EndDetection implements ContactListener {
         String c2 = contact.getFixtureB().getBody().getUserData().toString();
 
         if(c1.equals(sensorID) && c2.equals(playerID) || c1.equals(playerID) && c2.equals(sensorID)) {
-            System.out.println("Contact between " + c1 + " and " + c2);
+            player.pauseMovement();
             //TODO:
-            // 1. stop movement;
             // 2. create the end menu;
             // 3. display the end menu;
         }

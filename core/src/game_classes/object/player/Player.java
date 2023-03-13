@@ -11,7 +11,7 @@ import game_classes.screen.gameplay.GameUtils;
 
 public class Player extends Atom {
     private final Constants constants;
-    private int movementMultiplier;
+    private int movementMultiplier = 1;
 
     public Player(GameUtils utils) {
         super(
@@ -36,22 +36,22 @@ public class Player extends Atom {
         switch (direction){
             case LEFT:
                 if(body.getLinearVelocity().x > -constants.PLAYER_MAXIMUM_LINEAR_VELOCITY) {
-                    body.applyForceToCenter(new Vector2(-constants.PLAYER_MOVEMENT_FORCE, 0), true);
+                    body.applyForceToCenter(new Vector2(-constants.PLAYER_MOVEMENT_FORCE * movementMultiplier, 0), true);
                 }
                 break;
             case RIGHT:
                 if(body.getLinearVelocity().x < constants.PLAYER_MAXIMUM_LINEAR_VELOCITY) {
-                    body.applyForceToCenter(new Vector2(constants.PLAYER_MOVEMENT_FORCE, 0), true);
+                    body.applyForceToCenter(new Vector2(constants.PLAYER_MOVEMENT_FORCE* movementMultiplier, 0), true);
                 }
                 break;
             case UP:
                 if(body.getLinearVelocity().y < constants.PLAYER_MAXIMUM_LINEAR_VELOCITY) {
-                    body.applyForceToCenter(new Vector2(0, constants.PLAYER_MOVEMENT_FORCE), true);
+                    body.applyForceToCenter(new Vector2(0, constants.PLAYER_MOVEMENT_FORCE* movementMultiplier), true);
                 }
                 break;
             case DOWN:
                 if(body.getLinearVelocity().y > -constants.PLAYER_MAXIMUM_LINEAR_VELOCITY) {
-                    body.applyForceToCenter(new Vector2(0, -constants.PLAYER_MOVEMENT_FORCE), true);
+                    body.applyForceToCenter(new Vector2(0, -constants.PLAYER_MOVEMENT_FORCE* movementMultiplier), true);
                 }
                 break;
         }
@@ -74,6 +74,14 @@ public class Player extends Atom {
 
     public void dispose() {
         getSprite().dispose();
+    }
+
+    public void pauseMovement() {
+        movementMultiplier = 0;
+    }
+
+    public void resumeMovement() {
+        movementMultiplier = 1;
     }
 
 }

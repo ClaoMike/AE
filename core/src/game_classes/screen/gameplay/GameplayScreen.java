@@ -29,7 +29,6 @@ public class GameplayScreen extends SimpleScreen {
 
         world = new World(worldForces, true);
         GameUtils utils = new GameUtils(game, world);
-        EndDetection endDetection = new EndDetection(utils);
 
         //camera
         camera = new FollowingCamera(utils);
@@ -39,12 +38,10 @@ public class GameplayScreen extends SimpleScreen {
         spaceship = new Spaceship(utils, -300, 0);
         //player
         player = new Player(utils);
+        EndDetection endDetection = new EndDetection(utils, player);
 
         //TODO:
-        // 1. Sensor for reaching the end;
-        // 2. Stop movement when sensor is touched;
-        // 3. Draw a satellite/rover;
-        // 4. Draw some kind of reward in the end room;
+        // 3. Draw a satellite; - when found, stop movement;, load the end menu.
         // 5. Add sensors for detecting when the player reaches the end platform;
         // 6. Show an end menu when the sensors are triggered.
     }
