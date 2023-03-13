@@ -23,7 +23,7 @@ public class CubeMaze {
 
         for(int i = 0; i < maze.getVertices().size; i++) {
             nextCoordinates.x = coordinates.x;
-            nextCoordinates.y -= 400;
+            nextCoordinates.y -= 4 * Constants.BLOCK_SIZE;
             for(int j = 0; j < maze.getVertices().get(i).size; j++) {
                 Vertex current = maze.getVertices().get(i).get(j);
                 Array<Vertex> neighbours = current.getNeighbours();
@@ -153,7 +153,7 @@ public class CubeMaze {
 
                 }
 
-                nextCoordinates.x += 400;
+                nextCoordinates.x += 4 * Constants.BLOCK_SIZE;
                 Cube cube = new Cube(arrangement, nextCoordinates, utils);
                 cubes.add(cube);
             }

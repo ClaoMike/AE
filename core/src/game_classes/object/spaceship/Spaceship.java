@@ -19,4 +19,8 @@ public class Spaceship extends Atom {
         Body b = s.getBody();
         getSprite().setPosition(b.getPosition().x * Constants.PPM - s.getWidth()/3, b.getPosition().y * Constants.PPM - s.getHeight()/3);
     }
+
+    public void dispose() {
+        getSprite().dispose();
+    }
 }

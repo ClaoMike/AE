@@ -5,6 +5,7 @@ import com.badlogic.gdx.math.Vector2;
 
 import java.util.Random;
 
+import game_classes.Constants;
 import game_classes.object.Directions;
 import game_classes.object.terrain.cube.CubeMaze;
 import game_classes.object.terrain.platform.Platform;
@@ -15,22 +16,22 @@ public class Terrain {
     private final CubeMaze maze;
     private final Platform endPlatform;
 
-    public Terrain(GameUtils utils) {
+    public Terrain(GameUtils utils, Vector2 coordinates) {
         float screenWidth = Gdx.graphics.getWidth();
-        Vector2 coordinates = new Vector2(-screenWidth/2-400, 150);
-
-        startPlatform = new Platform(coordinates, (int)(screenWidth/100/4), Directions.LEFT, utils);
-
         Random rand = new Random();
+
+        coordinates = new Vector2(coordinates.x -screenWidth/2 - 4 * Constants.BLOCK_SIZE, coordinates.y + 1.5f * Constants.BLOCK_SIZE);
+        startPlatform = new Platform(coordinates, (int)(screenWidth /Constants.BLOCK_SIZE /4), Directions.LEFT, utils);
+
         int n = rand.nextInt(utils.game.settings.getMazeSize()) + 1;
-        Vector2 mazeCoordinates = new Vector2(startPlatform.getEndX(), 150 + n * 400);
+        Vector2 mazeCoordinates = new Vector2(startPlatform.getEndX(), 1.5f * Constants.BLOCK_SIZE + n * 4 * Constants.BLOCK_SIZE);
         int entranceRow = n-1;
         int exitRow = rand.nextInt(utils.game.settings.getMazeSize());
 
         maze = new CubeMaze(utils.game.settings.getMazeSize(), mazeCoordinates, utils, entranceRow, exitRow);
 
         Vector2 endPlatformCoordinates = new Vector2(maze.getEndX(), maze.getExitY());
-        endPlatform = new Platform(endPlatformCoordinates, (int)(screenWidth/100/4), Directions.RIGHT, utils);
+        endPlatform = new Platform(endPlatformCoordinates, (int)(screenWidth /Constants.BLOCK_SIZE /4), Directions.RIGHT, utils);
     }
 
     public void updatePosition() {

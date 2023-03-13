@@ -23,22 +23,22 @@ public class GameplayScreen extends SimpleScreen {
     public GameplayScreen(GameMain game) {
         super(game);
 
-        // world, utils, camera
-        world = new World(new Vector2(0, 0), true);
+        Vector2 originCoordinates = new Vector2(0, 0);
+        Vector2 worldForces = originCoordinates.cpy();
+
+        world = new World(worldForces, true);
         GameUtils utils = new GameUtils(game, world);
+
+        //camera
         camera = new FollowingCamera(utils);
-
         //terrain
-        terrain = new Terrain(utils);
-
+        terrain = new Terrain(utils, new Vector2(0, 0));
         // spaceship
         spaceship = new Spaceship(utils, -300, 0);
-
         //player
         player = new Player(utils);
 
         //TODO:
-        // 2.Rearrange things in classes;
         // 3. Fill the map with snow;
         // 4. Draw some kind of reward in the end room;
         // 5. Add sensors for detecting when the player reaches the end platform;
@@ -52,10 +52,8 @@ public class GameplayScreen extends SimpleScreen {
     private void updatePositions() {
         // terrain
         terrain.updatePosition();
-
         // spaceship
         spaceship.updatePosition();
-
         // player
         player.updatePosition();
     }
@@ -63,10 +61,8 @@ public class GameplayScreen extends SimpleScreen {
     private void draw() {
         // terrain
         terrain.draw();
-
         // spaceship
         spaceship.draw();
-
         // player
         player.draw();
     }
@@ -112,5 +108,8 @@ public class GameplayScreen extends SimpleScreen {
 
     @Override
     public void dispose() {
+        terrain.dispose();
+        spaceship.dispose();
+        player.dispose();
     }
 }

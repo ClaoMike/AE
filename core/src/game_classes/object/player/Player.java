@@ -71,4 +71,8 @@ public class Player extends Atom {
         }
     }
 
+    public void dispose() {
+        getSprite().dispose();
+    }
+
 }
