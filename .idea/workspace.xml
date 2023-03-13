@@ -17,8 +17,6 @@
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/CubeMaze.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/CubeMaze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/CubeArrangements.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/blocks/cube/CubeArrangements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/refactor/objects/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/objects/player/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/refactor/screens/gameplay/GameplayScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>

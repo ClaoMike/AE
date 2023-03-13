@@ -13,7 +13,7 @@ public class CubeMaze {
     private Maze maze;
     private Array<Cube> cubes = new Array<>();
 
-    public CubeMaze(int mazeSize, Vector2 coordinates, GameUtils utils) {
+    public CubeMaze(int mazeSize, Vector2 coordinates, GameUtils utils, int entranceRow) {
         maze = new Maze(mazeSize);
         Vector2 nextCoordinates = coordinates.cpy();
 
@@ -111,6 +111,24 @@ public class CubeMaze {
                     if(!downWall) {
                         arrangement[2][2] = BlockTypes.DIRT_SNOW_RIGHT;
                     }
+                }
+
+                if(i == entranceRow && j == 0){
+                    arrangement[1][0] = BlockTypes.DIRT_SNOW_UP;
+                    arrangement[2][0] = BlockTypes.DIRT_SNOW_DOWN;
+
+                    if(upWall) {
+                        arrangement[1][1] = BlockTypes.DIRT_SNOW_UP;
+                    } else {
+                        arrangement[1][1] = BlockTypes.DIRT_SPRITE;
+                    }
+
+                    if (downWall) {
+                        arrangement[2][1] = BlockTypes.DIRT_SNOW_DOWN;
+                    } else {
+                        arrangement[2][1] = BlockTypes.DIRT_SPRITE;
+                    }
+
                 }
 
                 nextCoordinates.x += 400;
