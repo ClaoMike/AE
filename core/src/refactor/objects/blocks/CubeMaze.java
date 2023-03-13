@@ -3,6 +3,7 @@ package refactor.objects.blocks;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
+import refactor.Constants;
 import refactor.objects.blocks.cube.Cube;
 import refactor.objects.blocks.cube.CubeArrangements;
 import refactor.objects.maze.Maze;
@@ -12,8 +13,13 @@ import refactor.screens.gameplay.GameUtils;
 public class CubeMaze {
     private Maze maze;
     private Array<Cube> cubes = new Array<>();
+    private float endX;
+    private float exitY;
 
     public CubeMaze(int mazeSize, Vector2 coordinates, GameUtils utils, int entranceRow, int exitRow) {
+        endX = coordinates.x + (mazeSize+1) * 4 * Constants.BLOCK_SIZE;
+        exitY = coordinates.y - 4*Constants.BLOCK_SIZE * (exitRow+1);
+
         maze = new Maze(mazeSize);
         Vector2 nextCoordinates = coordinates.cpy();
 
@@ -172,6 +178,14 @@ public class CubeMaze {
         for (Cube cube : cubes) {
             cube.dispose();
         }
+    }
+
+    public float getEndX() {
+        return endX;
+    }
+
+    public float getExitY() {
+        return exitY;
     }
 
 }

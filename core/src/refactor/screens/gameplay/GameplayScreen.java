@@ -1,20 +1,18 @@
 package refactor.screens.gameplay;
 
+import static com.badlogic.gdx.scenes.scene2d.InputEvent.Type.exit;
+
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
-import com.badlogic.gdx.utils.Array;
 
 import dev.clao.GameMain;
 import refactor.cameras.FollowingCamera;
 import refactor.objects.Directions;
 import refactor.objects.blocks.CubeMaze;
-import refactor.objects.blocks.cube.Cube;
-import refactor.objects.blocks.cube.CubeArrangements;
 import refactor.objects.blocks.platforms.Platform;
-import refactor.objects.maze.Maze;
 import refactor.objects.player.Player;
 import refactor.objects.spaceship.Spaceship;
 import refactor.screens.blueprints.SimpleScreen;
@@ -27,8 +25,10 @@ public class GameplayScreen extends SimpleScreen {
     private final FollowingCamera camera;
     private final Spaceship spaceship;
     private final Player player;
-    private Platform platform;
+    private Platform startPlatform;
     private CubeMaze maze;
+    private Platform endPlatform;
+
 
 
     public GameplayScreen(GameMain game) {
@@ -43,15 +43,18 @@ public class GameplayScreen extends SimpleScreen {
         float screenWidth = Gdx.graphics.getWidth();
         Vector2 coordinates = new Vector2(-screenWidth/2-400, 150);
 
-        platform = new Platform(coordinates, (int)(screenWidth/100/4), Directions.LEFT, utils);
+        startPlatform = new Platform(coordinates, (int)(screenWidth/100/4), Directions.LEFT, utils);
+
         Random rand = new Random();
         int n = rand.nextInt(game.settings.getMazeSize()) + 1;
-        Vector2 mazeCoordinates = new Vector2(platform.getEndX(), 150 + n * 400);
-
+        Vector2 mazeCoordinates = new Vector2(startPlatform.getEndX(), 150 + n * 400);
         int entranceRow = n-1;
         int exitRow = rand.nextInt(game.settings.getMazeSize());
 
         maze = new CubeMaze(game.settings.getMazeSize(), mazeCoordinates, utils, entranceRow, exitRow);
+
+        Vector2 endPlatformCoordinates = new Vector2(maze.getEndX(), maze.getExitY());
+        endPlatform = new Platform(endPlatformCoordinates, (int)(screenWidth/100/4), Directions.RIGHT, utils);
 
         // spaceship
         spaceship = new Spaceship(utils, -300, 0);
@@ -73,8 +76,9 @@ public class GameplayScreen extends SimpleScreen {
 
     private void updatePositions() {
         // terrain
-        platform.updatePosition();
+        startPlatform.updatePosition();
         maze.updatePosition();
+        endPlatform.updatePosition();
 
         // spaceship
         spaceship.updatePosition();
@@ -85,8 +89,9 @@ public class GameplayScreen extends SimpleScreen {
 
     private void draw() {
         // terrain
-        platform.draw();
+        startPlatform.draw();
         maze.draw();
+        endPlatform.draw();
 
         // spaceship
         spaceship.draw();
