@@ -52,7 +52,7 @@ public class CustomSpriteWithBody extends CustomSprite {
         setPosition(body.getPosition().x * Constants.PPM , body.getPosition().y * Constants.PPM );
     }
 
-    public static Body generateBody(World world, BodyDef.BodyType type, float x, float y, ObjectUserData userData) {
+    public static Body generateBody(World world, BodyDef.BodyType type, float x, float y, String userData) {
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = type;
         bodyDef.position.set(x / Constants.PPM, y / Constants.PPM);

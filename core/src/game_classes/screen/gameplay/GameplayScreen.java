@@ -8,6 +8,7 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import game_classes.camera.FollowingCamera;
+import game_classes.object.blueprint.Sensor;
 import game_classes.object.terrain.Terrain;
 import game_classes.object.player.Player;
 import game_classes.object.spaceship.Spaceship;
@@ -28,6 +29,7 @@ public class GameplayScreen extends SimpleScreen {
 
         world = new World(worldForces, true);
         GameUtils utils = new GameUtils(game, world);
+        EndDetection endDetection = new EndDetection(utils);
 
         //camera
         camera = new FollowingCamera(utils);

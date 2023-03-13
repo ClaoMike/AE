@@ -4,6 +4,7 @@ import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import game_classes.Constants;
 import game_classes.object.Directions;
+import game_classes.object.blueprint.Sensor;
 import game_classes.object.terrain.cube.Cube;
 import game_classes.object.terrain.cube.CubeArrangements;
 import game_classes.screen.gameplay.GameUtils;
@@ -12,10 +13,14 @@ public class Platform {
     private final GameUtils utils;
     private final Array<Cube> cubes = new Array<>();
     private final float endX;
+    private final float startX;
+    private final float startY;
 
     public Platform(Vector2 coordinates, int cubesCount, Directions directions, GameUtils utils) {
         this.utils = utils;
         this.endX = coordinates.x + cubesCount * 4 * Constants.BLOCK_SIZE;
+        this.startX = coordinates.x;
+        this.startY = coordinates.y;
 
         Vector2 nextCoordinates = coordinates.cpy();
         if(directions == Directions.LEFT) {
@@ -82,6 +87,14 @@ public class Platform {
 
     public float getEndX() {
         return endX;
+    }
+
+    public void addMiddleSensor() {
+        Sensor sensor = new Sensor(
+                utils.game.getConstants().END_SENSOR_NAME,
+                utils,
+                startX + (endX - startX)/2,
+                startY - 1.5f * Constants.BLOCK_SIZE);
     }
 
 }

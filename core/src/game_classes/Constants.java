@@ -23,7 +23,7 @@ public class Constants {
     public String BACKGROUND_MUSIC_FILEPATH;
     public String DEBUG_MODE_CHECKBOX_TITLE;
     public boolean DEBUG_MODE_DEFAULT_VALUE;
-    public String EMPTY_STRING;
+    public static final String EMPTY_STRING = "";
     public int FONT_DEFAULT_SIZE;
     public String FONT_FILEPATH;
     public String GAME_TITLE;
@@ -39,7 +39,7 @@ public class Constants {
     public float PLAYER_INITIAL_POSITION;
     public float PLAYER_MAXIMUM_LINEAR_VELOCITY;
     public float PLAYER_MOVEMENT_FORCE;
-    public String PNG_EXTENSION;
+    public static final String PNG_EXTENSION = ".png";
     public int POSITION_ITERATIONS;
     public String PROJECT_DEVELOPER;
     public String PROJECT_SUPERVISOR;
@@ -53,4 +53,9 @@ public class Constants {
     public String SPACESHIP_IMAGE_FILEPATH;
     public String UNIVERSITY_NAME;
     public int VELOCITY_ITERATIONS;
+    public String END_SENSOR_NAME;
+
+    public static String removePNGExtension(String filename) {
+        return filename.replaceAll(PNG_EXTENSION, EMPTY_STRING);
+    }
 }

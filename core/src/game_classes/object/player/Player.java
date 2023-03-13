@@ -11,6 +11,7 @@ import game_classes.screen.gameplay.GameUtils;
 
 public class Player extends Atom {
     private final Constants constants;
+    private int movementMultiplier;
 
     public Player(GameUtils utils) {
         super(
