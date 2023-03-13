@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.Shape;
 import com.badlogic.gdx.physics.box2d.World;
 
-import helpers.GameInfo;
+import refactor.Constants;
 
 public class CustomSpriteWithBody extends CustomSprite {
     private final Body body;
@@ -27,7 +27,7 @@ public class CustomSpriteWithBody extends CustomSprite {
     //  2. See what objects need a circle shape at the end;
     public void generatePolygonShape() {
         shape = new PolygonShape();
-        shape.setAsBox(getWidth() / 2 / GameInfo.PPM, getHeight() / 2 / GameInfo.PPM);
+        shape.setAsBox(getWidth() / 2 / Constants.PPM, getHeight() / 2 / Constants.PPM);
     }
 
     public Shape getShape() {
@@ -46,13 +46,13 @@ public class CustomSpriteWithBody extends CustomSprite {
     public void updatePositionToBody() {
 //        setPosition(body.getPosition().x * GameInfo.PPM - getWidth()/2, body.getPosition().y * GameInfo.PPM - getHeight()/2);
         // TODO: see this more closely.
-        setPosition(body.getPosition().x * GameInfo.PPM , body.getPosition().y * GameInfo.PPM );
+        setPosition(body.getPosition().x * Constants.PPM , body.getPosition().y * Constants.PPM );
     }
 
     public static Body generateBody(World world, BodyDef.BodyType type, float x, float y, ObjectUserData userData) {
         BodyDef bodyDef = new BodyDef();
         bodyDef.type = type;
-        bodyDef.position.set(x / GameInfo.PPM, y / GameInfo.PPM);
+        bodyDef.position.set(x / Constants.PPM, y / Constants.PPM);
 
         Body body = world.createBody(bodyDef);
         body.setUserData(userData);

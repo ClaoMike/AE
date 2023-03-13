@@ -1,6 +1,7 @@
 package refactor;
 
 public class Constants {
+    public static final int PPM = 100;
     public static final int BLOCK_SIZE = 100;
     public static final String SNOW_IMAGE_FILEPATH = "images/gameplay/terrain/snow.png";
     public static final String DIRT_IMAGE_FILEPATH = "images/gameplay/terrain/dirt.png";
@@ -36,7 +37,6 @@ public class Constants {
     public float PLAYER_MOVEMENT_FORCE;
     public String PNG_EXTENSION;
     public int POSITION_ITERATIONS;
-    public float PPM;
     public String PROJECT_DEVELOPER;
     public String PROJECT_SUPERVISOR;
     public int SETTINGS_SLIDER_DEFAULT_VALUE;
