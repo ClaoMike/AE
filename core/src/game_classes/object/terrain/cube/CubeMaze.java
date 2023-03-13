@@ -158,19 +158,79 @@ public class CubeMaze {
                 cubes.add(cube);
 
                 if(i == 0){
-                    Vector2 borderCoordinates = new Vector2(nextCoordinates.x, nextCoordinates.y + 4* Constants.BLOCK_SIZE);
+                    Vector2 borderCoordinates = new Vector2(nextCoordinates.x, nextCoordinates.y + 4 * Constants.BLOCK_SIZE);
                     Cube border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
                     cubes.add(border);
                 }
 
                 if(i == mazeSize-1){
-                    Vector2 borderCoordinates = new Vector2(nextCoordinates.x, nextCoordinates.y - 4* Constants.BLOCK_SIZE);
+                    Vector2 borderCoordinates = new Vector2(nextCoordinates.x, nextCoordinates.y - 4 * Constants.BLOCK_SIZE);
                     Cube border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
                     cubes.add(border);
                 }
 
+                if(j == 0) {
+                    if(i != entranceRow) {
+                        Vector2 borderCoordinates = new Vector2(nextCoordinates.x - 4 * Constants.BLOCK_SIZE, nextCoordinates.y);
+                        Cube border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+                        cubes.add(border);
+
+                        borderCoordinates = new Vector2(nextCoordinates.x - 8 * Constants.BLOCK_SIZE, nextCoordinates.y);
+                        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+                        cubes.add(border);
+                    }
+                }
+
+                if(j == mazeSize-1) {
+                    if(i != exitRow) {
+                        Vector2 borderCoordinates = new Vector2(nextCoordinates.x + 4 * Constants.BLOCK_SIZE, nextCoordinates.y);
+                        Cube border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+                        cubes.add(border);
+
+                        borderCoordinates = new Vector2(nextCoordinates.x + 8 * Constants.BLOCK_SIZE, nextCoordinates.y);
+                        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+                        cubes.add(border);
+                    }
+                }
+
             }
         }
+
+        // fill top left corner with snow
+        Vector2 borderCoordinates = new Vector2(coordinates.x, coordinates.y);
+        Cube border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+        cubes.add(border);
+
+        borderCoordinates = new Vector2(coordinates.x - 4 * Constants.BLOCK_SIZE, coordinates.y);
+        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+        cubes.add(border);
+
+        // fill top right corner with snow
+        borderCoordinates = new Vector2(coordinates.x + 4 * Constants.BLOCK_SIZE * (mazeSize+1), coordinates.y);
+        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+        cubes.add(border);
+
+        borderCoordinates = new Vector2(coordinates.x + 4 * Constants.BLOCK_SIZE * (mazeSize+2), coordinates.y);
+        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+        cubes.add(border);
+
+        // fill bottom left corner with snow
+        borderCoordinates = new Vector2(coordinates.x, coordinates.y - 4 * Constants.BLOCK_SIZE * (mazeSize+1));
+        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+        cubes.add(border);
+
+        borderCoordinates = new Vector2(coordinates.x - 4 * Constants.BLOCK_SIZE, coordinates.y - 4 * Constants.BLOCK_SIZE * (mazeSize+1));
+        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+        cubes.add(border);
+
+        // fill bottom right corner with snow
+        borderCoordinates = new Vector2(coordinates.x + 4 * Constants.BLOCK_SIZE * (mazeSize+1), coordinates.y - 4 * Constants.BLOCK_SIZE * (mazeSize+1));
+        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+        cubes.add(border);
+
+        borderCoordinates = new Vector2(coordinates.x + 4 * Constants.BLOCK_SIZE * (mazeSize+2), coordinates.y - 4 * Constants.BLOCK_SIZE * (mazeSize+1));
+        border = new Cube(CubeArrangements.Maze.snow, borderCoordinates, utils);
+        cubes.add(border);
     }
 
     public void updatePosition() {
