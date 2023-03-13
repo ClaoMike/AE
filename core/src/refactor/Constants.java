@@ -1,6 +1,10 @@
 package refactor;
 
+import com.badlogic.gdx.graphics.Color;
+
 public class Constants {
+    public static final Color SLIDER_DEFAULT_COLOUR = Color.YELLOW;
+    public static final Color SLIDER_CHECK_COLOUR = Color.RED;
     public static final float PPM = 100;
     public static final int BLOCK_SIZE = 100;
     public static final String SNOW_IMAGE_FILEPATH = "images/gameplay/terrain/snow.png";

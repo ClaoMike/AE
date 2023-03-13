@@ -43,7 +43,7 @@ public class Maze {
             if(vertices.get(v.getI()).get(v.getJ()+1)!= null) {
                 Vertex neighbour = vertices.get(v.getI()).get(v.getJ()+1);
 
-                if(!neighbour.isVisited()) {
+                if(neighbour.isVisited()) {
                     neighbours.add(neighbour);
                 }
             }
@@ -53,7 +53,7 @@ public class Maze {
             if(vertices.get(v.getI()).get(v.getJ()-1)!= null) {
                 Vertex neighbour = vertices.get(v.getI()).get(v.getJ()-1);
 
-                if(!neighbour.isVisited()) {
+                if(neighbour.isVisited()) {
                     neighbours.add(neighbour);
                 }
             }
@@ -63,7 +63,7 @@ public class Maze {
             if(vertices.get(v.getI()+1).get(v.getJ())!= null) {
                 Vertex neighbour = vertices.get(v.getI()+1).get(v.getJ());
 
-                if(!neighbour.isVisited()) {
+                if(neighbour.isVisited()) {
                     neighbours.add(neighbour);
                 }
             }
@@ -73,7 +73,7 @@ public class Maze {
             if(vertices.get(v.getI()-1).get(v.getJ())!= null) {
                 Vertex neighbour = vertices.get(v.getI()-1).get(v.getJ());
 
-                if(!neighbour.isVisited()) {
+                if(neighbour.isVisited()) {
                     neighbours.add(neighbour);
                 }
             }

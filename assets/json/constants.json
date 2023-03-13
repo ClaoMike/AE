@@ -1,5 +1,5 @@
 {
-  "BACKGROUND_IMAGE_FILEPATH": "images/mainmenu/background/background.png",
+  "BACKGROUND_IMAGE_FILEPATH": "images/main_menu/background/background.png",
   "BACKGROUND_MUSIC_FILEPATH": "music/background.mp3",
   "DEBUG_MODE_CHECKBOX_TITLE": "Debug Mode: ",
   "DEBUG_MODE_DEFAULT_VALUE": false,
@@ -25,8 +25,8 @@
   "SETTINGS_SLIDER_MAX_VALUE": 100,
   "SETTINGS_SLIDER_STEP_VALUE": 10,
   "SETTINGS_SLIDER_DEFAULT_VALUE": 10,
-  "SLIDER_BACKGROUND": "images/mainmenu/slider/slider_background.png",
-  "SLIDER_KNOB_BACKGROUND": "images/mainmenu/slider/slider_knob_background.png",
+  "SLIDER_BACKGROUND": "images/main_menu/slider/slider_background.png",
+  "SLIDER_KNOB_BACKGROUND": "images/main_menu/slider/slider_knob_background.png",
   "SLIDER_MAZE_SIZE_TITLE": "Maze Size: ",
   "SPACESHIP_IMAGE_FILEPATH": "images/gameplay/spaceship/spaceship2.png",
   "UNIVERSITY_NAME": "The University of Manchester",

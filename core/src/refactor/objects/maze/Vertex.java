@@ -26,7 +26,7 @@ public class Vertex {
     }
 
     public boolean isVisited() {
-        return visited;
+        return !visited;
     }
 
     public void setNeighbour(Vertex v) {

@@ -5,10 +5,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 public class ButtonTable {
     private final Table table;
 
-    public ButtonTable() {
-        table = new Table();
-    }
-
     public ButtonTable(float x, float y) {
         table = new Table();
         setPosition(x, y);
@@ -20,13 +16,6 @@ public class ButtonTable {
 
     public void addCustomButton(CustomButton cb, float bottomPadding, boolean newRow) {
         table.add(cb.getButton()).padBottom(bottomPadding);
-        if(newRow) {
-            table.row();
-        }
-    }
-
-    public void addCustomSlider(CustomSlider cs, float bottomPadding, boolean newRow, float width) {
-        table.add(cs.getSlider()).padBottom(bottomPadding).width(width);
         if(newRow) {
             table.row();
         }
