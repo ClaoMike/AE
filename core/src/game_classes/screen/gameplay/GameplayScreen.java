@@ -26,6 +26,7 @@ public class GameplayScreen extends SimpleScreen {
 
     private boolean isPaused = false;
     boolean escapeKeyPressed = false;
+    boolean endOfTheGame = false;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -44,7 +45,7 @@ public class GameplayScreen extends SimpleScreen {
         spaceship = new Spaceship(utils, -300, 0);
         //player
         player = new Player(utils);
-        EndDetection endDetection = new EndDetection(utils, player);
+        EndDetection endDetection = new EndDetection(utils, player, this);
         satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
 
         stage = new Stage();
@@ -59,6 +60,16 @@ public class GameplayScreen extends SimpleScreen {
 
     @Override
     public void show() {
+    }
+
+    public void showEndMenu() {
+        stage.clear();
+
+        EndMenu endMenu = new EndMenu(game, font);
+        stage.addActor(endMenu);
+        endOfTheGame = true;
+        isPaused = true;
+        Gdx.input.setInputProcessor(stage);
     }
 
     public void dismissPauseMenu() {
@@ -119,7 +130,7 @@ public class GameplayScreen extends SimpleScreen {
     }
 
     private void detectUserInput() {
-        if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
+        if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE) && !endOfTheGame) {
             if (!escapeKeyPressed) {
                 escapeKeyPressed = true;
                 isPaused = !isPaused;
@@ -134,7 +145,6 @@ public class GameplayScreen extends SimpleScreen {
         } else {
             escapeKeyPressed = false;
         }
-
     }
 
     @Override

@@ -74,12 +74,15 @@ public class Player extends Atom {
         }
     }
 
+
     public void dispose() {
         getSprite().dispose();
     }
 
     public void pauseMovement() {
         movementMultiplier = 0;
+        Body body = getSprite().getBody();
+        body.setLinearVelocity(0, 0);
     }
 
     public void resumeMovement() {

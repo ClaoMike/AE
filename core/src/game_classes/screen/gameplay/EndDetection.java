@@ -11,10 +11,12 @@ import game_classes.object.player.Player;
 public class EndDetection implements ContactListener {
     private GameUtils utils;
     private Player player;
+    private GameplayScreen gameplayScreen;
 
-    public EndDetection(GameUtils utils, Player player) {
+    public EndDetection(GameUtils utils, Player player, GameplayScreen screen) {
         this.utils = utils;
         this.player = player;
+        this.gameplayScreen = screen;
         utils.world.setContactListener(this);
     }
 
@@ -28,9 +30,7 @@ public class EndDetection implements ContactListener {
 
         if(c1.equals(sensorID) && c2.equals(playerID) || c1.equals(playerID) && c2.equals(sensorID)) {
             player.pauseMovement();
-            //TODO:
-            // 2. create the end menu;
-            // 3. display the end menu;
+            gameplayScreen.showEndMenu();
         }
     }
 

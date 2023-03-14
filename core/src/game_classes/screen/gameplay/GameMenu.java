@@ -27,7 +27,7 @@ public class GameMenu extends ButtonTable {
         this.game = game;
 
         firstButton = new CustomButton(button1Text, font);
-        secondButton = new CustomButton("Main Menu", font);
+        secondButton = new CustomButton(Constants.MAIN_MENU_STRING, font);
 
         secondButton.addListener(new ChangeListener() {
             @Override
