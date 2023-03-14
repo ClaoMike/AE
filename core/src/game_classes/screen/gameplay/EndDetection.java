@@ -4,7 +4,6 @@ import com.badlogic.gdx.physics.box2d.Contact;
 import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Manifold;
-import com.badlogic.gdx.physics.box2d.World;
 
 import game_classes.Constants;
 import game_classes.object.player.Player;
@@ -22,7 +21,7 @@ public class EndDetection implements ContactListener {
     @Override
     public void beginContact(Contact contact) {
         String playerID = Constants.removePNGExtension(utils.game.getConstants().PLAYER_IMAGE_FILEPATH);
-        String sensorID = utils.game.getConstants().END_SENSOR_NAME;
+        String sensorID = Constants.removePNGExtension(Constants.SATELLITE_IMAGE_FILEPATH);
 
         String c1 = contact.getFixtureA().getBody().getUserData().toString();
         String c2 = contact.getFixtureB().getBody().getUserData().toString();

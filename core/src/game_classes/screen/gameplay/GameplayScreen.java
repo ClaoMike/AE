@@ -8,7 +8,7 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import dev.clao.GameMain;
 import game_classes.camera.FollowingCamera;
-import game_classes.object.blueprint.Sensor;
+import game_classes.object.Satellite;
 import game_classes.object.terrain.Terrain;
 import game_classes.object.player.Player;
 import game_classes.object.spaceship.Spaceship;
@@ -20,6 +20,7 @@ public class GameplayScreen extends SimpleScreen {
     private final Terrain terrain;
     private final Spaceship spaceship;
     private final Player player;
+    private final Satellite satellite;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -39,6 +40,7 @@ public class GameplayScreen extends SimpleScreen {
         //player
         player = new Player(utils);
         EndDetection endDetection = new EndDetection(utils, player);
+        satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
 
         //TODO:
         // 3. Draw a satellite; - when found, stop movement;, load the end menu.
@@ -57,6 +59,7 @@ public class GameplayScreen extends SimpleScreen {
         spaceship.updatePosition();
         // player
         player.updatePosition();
+        satellite.updatePosition();
     }
 
     private void draw() {
@@ -64,8 +67,11 @@ public class GameplayScreen extends SimpleScreen {
         terrain.draw();
         // spaceship
         spaceship.draw();
+        // satellite
+        satellite.draw();
         // player
         player.draw();
+
     }
 
     @Override

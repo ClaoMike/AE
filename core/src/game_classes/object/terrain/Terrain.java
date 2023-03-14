@@ -32,7 +32,10 @@ public class Terrain {
 
         Vector2 endPlatformCoordinates = new Vector2(maze.getEndX(), maze.getExitY());
         endPlatform = new Platform(endPlatformCoordinates, (int)(screenWidth /Constants.BLOCK_SIZE /4), Directions.RIGHT, utils);
-        endPlatform.addMiddleSensor();
+    }
+
+    public Vector2 getEndPlatformMiddleCoordinates() {
+        return endPlatform.getMiddleCoordinates();
     }
 
     public void updatePosition() {
