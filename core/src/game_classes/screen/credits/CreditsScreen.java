@@ -39,13 +39,14 @@ public class CreditsScreen extends UIScreen {
         float screenHeight = Gdx.graphics.getHeight();
 
         ButtonTable table = new ButtonTable(screenWidth / 2, screenHeight / 2);
-        table.addCustomButton(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
-        table.addCustomButton(me, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
-        table.addCustomButton(supervisor, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true);
-        table.addCustomButton(university, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
-        table.addCustomButton(exitButton, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
 
-        getStage().addActor(table.getTable());
+        table.addActor(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true, 0);
+        table.addActor(me, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true, 0);
+        table.addActor(supervisor, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true, 0);
+        table.addActor(university, getConstants().GAME_TITLE_BOTTOM_PADDING, true, 0);
+        table.addActor(exitButton, getConstants().GAME_TITLE_BOTTOM_PADDING, true, 0);
+
+        getStage().addActor(table);
     }
 
     @Override

@@ -4,6 +4,7 @@ import static game_classes.screen.Screens.MAIN_MENU;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 
 import dev.clao.GameMain;
@@ -57,12 +58,12 @@ public class SettingsScreen extends UIScreen {
         });
 
         ButtonTable table = new ButtonTable(screenWidth / 2, screenHeight / 2);
-        table.addCustomButton(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
-        table.addSliderWithTitle(slider, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true, sliderWidth);
-        table.addCheckBoxWithTitle(checkBox, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
-        table.addCustomButton(exitButton, getConstants().GAME_TITLE_BOTTOM_PADDING, true);
+        table.addActor(title, getConstants().GAME_TITLE_BOTTOM_PADDING, true, 0);
+        table.addActor(slider, getConstants().MAIN_MENU_BUTTON_BOTTOM_PADDING, true, sliderWidth);
+        table.addActor(checkBox, getConstants().GAME_TITLE_BOTTOM_PADDING, true, 0);
+        table.addActor(exitButton, getConstants().GAME_TITLE_BOTTOM_PADDING, true, 0);
 
-        getStage().addActor(table.getTable());
+        getStage().addActor(table);
     }
 
     @Override

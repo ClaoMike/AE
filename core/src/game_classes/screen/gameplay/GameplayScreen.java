@@ -43,7 +43,7 @@ public class GameplayScreen extends SimpleScreen {
         satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
 
         //TODO:
-        // 3. Draw a satellite; - when found, stop movement;, load the end menu.
+        // 3. load the end menu.
         // 5. Add sensors for detecting when the player reaches the end platform;
         // 6. Show an end menu when the sensors are triggered.
     }

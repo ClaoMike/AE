@@ -4,28 +4,25 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 
-public class CustomButton {
-
-    private final TextButton button;
+public class CustomButton extends TextButton {
 
     public CustomButton(String text, BitmapFont font) {
-        TextButton.TextButtonStyle textButtonStyle = generateNewStyle(font);
-        button = new TextButton(text, textButtonStyle);
+        super(text, generateNewStyle(font));
     }
 
-    public void addListener(EventListener listener) {
-        button.addListener(listener);
-    }
+//    public void addListener(EventListener listener) {
+//        button.addListener(listener);
+//    }
 
-    public TextButton getButton() {
-        return button;
-    }
+//    public TextButton getButton() {
+//        return button;
+//    }
 
-    public void updateText(String newText) {
-        button.setText(newText);
-    }
+//    public void updateText(String newText) {
+//        button.setText(newText);
+//    }
 
-    private TextButton.TextButtonStyle generateNewStyle(BitmapFont font) {
+    private static TextButton.TextButtonStyle generateNewStyle(BitmapFont font) {
         TextButton.TextButtonStyle textButtonStyle = new TextButton.TextButtonStyle();
         textButtonStyle.font = font;
         textButtonStyle.fontColor = font.getColor();
