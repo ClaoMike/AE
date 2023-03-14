@@ -45,8 +45,8 @@ public class GameplayScreen extends SimpleScreen {
         satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
 
         stage = new Stage();
-//        GameMenu pauseMenu = new GameMenu("test1", "test2", getFont().getFont());
-//        stage.addActor(pauseMenu);
+        GameMenu pauseMenu = new GameMenu("test1", "test2", font);
+        stage.addActor(pauseMenu);
 //        Gdx.input.setInputProcessor(stage);
 
 
@@ -80,7 +80,7 @@ public class GameplayScreen extends SimpleScreen {
         // player
         player.draw();
 
-//        stage.draw();
+        stage.draw();
 
     }
 

@@ -20,6 +20,7 @@ public class SimpleScreen implements Screen {
 
     public SimpleScreen(GameMain game) {
         this.game = game;
+        font = FontGenerator.generateBitmap(getConstants().FONT_FILEPATH, getConstants().FONT_DEFAULT_SIZE, Color.RED);
     }
 
     @Override
@@ -28,8 +29,6 @@ public class SimpleScreen implements Screen {
         mainCamera.setToOrtho(false, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         mainCamera.position.set(mainCamera.viewportWidth / 2f, mainCamera.viewportHeight / 2f, 0);
         mainCamera.update();
-
-        font = FontGenerator.generateBitmap(getConstants().FONT_FILEPATH, getConstants().FONT_DEFAULT_SIZE, Color.RED);
     }
 
     @Override

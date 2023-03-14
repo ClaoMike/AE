@@ -1,5 +1,6 @@
 package game_classes.screen.gameplay;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 import game_classes.screen.uicomponents.ButtonTable;
@@ -7,7 +8,7 @@ import game_classes.screen.uicomponents.CustomButton;
 
 public class GameMenu extends ButtonTable {
     public GameMenu(String button1Text, String button2Text, BitmapFont font) {
-        super(0, 0);
+        super(Gdx.graphics.getWidth()/2, Gdx.graphics.getHeight()/2);
 
         CustomButton b1 = new CustomButton(button1Text, font);
         CustomButton b2 = new CustomButton(button2Text, font);
