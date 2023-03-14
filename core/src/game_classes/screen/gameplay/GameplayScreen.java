@@ -51,15 +51,15 @@ public class GameplayScreen extends SimpleScreen {
         stage = new Stage();
         PauseMenu pauseMenu = new PauseMenu(game, font, this);
         stage.addActor(pauseMenu);
-
-
+        
         //TODO:
+        // 0. Update the slider's values in the settings screen;
         // 1. When going back to the main menu, start music again;
         // 2. Add sound effects here in gameplay and when pressing a button;
         // 3. Add animations;
         // 4. Update game version;
         // 5. (OPTIONAL) Add a snow animation;
-        // 6. Remove all warnings.
+        // 6. Remove all warnings;
         // 7. One last refactor;
         // 8. Finally, finish the README file;
         // 9. Submit the project.
