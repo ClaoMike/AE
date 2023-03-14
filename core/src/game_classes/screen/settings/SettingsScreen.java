@@ -27,11 +27,11 @@ public class SettingsScreen extends UIScreen {
         float screenHeight = Gdx.graphics.getHeight();
         float sliderWidth = screenWidth/4;
 
-        CustomButton title = new CustomButton(getConstants().GAME_TITLE, getFont().getFont());
+        CustomButton title = new CustomButton(getConstants().GAME_TITLE, font);
 
         SliderWithTitle slider = new SliderWithTitle(
                 getConstants().SLIDER_MAZE_SIZE_TITLE,
-                getFont().getFont(),
+                font,
                 getConstants().SLIDER_BACKGROUND,
                 getConstants().SLIDER_KNOB_BACKGROUND,
                 getConstants().SETTINGS_SLIDER_MIN_VALUE,
@@ -43,13 +43,13 @@ public class SettingsScreen extends UIScreen {
 
         CheckBoxWithTitle checkBox = new CheckBoxWithTitle(
                 getConstants().DEBUG_MODE_CHECKBOX_TITLE,
-                getFont().getFont(),
+                font,
                 screenWidth / 50,
                 screenWidth / 50,
                 game.settings
         );
 
-        CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
+        CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, font);
         exitButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {

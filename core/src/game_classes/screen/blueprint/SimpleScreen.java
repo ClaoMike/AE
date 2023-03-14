@@ -5,16 +5,17 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import dev.clao.GameMain;
 import game_classes.Constants;
-import game_classes.screen.uicomponents.CustomFont;
+import game_classes.screen.uicomponents.FontGenerator;
 
 public class SimpleScreen implements Screen {
     protected final GameMain game;
     protected OrthographicCamera mainCamera;
-    private CustomFont font;
+    protected BitmapFont font;
 
 
     public SimpleScreen(GameMain game) {
@@ -28,7 +29,7 @@ public class SimpleScreen implements Screen {
         mainCamera.position.set(mainCamera.viewportWidth / 2f, mainCamera.viewportHeight / 2f, 0);
         mainCamera.update();
 
-        font = new CustomFont(getConstants().FONT_FILEPATH, getConstants().FONT_DEFAULT_SIZE, Color.RED, getBatch());
+        font = FontGenerator.generateBitmap(getConstants().FONT_FILEPATH, getConstants().FONT_DEFAULT_SIZE, Color.RED);
     }
 
     @Override
@@ -73,7 +74,4 @@ public class SimpleScreen implements Screen {
         return game.getBatch();
     }
 
-    public CustomFont getFont() {
-        return font;
-    }
 }

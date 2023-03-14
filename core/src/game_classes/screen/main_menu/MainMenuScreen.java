@@ -23,9 +23,9 @@ public class MainMenuScreen extends UIScreen {
     public void show() {
         super.show();
 
-        CustomButton title = new CustomButton(getConstants().GAME_TITLE, getFont().getFont());
+        CustomButton title = new CustomButton(getConstants().GAME_TITLE, font);
 
-        CustomButton playButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_PLAY, getFont().getFont());
+        CustomButton playButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_PLAY, font);
         playButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
@@ -34,7 +34,7 @@ public class MainMenuScreen extends UIScreen {
         });
 
 
-        CustomButton creditsButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_CREDITS, getFont().getFont());
+        CustomButton creditsButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_CREDITS, font);
         creditsButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
@@ -42,7 +42,7 @@ public class MainMenuScreen extends UIScreen {
             }
         });
 
-        CustomButton settingsButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_SETTINGS, getFont().getFont());
+        CustomButton settingsButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_SETTINGS, font);
         settingsButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
@@ -50,7 +50,7 @@ public class MainMenuScreen extends UIScreen {
             }
         });
 
-        CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
+        CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, font);
         exitButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
@@ -80,7 +80,7 @@ public class MainMenuScreen extends UIScreen {
 
         getBatch().begin();
         getStage().draw();
-        getFont().drawText(getConstants().GAME_VERSION, screenWidth/10, screenHeight/6);
+        font.draw(getBatch(), getConstants().GAME_VERSION, screenWidth/10, screenHeight/6);
         getBatch().end();
 
         mainCamera.update();

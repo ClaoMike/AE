@@ -21,16 +21,15 @@ public class CreditsScreen extends UIScreen {
     public void show() {
         super.show();
 
-        CustomButton title = new CustomButton(getConstants().GAME_TITLE, getFont().getFont());
-        CustomButton me = new CustomButton(getConstants().PROJECT_DEVELOPER, getFont().getFont());
-        CustomButton supervisor = new CustomButton(getConstants().PROJECT_SUPERVISOR, getFont().getFont());
-        CustomButton university = new CustomButton(getConstants().UNIVERSITY_NAME, getFont().getFont());
+        CustomButton title = new CustomButton(getConstants().GAME_TITLE, font);
+        CustomButton me = new CustomButton(getConstants().PROJECT_DEVELOPER, font);
+        CustomButton supervisor = new CustomButton(getConstants().PROJECT_SUPERVISOR, font);
+        CustomButton university = new CustomButton(getConstants().UNIVERSITY_NAME, font);
 
-        CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, getFont().getFont());
+        CustomButton exitButton = new CustomButton(getConstants().MAIN_MENU_BUTTON_EXIT, font);
         exitButton.addListener(new ChangeListener() {
             @Override
             public void changed (ChangeEvent event, Actor actor) {
-                System.out.println(getConstants().MAIN_MENU_BUTTON_EXIT + " Pressed");
                 game.goToScreen(MAIN_MENU);
             }
         });

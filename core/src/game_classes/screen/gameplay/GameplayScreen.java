@@ -5,6 +5,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.World;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 
 import dev.clao.GameMain;
 import game_classes.camera.FollowingCamera;
@@ -21,6 +22,7 @@ public class GameplayScreen extends SimpleScreen {
     private final Spaceship spaceship;
     private final Player player;
     private final Satellite satellite;
+    private final Stage stage;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -41,6 +43,12 @@ public class GameplayScreen extends SimpleScreen {
         player = new Player(utils);
         EndDetection endDetection = new EndDetection(utils, player);
         satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
+
+        stage = new Stage();
+//        GameMenu pauseMenu = new GameMenu("test1", "test2", getFont().getFont());
+//        stage.addActor(pauseMenu);
+//        Gdx.input.setInputProcessor(stage);
+
 
         //TODO:
         // 3. load the end menu.
@@ -71,6 +79,8 @@ public class GameplayScreen extends SimpleScreen {
         satellite.draw();
         // player
         player.draw();
+
+//        stage.draw();
 
     }
 
@@ -118,5 +128,6 @@ public class GameplayScreen extends SimpleScreen {
         terrain.dispose();
         spaceship.dispose();
         player.dispose();
+        stage.dispose();
     }
 }

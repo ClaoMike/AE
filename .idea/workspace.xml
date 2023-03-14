@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
-      <change afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/SmallMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/FontGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -13,23 +13,25 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/blueprint/SimpleScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/blueprint/SimpleScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/credits/CreditsScreen$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/credits/CreditsScreen$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/credits/CreditsScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/credits/CreditsScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/GameplayScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/SmallMenu.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/main_menu/MainMenuScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/main_menu/MainMenuScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/settings/SettingsScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/settings/SettingsScreen.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/uicomponents/ButtonTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/uicomponents/ButtonTable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/uicomponents/CustomButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/uicomponents/CustomButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/uicomponents/CustomFont.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/blueprint/SimpleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/blueprint/SimpleScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/credits/CreditsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/credits/CreditsScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/SmallMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/main_menu/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/main_menu/MainMenuScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/settings/SettingsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/settings/SettingsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/ButtonTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/ButtonTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CheckBoxWithTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CheckBoxWithTitle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomSlider.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomSlider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/SliderWithTitle.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/SliderWithTitle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/uicomponents/CustomFont.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

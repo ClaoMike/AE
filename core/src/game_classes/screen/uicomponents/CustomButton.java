@@ -10,18 +10,6 @@ public class CustomButton extends TextButton {
         super(text, generateNewStyle(font));
     }
 
-//    public void addListener(EventListener listener) {
-//        button.addListener(listener);
-//    }
-
-//    public TextButton getButton() {
-//        return button;
-//    }
-
-//    public void updateText(String newText) {
-//        button.setText(newText);
-//    }
-
     private static TextButton.TextButtonStyle generateNewStyle(BitmapFont font) {
         TextButton.TextButtonStyle textButtonStyle = new TextButton.TextButtonStyle();
         textButtonStyle.font = font;
