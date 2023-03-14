@@ -1,5 +1,6 @@
 package game_classes.object.player;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
@@ -12,6 +13,7 @@ import game_classes.screen.gameplay.GameUtils;
 public class Player extends Atom {
     private final Constants constants;
     private int movementMultiplier = 1;
+    private PlayerInputProcessor playerInputProcessor;
 
     public Player(GameUtils utils) {
         super(
@@ -27,7 +29,7 @@ public class Player extends Atom {
 
         this.constants = utils.game.getConstants();
 
-        new PlayerInputProcessor(this);
+        playerInputProcessor = new PlayerInputProcessor(this);
     }
 
     public void move(Directions direction) {
@@ -82,6 +84,10 @@ public class Player extends Atom {
 
     public void resumeMovement() {
         movementMultiplier = 1;
+    }
+
+    public void setInputProcessorToPlayer() {
+        Gdx.input.setInputProcessor(playerInputProcessor);
     }
 
 }

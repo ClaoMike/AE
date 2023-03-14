@@ -15,12 +15,8 @@ public class CustomSlider extends Slider {
                 stepSize,
                 false,
                 generateStyle(
-                        generateTextureRegionDrawable(
-                                backgroundFilepath
-                        ),
-                        generateTextureRegionDrawable(
-                                knobFilepath
-                        )
+                        TextureRegionDrawableGenerator.generate(backgroundFilepath),
+                        TextureRegionDrawableGenerator.generate(knobFilepath)
                 )
         );
 
@@ -28,9 +24,6 @@ public class CustomSlider extends Slider {
         setValue(initialValue);
     }
 
-    private static TextureRegionDrawable generateTextureRegionDrawable(String filepath) {
-        return new TextureRegionDrawable(new TextureRegion(new Texture(Gdx.files.internal(filepath))));
-    }
     private static Slider.SliderStyle generateStyle(Drawable background, Drawable knob) {
         Slider.SliderStyle sliderStyle = new Slider.SliderStyle();
         sliderStyle.background = background;
@@ -39,3 +32,4 @@ public class CustomSlider extends Slider {
         return sliderStyle;
     }
 }
+

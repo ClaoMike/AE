@@ -24,6 +24,9 @@ public class GameplayScreen extends SimpleScreen {
     private final Satellite satellite;
     private final Stage stage;
 
+    private boolean isPaused = false;
+    boolean escapeKeyPressed = false;
+
     public GameplayScreen(GameMain game) {
         super(game);
 
@@ -45,19 +48,23 @@ public class GameplayScreen extends SimpleScreen {
         satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
 
         stage = new Stage();
-        GameMenu pauseMenu = new GameMenu("test1", "test2", font);
+        PauseMenu pauseMenu = new PauseMenu(game, font, this);
         stage.addActor(pauseMenu);
-//        Gdx.input.setInputProcessor(stage);
 
 
         //TODO:
         // 3. load the end menu.
-        // 5. Add sensors for detecting when the player reaches the end platform;
         // 6. Show an end menu when the sensors are triggered.
     }
 
     @Override
     public void show() {
+    }
+
+    public void dismissPauseMenu() {
+        escapeKeyPressed = true;
+        isPaused = !isPaused;
+        player.setInputProcessorToPlayer();
     }
 
     private void updatePositions() {
@@ -77,11 +84,13 @@ public class GameplayScreen extends SimpleScreen {
         spaceship.draw();
         // satellite
         satellite.draw();
-        // player
-        player.draw();
 
-        stage.draw();
-
+        if(isPaused) {
+            stage.draw();
+        } else {
+            // player
+            player.draw();
+        }
     }
 
     @Override
@@ -111,11 +120,21 @@ public class GameplayScreen extends SimpleScreen {
 
     private void detectUserInput() {
         if (Gdx.input.isKeyPressed(Input.Keys.ESCAPE)) {
-            // TODO:
-            //  1. Implement a pause menu;
-            //  2. Stop every movement when the menu is on
-            System.out.println("ESCAPE");
+            if (!escapeKeyPressed) {
+                escapeKeyPressed = true;
+                isPaused = !isPaused;
+
+                if(isPaused) {
+                Gdx.input.setInputProcessor(stage);
+            } else {
+                player.setInputProcessorToPlayer();
+            }
+
+            }
+        } else {
+            escapeKeyPressed = false;
         }
+
     }
 
     @Override
