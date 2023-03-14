@@ -15,7 +15,7 @@ import game_classes.screen.uicomponents.FontGenerator;
 public class SimpleScreen implements Screen {
     protected final GameMain game;
     protected OrthographicCamera mainCamera;
-    protected BitmapFont font;
+    protected final BitmapFont font;
 
 
     public SimpleScreen(GameMain game) {

@@ -37,8 +37,7 @@ public class SliderWithTitle extends ButtonTable {
 
     private String textFormatter(float value) {
         int newValue = (int) value;
-        String newText = text + newValue + " x " + newValue;
 
-        return newText;
+        return text + newValue + " x " + newValue;
     }
 }

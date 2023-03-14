@@ -45,7 +45,7 @@ public class GameplayScreen extends SimpleScreen {
         spaceship = new Spaceship(utils, -300, 0);
         //player
         player = new Player(utils);
-        EndDetection endDetection = new EndDetection(utils, player, this);
+        new EndDetection(utils, player, this);
         satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
 
         stage = new Stage();
@@ -54,8 +54,15 @@ public class GameplayScreen extends SimpleScreen {
 
 
         //TODO:
-        // 3. load the end menu.
-        // 6. Show an end menu when the sensors are triggered.
+        // 1. When going back to the main menu, start music again;
+        // 2. Add sound effects here in gameplay and when pressing a button;
+        // 3. Add animations;
+        // 4. Update game version;
+        // 5. (OPTIONAL) Add a snow animation;
+        // 6. Remove all warnings.
+        // 7. One last refactor;
+        // 8. Finally, finish the README file;
+        // 9. Submit the project.
     }
 
     @Override
@@ -137,10 +144,9 @@ public class GameplayScreen extends SimpleScreen {
 
                 if(isPaused) {
                 Gdx.input.setInputProcessor(stage);
-            } else {
-                player.setInputProcessorToPlayer();
-            }
-
+                } else {
+                    player.setInputProcessorToPlayer();
+                }
             }
         } else {
             escapeKeyPressed = false;
@@ -157,6 +163,7 @@ public class GameplayScreen extends SimpleScreen {
         terrain.dispose();
         spaceship.dispose();
         player.dispose();
+        satellite.dispose();
         stage.dispose();
     }
 }

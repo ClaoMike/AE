@@ -9,9 +9,9 @@ import game_classes.Constants;
 import game_classes.object.player.Player;
 
 public class EndDetection implements ContactListener {
-    private GameUtils utils;
-    private Player player;
-    private GameplayScreen gameplayScreen;
+    private final GameUtils utils;
+    private final Player player;
+    private final GameplayScreen gameplayScreen;
 
     public EndDetection(GameUtils utils, Player player, GameplayScreen screen) {
         this.utils = utils;

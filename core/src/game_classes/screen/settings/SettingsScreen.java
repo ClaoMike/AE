@@ -4,7 +4,6 @@ import static game_classes.screen.Screens.MAIN_MENU;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Actor;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 
 import dev.clao.GameMain;

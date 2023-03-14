@@ -1,6 +1,5 @@
 package game_classes.screen.gameplay;
 
-import static game_classes.screen.Screens.GAMEPLAY;
 import static game_classes.screen.Screens.MAIN_MENU;
 
 import com.badlogic.gdx.Gdx;
@@ -18,13 +17,11 @@ import game_classes.screen.uicomponents.CustomButton;
 import game_classes.screen.uicomponents.TextureRegionDrawableGenerator;
 
 public class GameMenu extends ButtonTable {
-    protected CustomButton firstButton;
-    protected CustomButton secondButton;
-    private GameMain game;
+    protected final CustomButton firstButton;
+    protected final CustomButton secondButton;
 
     public GameMenu(final GameMain game, String button1Text, BitmapFont font) {
         super(0, 0);
-        this.game = game;
 
         firstButton = new CustomButton(button1Text, font);
         secondButton = new CustomButton(Constants.MAIN_MENU_STRING, font);

@@ -1,7 +1,6 @@
 package game_classes.screen.uicomponents;
 
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 
 public class CustomButton extends TextButton {

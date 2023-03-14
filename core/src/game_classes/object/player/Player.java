@@ -13,7 +13,7 @@ import game_classes.screen.gameplay.GameUtils;
 public class Player extends Atom {
     private final Constants constants;
     private int movementMultiplier = 1;
-    private PlayerInputProcessor playerInputProcessor;
+    private final PlayerInputProcessor playerInputProcessor;
 
     public Player(GameUtils utils) {
         super(
@@ -83,10 +83,6 @@ public class Player extends Atom {
         movementMultiplier = 0;
         Body body = getSprite().getBody();
         body.setLinearVelocity(0, 0);
-    }
-
-    public void resumeMovement() {
-        movementMultiplier = 1;
     }
 
     public void setInputProcessorToPlayer() {
