@@ -3,17 +3,19 @@ package game_classes.screen.gameplay;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
 import dev.clao.GameMain;
 import game_classes.camera.FollowingCamera;
 import game_classes.object.CustomAnimation;
+import game_classes.object.CustomAnimationWithBody;
 import game_classes.object.Satellite;
+import game_classes.object.blueprint.AtomAnimation;
+import game_classes.object.blueprint.PhysicsTools;
 import game_classes.object.terrain.Terrain;
 import game_classes.object.player.Player;
 import game_classes.object.spaceship.Spaceship;
@@ -31,7 +33,7 @@ public class GameplayScreen extends SimpleScreen {
     boolean escapeKeyPressed = false;
     boolean endOfTheGame = false;
 
-    CustomAnimation customAnimation;
+    AtomAnimation customAnimation;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -57,7 +59,8 @@ public class GameplayScreen extends SimpleScreen {
         PauseMenu pauseMenu = new PauseMenu(game, font, this);
         stage.addActor(pauseMenu);
 
-        customAnimation = new CustomAnimation("animation_test.png", 0.025f, utils);
+        Body body = PhysicsTools.generateBody(world, BodyDef.BodyType.DynamicBody, 0, 0, "test");
+        customAnimation = new AtomAnimation("animation_test.png", BodyDef.BodyType.DynamicBody, 0, 0, 1, false, 0.4f, 0.025f, utils);
         
         //TODO:
         // 0. Update the slider's values in the settings screen;
@@ -101,7 +104,7 @@ public class GameplayScreen extends SimpleScreen {
         player.updatePosition();
         satellite.updatePosition();
 
-        customAnimation.updatePosition(player.getSprite().getX(), player.getSprite().getY());
+        customAnimation.updatePosition();
     }
 
     private void draw() {

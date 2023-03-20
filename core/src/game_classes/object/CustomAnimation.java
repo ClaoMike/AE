@@ -53,4 +53,16 @@ public class CustomAnimation {
         texture.dispose();
     }
 
+    public float getWidth() {
+        return texture.getWidth();
+    }
+
+    public float getHeight() {
+        return texture.getHeight();
+    }
+
+    public Texture getTexture() {
+        return texture;
+    }
+
 }

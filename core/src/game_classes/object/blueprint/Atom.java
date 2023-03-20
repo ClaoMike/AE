@@ -15,7 +15,7 @@ public class Atom {
     public Atom(GameMain game, String filepath, World world, BodyDef.BodyType bodyType, float x, float y, float density, boolean isSensor, float radius) {
         this.game = game;
 
-        Body body = CustomSpriteWithBody.generateBody(world, bodyType, x, y, Constants.removePNGExtension(filepath));
+        Body body = PhysicsTools.generateBody(world, bodyType, x, y, Constants.removePNGExtension(filepath));
 
         sprite = new CustomSpriteWithBody(filepath, body);
         if(radius > 0) {
@@ -25,7 +25,7 @@ public class Atom {
         }
 
 
-        FixtureDef fixtureDef = CustomSpriteWithBody.generateFixtureDef(sprite.getShape(), density, isSensor);
+        FixtureDef fixtureDef = PhysicsTools.generateFixtureDef(sprite.getShape(), density, isSensor);
 
         sprite.attachFixture(fixtureDef);
         sprite.updatePositionToBody();
