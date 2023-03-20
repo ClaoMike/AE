@@ -29,6 +29,5 @@
   "SPACESHIP_IMAGE_FILEPATH": "images/gameplay/spaceship/spaceship2.png",
   "UNIVERSITY_NAME": "The University of Manchester",
   "VELOCITY_ITERATIONS": 6,
-  "POSITION_ITERATIONS": 2,
-  "END_SENSOR_NAME": "e_n_d"
+  "POSITION_ITERATIONS": 2
 }

@@ -4,19 +4,12 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.Body;
-import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 
 import dev.clao.GameMain;
 import game_classes.camera.FollowingCamera;
-import game_classes.object.CustomAnimation;
-import game_classes.object.CustomAnimationWithBody;
-import game_classes.object.NewSatellite;
 import game_classes.object.Satellite;
-import game_classes.object.blueprint.AtomAnimation;
-import game_classes.object.blueprint.PhysicsTools;
 import game_classes.object.terrain.Terrain;
 import game_classes.object.player.Player;
 import game_classes.object.spaceship.Spaceship;
@@ -28,14 +21,11 @@ public class GameplayScreen extends SimpleScreen {
     private final Terrain terrain;
     private final Spaceship spaceship;
     private final Player player;
-//    private final Satellite satellite;
-    private final NewSatellite newSatellite;
+    private final Satellite satellite;
     private final Stage stage;
     private boolean isPaused = false;
     boolean escapeKeyPressed = false;
     boolean endOfTheGame = false;
-
-    AtomAnimation customAnimation;
 
     public GameplayScreen(GameMain game) {
         super(game);
@@ -55,15 +45,12 @@ public class GameplayScreen extends SimpleScreen {
         //player
         player = new Player(utils);
         new EndDetection(utils, player, this);
-//        satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
-        newSatellite = new NewSatellite(terrain.getEndPlatformMiddleCoordinates(), utils);
+        satellite = new Satellite(terrain.getEndPlatformMiddleCoordinates(), utils);
 
         stage = new Stage();
         PauseMenu pauseMenu = new PauseMenu(game, font, this);
         stage.addActor(pauseMenu);
 
-        customAnimation = new AtomAnimation("animation_test.png", BodyDef.BodyType.DynamicBody, 0, 0, 1, false, 0.4f, 0.025f, 6, 5, utils);
-        
         //TODO:
         // 2. Add sound effects here in gameplay and when pressing a button;
         // 3. Add animations;
@@ -102,10 +89,7 @@ public class GameplayScreen extends SimpleScreen {
         spaceship.updatePosition();
         // player
         player.updatePosition();
-//        satellite.updatePosition();
-        newSatellite.updatePosition();
-
-        customAnimation.updatePosition();
+        satellite.updatePosition();
     }
 
     private void draw() {
@@ -114,8 +98,8 @@ public class GameplayScreen extends SimpleScreen {
         // spaceship
         spaceship.draw();
         // satellite
-//        satellite.draw();
-        newSatellite.draw();
+        satellite.draw();
+        satellite.draw();
 
         if(isPaused) {
             stage.draw();
@@ -124,7 +108,6 @@ public class GameplayScreen extends SimpleScreen {
             player.draw();
         }
 
-        customAnimation.draw();
     }
 
     @Override
@@ -179,9 +162,8 @@ public class GameplayScreen extends SimpleScreen {
         terrain.dispose();
         spaceship.dispose();
         player.dispose();
-//        satellite.dispose();
-        newSatellite.dispose();
+        satellite.dispose();
+        satellite.dispose();
         stage.dispose();
-        customAnimation.dispose();
     }
 }
