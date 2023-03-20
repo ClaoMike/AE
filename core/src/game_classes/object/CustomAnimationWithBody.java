@@ -19,10 +19,7 @@ public class CustomAnimationWithBody extends CustomAnimation {
     }
 
     public void updatePosition() {
-        // TODO: update this accordingly
         updatePosition(body.getPosition().x * Constants.PPM, body.getPosition().y * Constants.PPM);
-//        updatePosition(body.getPosition().x * Constants.PPM + getTexture().getWidth()/4, body.getPosition().y * Constants.PPM + getTexture().getHeight()/4);
-//        updatePosition((body.getPosition().x - 1) * Constants.PPM, (body.getPosition().y - 1) * Constants.PPM);
     }
 
     public Body getBody() {

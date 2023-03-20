@@ -6,14 +6,18 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 
 import game_classes.Constants;
+import game_classes.object.CustomAnimationWithBody;
 import game_classes.object.Directions;
 import game_classes.object.blueprint.Atom;
 import game_classes.screen.gameplay.GameUtils;
 
 public class Player extends Atom {
+    private final GameUtils utils;
     private final Constants constants;
     private int movementMultiplier = 1;
     private final PlayerInputProcessor playerInputProcessor;
+    private final CustomAnimationWithBody animation;
+    public boolean isMoving = false;
 
     public Player(GameUtils utils) {
         super(
@@ -26,10 +30,12 @@ public class Player extends Atom {
                 utils.game.settings.getDebugMode(),
                 0.4f
         );
+        this.utils = utils;
 
         this.constants = utils.game.getConstants();
 
         playerInputProcessor = new PlayerInputProcessor(this);
+        animation = new CustomAnimationWithBody(Constants.PLAYER_ANIMATION_FILEPATH, 2f, getSprite().getBody(), utils, 2, 1);
     }
 
     public void move(Directions direction) {
@@ -74,7 +80,6 @@ public class Player extends Atom {
         }
     }
 
-
     public void dispose() {
         getSprite().dispose();
     }
@@ -89,4 +94,18 @@ public class Player extends Atom {
         Gdx.input.setInputProcessor(playerInputProcessor);
     }
 
+    @Override
+    public void draw() {
+        if(isMoving){
+            animation.draw();
+        } else {
+            super.draw();
+        }
+    }
+
+    @Override
+    public void updatePosition() {
+        super.updatePosition();
+        animation.updatePosition();
+    }
 }

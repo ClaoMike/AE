@@ -36,6 +36,7 @@ public class Constants {
     public String MAIN_MENU_BUTTON_PLAY;
     public String MAIN_MENU_BUTTON_SETTINGS;
     public String PLAYER_IMAGE_FILEPATH;
+    public static final String PLAYER_ANIMATION_FILEPATH = "images/gameplay/player/player_animation.png";
     public float PLAYER_INITIAL_POSITION;
     public float PLAYER_MAXIMUM_LINEAR_VELOCITY;
     public float PLAYER_MOVEMENT_FORCE;

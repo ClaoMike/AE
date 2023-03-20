@@ -33,6 +33,7 @@ public class PlayerInputProcessor implements InputProcessor {
                 player.move(DOWN);
                 break;
         }
+        player.isMoving = true;
         return false;
     }
 
@@ -48,6 +49,7 @@ public class PlayerInputProcessor implements InputProcessor {
                 player.stopMoving(UP);
                 break;
         }
+        player.isMoving = false;
 
         return true;
     }

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d97659b-95c1-4c77-9964-2fb1ba84022b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/gameplay/player/player_animation.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,26 +13,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/animation_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/gameplay/satellite/satellite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/satellite_animation.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/gameplay/satellite/satellite_animation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/gameplay/player/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/gameplay/player/player.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/NewSatellite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/Satellite.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/Satellite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/EndDetection.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/EndDetection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/GameplayScreen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/CustomAnimationWithBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/CustomAnimationWithBody.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/player/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/game_classes/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/NewSatellite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/Satellite.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/Satellite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/EndDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/EndDetection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/animation_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/images/gameplay/satellite/satellite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/satellite_animation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/CustomAnimationWithBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/CustomAnimationWithBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/player/PlayerInputProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/player/PlayerInputProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/images/gameplay/player/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/images/gameplay/player/player.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,11 +63,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets"
+    "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets/images/gameplay/player"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images/gameplay/player" />
       <recent name="$PROJECT_DIR$/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
