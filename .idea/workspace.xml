@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="NONE" />
+    <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
+    <list default="true" id="9d97659b-95c1-4c77-9964-2fb1ba84022b" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
+      <change afterPath="$PROJECT_DIR$/assets/animation_test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/game_classes/object/CustomAnimation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,186 +14,44 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/blueprint/ObjectUserData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/player/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/GameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/ObjectUserData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2LsauzZjNWBC7sbm4DKnvPc3uN3" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
-      <recent name="$PROJECT_DIR$/assets/images/gameplay/satellite" />
-      <recent name="$PROJECT_DIR$/assets/images/gameplay/spaceship" />
-      <recent name="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner" />
-      <recent name="$PROJECT_DIR$/assets/images/gameplay/terrain" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/images/gameplay/ui" />
-      <recent name="$PROJECT_DIR$/core/src" />
-      <recent name="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow_corner" />
-      <recent name="$PROJECT_DIR$/assets/images/gameplay/terrain/dirt_with_snow" />
-      <recent name="$PROJECT_DIR$/assets" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="refactor.objects.terrain" />
-      <recent name="refactor.objects.terrain.cube" />
-      <recent name="refactor.objects.terrain.maze" />
-      <recent name="refactor.objects.spaceship" />
-      <recent name="refactor.objects.blocks" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="b3655f1e-147f-4e25-b4a0-a4c3ad57903a" name="Changes" comment="" />
-      <created>1676662473843</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1676662473843</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Refactor&#10;&#10;Implemented simple screen;&#10;Added a background image;&#10;Added background music;&#10;Added a StretchViewport.">
-      <created>1678114201787</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678114201787</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!">
-      <created>1678120973861</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1678120973861</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Refactor&#10;&#10;Implement Texts and Buttons using a custom font plus a Table.">
-      <created>1678127417807</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1678127417808</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Refactor&#10;&#10;Implemented the main menu screen.">
-      <created>1678130532412</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1678130532412</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Refactor&#10;&#10;Implemented the credits screen">
-      <created>1678131284239</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1678131284239</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Refactor&#10;&#10;Prepared the Credits screen;">
-      <created>1678132060208</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1678132060208</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Refactor&#10;&#10;Prepared the Credits screen;">
-      <created>1678132102621</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1678132102621</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Refactor&#10;&#10;Implemented a slider for setting the maze size.">
-      <created>1678205444345</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1678205444345</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Refactor&#10;&#10;Implemented a checkbox for setting the debug mode on or off.">
-      <created>1678208039312</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1678208039312</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Refactor&#10;&#10;Connected the UIScreens.">
-      <created>1678209411947</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1678209411947</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Refactor&#10;&#10;Removed warnings and deprecated classes.">
-      <created>1678210034263</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1678210034263</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Refactor&#10;&#10;Fixed main menu music.">
-      <created>1678210674712</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1678210674712</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,20 +64,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor&#10;&#10;Implemented simple screen;&#10;Added a background image;&#10;Added background music;&#10;Added a StretchViewport." />
-    <MESSAGE value="Refactor&#10;&#10;New way to save the constants, using a JSON file. Cheers!" />
-    <MESSAGE value="Refactor&#10;&#10;Implement Texts and Buttons using a custom font." />
-    <MESSAGE value="Refactor&#10;&#10;Implement Texts and Buttons using a custom font plus a Table." />
-    <MESSAGE value="Refactor&#10;&#10;Implemented the main menu screen." />
-    <MESSAGE value="Refactor&#10;&#10;Implemented the credits screen" />
-    <MESSAGE value="Refactor&#10;&#10;Prepared the Credits screen;" />
-    <MESSAGE value="Refactor&#10;&#10;Implemented a slider for setting the maze size." />
-    <MESSAGE value="Refactor&#10;&#10;Implemented a checkbox for setting the debug mode on or off." />
-    <MESSAGE value="Refactor&#10;&#10;Connected the UIScreens." />
-    <MESSAGE value="Refactor&#10;&#10;Removed warnings and deprecated classes." />
-    <MESSAGE value="Refactor&#10;&#10;Fixed main menu music." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor&#10;&#10;Fixed main menu music." />
   </component>
 </project>
