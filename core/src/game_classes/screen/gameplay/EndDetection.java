@@ -23,7 +23,7 @@ public class EndDetection implements ContactListener {
     @Override
     public void beginContact(Contact contact) {
         String playerID = Constants.removePNGExtension(utils.game.getConstants().PLAYER_IMAGE_FILEPATH);
-        String sensorID = Constants.removePNGExtension(Constants.SATELLITE_IMAGE_FILEPATH);
+        String sensorID = Constants.removePNGExtension(Constants.NEW_SATELLITE_IMAGE_FILEPATH);
 
         String c1 = contact.getFixtureA().getBody().getUserData().toString();
         String c2 = contact.getFixtureB().getBody().getUserData().toString();

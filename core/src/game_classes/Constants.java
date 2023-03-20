@@ -55,6 +55,7 @@ public class Constants {
     public int VELOCITY_ITERATIONS;
     public String END_SENSOR_NAME;
     public static final String SATELLITE_IMAGE_FILEPATH = "images/gameplay/satellite/satellite.png";
+    public static final String NEW_SATELLITE_IMAGE_FILEPATH = "satellite_animation.png";
     public static final String GAME_MENU_BACKGROUND_IMAGE_FILEPATH = "images/gameplay/ui/game_menu_background.png";
     public static final String MAIN_MENU_STRING = "Main Menu";
     public static final String PLAY_AGAIN_STRING = "Play again";

@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d97659b-95c1-4c77-9964-2fb1ba84022b" name="Changes" comment="Refactor&#10;&#10;Fixed main menu music.">
+    <list default="true" id="9d97659b-95c1-4c77-9964-2fb1ba84022b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/satellite_animation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/game_classes/object/NewSatellite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/dev/clao/GameMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/music/BackgroundMusic.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/constants.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/CustomAnimation.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/CustomAnimation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/CustomAnimationWithBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/CustomAnimationWithBody.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/blueprint/AtomAnimation.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/object/blueprint/AtomAnimation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/GameplayScreen.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/game_classes/screen/gameplay/GameplayScreen.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/libs/core-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/dev/clao/GameMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/music/BackgroundMusic.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/music/CustomMusic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/CustomAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/CustomAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/CustomAnimationWithBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/CustomAnimationWithBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/AtomAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/object/blueprint/AtomAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/EndDetection.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/EndDetection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/gameplay/GameplayScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/game_classes/screen/main_menu/MainMenuScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/game_classes/screen/main_menu/MainMenuScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/resources/main/json/constants.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,11 +54,20 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectId" id="2NHnx2rxVjSrvUIXSU8ID2oz2gu" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
     "last_opened_file_path": "/Users/claomike/Desktop/3rdYearProject/Antrum Exploratio/assets"
   }
 }]]></component>
@@ -55,7 +76,15 @@
       <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d97659b-95c1-4c77-9964-2fb1ba84022b" name="Changes" comment="" />
+      <created>1679330117702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679330117702</updated>
+    </task>
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

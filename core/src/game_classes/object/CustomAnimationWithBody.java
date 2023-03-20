@@ -9,8 +9,8 @@ import game_classes.screen.gameplay.GameUtils;
 public class CustomAnimationWithBody extends CustomAnimation {
     private final Body body;
 
-    public CustomAnimationWithBody(String filepath, float frameDuration, Body body, GameUtils utils) {
-        super(filepath, frameDuration, utils);
+    public CustomAnimationWithBody(String filepath, float frameDuration, Body body, GameUtils utils, int FRAME_COLS, int FRAME_ROWS) {
+        super(filepath, frameDuration, utils, FRAME_COLS, FRAME_ROWS);
         this.body = body;
     }
 
@@ -22,7 +22,11 @@ public class CustomAnimationWithBody extends CustomAnimation {
         // TODO: update this accordingly
         updatePosition(body.getPosition().x * Constants.PPM, body.getPosition().y * Constants.PPM);
 //        updatePosition(body.getPosition().x * Constants.PPM + getTexture().getWidth()/4, body.getPosition().y * Constants.PPM + getTexture().getHeight()/4);
+//        updatePosition((body.getPosition().x - 1) * Constants.PPM, (body.getPosition().y - 1) * Constants.PPM);
+    }
 
+    public Body getBody() {
+        return body;
     }
 
 

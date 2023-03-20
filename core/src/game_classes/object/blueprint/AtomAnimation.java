@@ -9,18 +9,18 @@ import game_classes.object.CustomAnimationWithBody;
 import game_classes.screen.gameplay.GameUtils;
 
 public class AtomAnimation {
-    private CustomAnimationWithBody animation;
+    protected CustomAnimationWithBody animation;
 
-    public AtomAnimation(String filepath, BodyDef.BodyType bodyType, float x, float y, float density, boolean isSensor, float radius, float frameDuration, GameUtils utils) {
+    public AtomAnimation(String filepath, BodyDef.BodyType bodyType, float x, float y, float density, boolean isSensor, float radius, float frameDuration, int FRAME_COLS, int FRAME_ROWS, GameUtils utils) {
         Body body = PhysicsTools.generateBody(utils.world, bodyType, x, y, Constants.removePNGExtension(filepath));
-        animation = new CustomAnimationWithBody(filepath, frameDuration, body, utils);
+        animation = new CustomAnimationWithBody(filepath, frameDuration, body, utils, FRAME_COLS, FRAME_ROWS);
 
         Shape shape;
 
         if(radius > 0) {
             shape = PhysicsTools.generateCircleShape(radius);
         } else {
-            shape = PhysicsTools.generatePolygonShape(animation.getWidth(), animation.getHeight());
+            shape = PhysicsTools.generatePolygonShape(animation.getWidth()/FRAME_COLS, animation.getHeight()/FRAME_ROWS);
         }
 
         FixtureDef fixtureDef = PhysicsTools.generateFixtureDef(shape, density, isSensor);

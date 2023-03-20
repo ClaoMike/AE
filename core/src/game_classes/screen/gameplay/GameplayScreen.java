@@ -13,6 +13,7 @@ import dev.clao.GameMain;
 import game_classes.camera.FollowingCamera;
 import game_classes.object.CustomAnimation;
 import game_classes.object.CustomAnimationWithBody;
+import game_classes.object.NewSatellite;
 import game_classes.object.Satellite;
 import game_classes.object.blueprint.AtomAnimation;
 import game_classes.object.blueprint.PhysicsTools;
@@ -27,7 +28,8 @@ public class GameplayScreen extends SimpleScreen {
     private final Terrain terrain;
     private final Spaceship spaceship;
     private final Player player;
-    private final Satellite satellite;
+//    private final Satellite satellite;
+    private final NewSatellite newSatellite;
     private final Stage stage;
     private boolean isPaused = false;
     boolean escapeKeyPressed = false;
@@ -53,14 +55,14 @@ public class GameplayScreen extends SimpleScreen {
         //player
         player = new Player(utils);
         new EndDetection(utils, player, this);
-        satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
+//        satellite = new Satellite(utils, terrain.getEndPlatformMiddleCoordinates());
+        newSatellite = new NewSatellite(terrain.getEndPlatformMiddleCoordinates(), utils);
 
         stage = new Stage();
         PauseMenu pauseMenu = new PauseMenu(game, font, this);
         stage.addActor(pauseMenu);
 
-        Body body = PhysicsTools.generateBody(world, BodyDef.BodyType.DynamicBody, 0, 0, "test");
-        customAnimation = new AtomAnimation("animation_test.png", BodyDef.BodyType.DynamicBody, 0, 0, 1, false, 0.4f, 0.025f, utils);
+        customAnimation = new AtomAnimation("animation_test.png", BodyDef.BodyType.DynamicBody, 0, 0, 1, false, 0.4f, 0.025f, 6, 5, utils);
         
         //TODO:
         // 2. Add sound effects here in gameplay and when pressing a button;
@@ -100,7 +102,8 @@ public class GameplayScreen extends SimpleScreen {
         spaceship.updatePosition();
         // player
         player.updatePosition();
-        satellite.updatePosition();
+//        satellite.updatePosition();
+        newSatellite.updatePosition();
 
         customAnimation.updatePosition();
     }
@@ -111,7 +114,8 @@ public class GameplayScreen extends SimpleScreen {
         // spaceship
         spaceship.draw();
         // satellite
-        satellite.draw();
+//        satellite.draw();
+        newSatellite.draw();
 
         if(isPaused) {
             stage.draw();
@@ -175,7 +179,8 @@ public class GameplayScreen extends SimpleScreen {
         terrain.dispose();
         spaceship.dispose();
         player.dispose();
-        satellite.dispose();
+//        satellite.dispose();
+        newSatellite.dispose();
         stage.dispose();
         customAnimation.dispose();
     }

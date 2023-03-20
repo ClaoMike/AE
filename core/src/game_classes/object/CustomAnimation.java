@@ -9,15 +9,17 @@ import game_classes.screen.gameplay.GameUtils;
 
 public class CustomAnimation {
     private GameUtils utils;
-    private final int FRAME_COLS = 6, FRAME_ROWS = 5;
+    private final int FRAME_COLS, FRAME_ROWS;
     private Animation<TextureRegion> animation;
     private Texture texture;
     private float stateTime;
     private float x = 0;
     private float y = 0;
 
-    public CustomAnimation(String filepath, float frameDuration, GameUtils utils) {
+    public CustomAnimation(String filepath, float frameDuration, GameUtils utils, int FRAME_COLS, int FRAME_ROWS) {
         this.utils = utils;
+        this.FRAME_COLS = FRAME_COLS;
+        this.FRAME_ROWS = FRAME_ROWS;
 
         texture = new Texture(Gdx.files.internal(filepath));
 
