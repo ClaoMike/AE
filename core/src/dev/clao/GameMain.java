@@ -8,7 +8,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Json;
 
-import game_classes.music.BackgroundMusic;
+import game_classes.music.CustomMusic;
 import game_classes.Constants;
 import game_classes.screen.settings.GameSettings;
 import game_classes.screen.credits.CreditsScreen;
@@ -24,19 +24,26 @@ import game_classes.screen.settings.SettingsScreen;
 public class GameMain extends Game {
 	private Constants constants;
 	private SpriteBatch batch;
-	private BackgroundMusic backgroundMusic;
+	private CustomMusic customMusic;
 
 	public SpriteBatch getBatch() {
 		return batch;
 	}
 	public GameSettings settings;
 
+	public void playMusic() {
+		if(!customMusic.isPlaying())
+			customMusic.play();
+	}
+
 	@Override
 	public void create () {
 		loadConstants();
 		batch = new SpriteBatch();
 
-		backgroundMusic = new BackgroundMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
+		customMusic = new CustomMusic(getConstants().BACKGROUND_MUSIC_FILEPATH);
+		customMusic.play();
+
 		settings = new GameSettings(getConstants());
 
 		if(constants.DEBUG_MODE_DEFAULT_VALUE) {
@@ -51,7 +58,7 @@ public class GameMain extends Game {
 	public void dispose() {
 		super.dispose();
 		batch.dispose();
-		backgroundMusic.dispose();
+		customMusic.dispose();
 	}
 
 	private void loadConstants() {
@@ -70,7 +77,7 @@ public class GameMain extends Game {
 	public void goToScreen(Screens s) {
 		switch (s) {
 			case GAMEPLAY:
-				backgroundMusic.stop();
+				customMusic.stop();
 				setScreen(new GameplayScreen(this));
 
 				break;

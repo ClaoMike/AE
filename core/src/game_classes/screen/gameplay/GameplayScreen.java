@@ -63,7 +63,6 @@ public class GameplayScreen extends SimpleScreen {
         customAnimation = new AtomAnimation("animation_test.png", BodyDef.BodyType.DynamicBody, 0, 0, 1, false, 0.4f, 0.025f, utils);
         
         //TODO:
-        // 1. When going back to the main menu, start music again;
         // 2. Add sound effects here in gameplay and when pressing a button;
         // 3. Add animations;
         // 4. Update game version;

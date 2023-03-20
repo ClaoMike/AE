@@ -3,13 +3,12 @@ package game_classes.music;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.audio.Music;
 
-public class BackgroundMusic {
+public class CustomMusic {
     private final Music music;
 
-    public BackgroundMusic(String filepath) {
+    public CustomMusic(String filepath) {
         music = Gdx.audio.newMusic(Gdx.files.internal(filepath));
         music.setLooping(true);
-        play();
     }
     public void play() {
         music.play();
@@ -22,5 +21,9 @@ public class BackgroundMusic {
     public void dispose() {
         stop();
         music.dispose();
+    }
+
+    public boolean isPlaying() {
+        return music.isPlaying();
     }
 }

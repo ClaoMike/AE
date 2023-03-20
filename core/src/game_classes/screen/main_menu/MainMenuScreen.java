@@ -22,6 +22,7 @@ public class MainMenuScreen extends UIScreen {
     @Override
     public void show() {
         super.show();
+        game.playMusic();
 
         CustomButton title = new CustomButton(getConstants().GAME_TITLE, font);
 
