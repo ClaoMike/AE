@@ -12,7 +12,6 @@ public class Satellite extends AtomAnimation {
         super(Constants.SATELLITE_IMAGE_FILEPATH, BodyDef.BodyType.StaticBody, coordinates.x, coordinates.y, 100, false, 0, 1f, 2, 1, utils);
     }
 
-    @Override
     public void updatePosition() {
         animation.updatePosition((animation.getBody().getPosition().x - 1) * Constants.PPM, (animation.getBody().getPosition().y - 1) * Constants.PPM);
     }

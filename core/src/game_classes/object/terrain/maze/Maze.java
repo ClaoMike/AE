@@ -87,6 +87,7 @@ public class Maze {
         nextVertex.setNeighbour(v);
     }
 
+    @SuppressWarnings("unused")
     public void printToConsole() {
         for(Array<Vertex> row : vertices) {
             for(Vertex v: row) {

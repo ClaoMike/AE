@@ -66,6 +66,7 @@ public class CubeArrangements {
         return copy;
     }
 
+    @SuppressWarnings("unused")
     public static void printToConsole(BlockTypes[][] arrangement) {
         System.out.println();
 

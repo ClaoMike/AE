@@ -33,10 +33,6 @@ public class AtomAnimation {
         animation.draw();
     }
 
-    public void updatePosition() {
-        animation.updatePosition();
-    }
-
     public void dispose() {
         animation.dispose();
     }

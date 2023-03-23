@@ -2,6 +2,7 @@ package game_classes;
 
 import com.badlogic.gdx.graphics.Color;
 
+@SuppressWarnings("unused")
 public class Constants {
     public static final Color SLIDER_DEFAULT_COLOUR = Color.YELLOW;
     public static final Color SLIDER_CHECK_COLOUR = Color.RED;

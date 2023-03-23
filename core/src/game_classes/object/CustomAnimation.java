@@ -61,8 +61,4 @@ public class CustomAnimation {
         return texture.getHeight();
     }
 
-    public Texture getTexture() {
-        return texture;
-    }
-
 }
