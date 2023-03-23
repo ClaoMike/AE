@@ -8,18 +8,15 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import game_classes.screen.gameplay.GameUtils;
 
 public class CustomAnimation {
-    private GameUtils utils;
-    private final int FRAME_COLS, FRAME_ROWS;
-    private Animation<TextureRegion> animation;
-    private Texture texture;
+    private final GameUtils utils;
+    private final Animation<TextureRegion> animation;
+    private final Texture texture;
     private float stateTime;
     private float x = 0;
     private float y = 0;
 
     public CustomAnimation(String filepath, float frameDuration, GameUtils utils, int FRAME_COLS, int FRAME_ROWS) {
         this.utils = utils;
-        this.FRAME_COLS = FRAME_COLS;
-        this.FRAME_ROWS = FRAME_ROWS;
 
         texture = new Texture(Gdx.files.internal(filepath));
 
@@ -35,7 +32,7 @@ public class CustomAnimation {
             }
         }
 
-        animation = new Animation<TextureRegion>(frameDuration, frames);
+        animation = new Animation<>(frameDuration, frames);
         stateTime = 0f;
     }
 

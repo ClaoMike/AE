@@ -52,10 +52,6 @@ public class GameplayScreen extends SimpleScreen {
         stage.addActor(pauseMenu);
 
         //TODO:
-        // 2. Add sound effects here in gameplay and when pressing a button;
-        // 3. Add animations;
-        // 4. Update game version;
-        // 5. (OPTIONAL) Add a snow animation;
         // 6. Remove all warnings;
         // 7. One last refactor;
         // 8. Finally, finish the README file;

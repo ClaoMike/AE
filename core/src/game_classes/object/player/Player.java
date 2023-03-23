@@ -12,7 +12,6 @@ import game_classes.object.blueprint.Atom;
 import game_classes.screen.gameplay.GameUtils;
 
 public class Player extends Atom {
-    private final GameUtils utils;
     private final Constants constants;
     private int movementMultiplier = 1;
     private final PlayerInputProcessor playerInputProcessor;
@@ -30,7 +29,6 @@ public class Player extends Atom {
                 utils.game.settings.getDebugMode(),
                 0.4f
         );
-        this.utils = utils;
 
         this.constants = utils.game.getConstants();
 

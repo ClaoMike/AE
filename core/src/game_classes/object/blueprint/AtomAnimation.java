@@ -9,7 +9,7 @@ import game_classes.object.CustomAnimationWithBody;
 import game_classes.screen.gameplay.GameUtils;
 
 public class AtomAnimation {
-    protected CustomAnimationWithBody animation;
+    protected final CustomAnimationWithBody animation;
 
     public AtomAnimation(String filepath, BodyDef.BodyType bodyType, float x, float y, float density, boolean isSensor, float radius, float frameDuration, int FRAME_COLS, int FRAME_ROWS, GameUtils utils) {
         Body body = PhysicsTools.generateBody(utils.world, bodyType, x, y, Constants.removePNGExtension(filepath));

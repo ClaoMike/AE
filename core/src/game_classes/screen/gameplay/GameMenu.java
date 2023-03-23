@@ -34,7 +34,7 @@ public class GameMenu extends ButtonTable {
         });
 
         TextureRegionDrawable drawable = TextureRegionDrawableGenerator.generate(Constants.GAME_MENU_BACKGROUND_IMAGE_FILEPATH);
-        Vector2 drawableSize = getImageSize(Constants.GAME_MENU_BACKGROUND_IMAGE_FILEPATH);
+        Vector2 drawableSize = getImageSize();
         setBackground(drawable);
 
         addActor(firstButton, 50, true, 0);
@@ -44,8 +44,8 @@ public class GameMenu extends ButtonTable {
         pack();
     }
 
-    private Vector2 getImageSize(String filepath) {
-        Texture t = new Texture(filepath);
+    private Vector2 getImageSize() {
+        Texture t = new Texture(Constants.GAME_MENU_BACKGROUND_IMAGE_FILEPATH);
         Vector2 size = new Vector2(t.getWidth(), t.getHeight());
         t.dispose();
 
