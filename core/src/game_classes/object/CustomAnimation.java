@@ -42,8 +42,9 @@ public class CustomAnimation {
     public void draw() {
         stateTime += Gdx.graphics.getDeltaTime();
         TextureRegion currentFrame = animation.getKeyFrame(stateTime, true);
-        utils.game.getBatch().draw(currentFrame, x, y);
 //        currentFrame.flip(true, false);
+        utils.game.getBatch().draw(currentFrame, x, y);
+
     }
 
     public void updatePosition(float x, float y) {
