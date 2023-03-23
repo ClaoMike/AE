@@ -50,10 +50,6 @@ public class GameplayScreen extends SimpleScreen {
         stage = new Stage();
         PauseMenu pauseMenu = new PauseMenu(game, font, this);
         stage.addActor(pauseMenu);
-
-        //TODO:
-        // 8. Finally, finish the README file;
-        // 9. Submit the project.
     }
 
     @Override
