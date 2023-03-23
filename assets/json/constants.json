@@ -1,6 +1,6 @@
 {
   "BACKGROUND_IMAGE_FILEPATH": "images/main_menu/background/background.png",
-  "BACKGROUND_MUSIC_FILEPATH": "music/background.mp3",
+  "BACKGROUND_MUSIC_FILEPATH": "music/soundtrack.mp3",
   "DEBUG_MODE_CHECKBOX_TITLE": "Debug Mode: ",
   "DEBUG_MODE_DEFAULT_VALUE": false,
   "FONT_FILEPATH": "fonts/Mabook.ttf",
