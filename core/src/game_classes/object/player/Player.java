@@ -35,7 +35,7 @@ public class Player extends Atom {
         this.constants = utils.game.getConstants();
 
         playerInputProcessor = new PlayerInputProcessor(this);
-        animation = new CustomAnimationWithBody(Constants.PLAYER_ANIMATION_FILEPATH, 2f, getSprite().getBody(), utils, 2, 1);
+        animation = new CustomAnimationWithBody(Constants.PLAYER_ANIMATION_FILEPATH, 0.25f, getSprite().getBody(), utils, 2, 1);
     }
 
     public void move(Directions direction) {
