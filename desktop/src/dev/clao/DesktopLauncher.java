@@ -16,7 +16,7 @@ import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		int FPS = 60;
-		String GAME_TITLE = "Antrum Exploratio";
+		String GAME_TITLE = "Spatium Explorationis";
 		int DEFAULT_WINDOW_WIDTH = 1440;
 		int DEFAULT_WINDOW_HEIGHT = 900;
 

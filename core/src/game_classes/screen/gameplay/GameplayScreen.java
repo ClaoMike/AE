@@ -52,8 +52,6 @@ public class GameplayScreen extends SimpleScreen {
         stage.addActor(pauseMenu);
 
         //TODO:
-        // 6. Remove all warnings;
-        // 7. One last refactor;
         // 8. Finally, finish the README file;
         // 9. Submit the project.
     }
