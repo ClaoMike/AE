@@ -14,13 +14,20 @@ The project contains three main packages:
 
 ## Credits
 Author: Claudiu Mihai Jechel
+
 Supervisor: Ke Chen
+
 [The University of Manchester](https://www.manchester.ac.uk/)
+
 March 2023
 
 ## More details
 Game version: 1.0.0
+
 [Java SDK](https://www.oracle.com/uk/java/technologies/javase/jdk11-archive-downloads.html) version: 11
+
 [Gradle](https://gradle.org/releases/) version: 7.5.1
+
 [Android Studio](https://developer.android.com/studio?gclid=Cj0KCQjwlPWgBhDHARIsAH2xdNcmYDDamL2KYoQ83-rH6PtiWtg-7SFGSczz-2lbJOQ5IuFftRsO1JMaAhoIEALw_wcB&gclsrc=aw.ds) version: Electric Eel | 2022.1.1 Patch 1
+
 [LibGDX](https://libgdx.com/) version: 1.11.0
